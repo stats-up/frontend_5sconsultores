@@ -1,0 +1,16 @@
+.bg-5s{
+    background-color: #ffc449;
+}
+.color-5s{
+    color: #f8b426;
+}
+.btn-5s{
+    background-color: #f8b426;
+    border-color: #ad7600;
+    color: white;
+}
+.btn-5s:hover{
+    background-color: #ffc449;
+    border-color: #ffae00;
+    color : white;
+}
