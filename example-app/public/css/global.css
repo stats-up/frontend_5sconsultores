@@ -48,3 +48,7 @@
   height: 5rem;
   color: rgba(128, 128, 128, 0.616);
 }
+
+.navbar-custom {
+  background-color: lightgreen;
+}

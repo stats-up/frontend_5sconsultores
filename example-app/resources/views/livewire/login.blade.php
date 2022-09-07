@@ -1,5 +1,6 @@
 @extends('layout')
 @section('content')
+<link href="{{ asset('css/login.css') }}" rel="stylesheet">
     <div class="container d-flex justify-content-center align-items-center" style="height:100vh">
         <div class="card " style="max-width:30rem; height:40rem">
             <div class="card-body">
@@ -13,7 +14,7 @@
                 <div class="d-flex justify-content-center">  
                     <form action="/login" method="POST">
                         @csrf
-                        <div style="width:24rem;">
+                        <div style="justify-content:center">
                             <div class="form-group py-2">
                                 <div class="form-floating ">
                                     <input type="email" class="form-control" id="floatingInput" name="email" placeholder="Correo electrónico" autofocus>
@@ -28,8 +29,8 @@
                                 </div>   
                             </div>
                         </div>
-                        <div class="py-3">
-                            <button type="submit" class="btn btn-submit" style="width:24rem;background-color:#df9f17;color:white">Ingresar</button>
+                        <div class="footerL py-3">
+                            <button type="submit" class="btn btn-submit" style="background-color:#df9f17;color:white">Ingresar</button>
                             <div class="footerLog d-flex justify-content-center py-3" style="color:grey">¿Olvidaste tu contraseña?</div>
                         </div>
                     </form>
