@@ -24,3 +24,11 @@ Route::get('/test', function () {
 Route::get('/login', function () {
     return view('livewire.login');
 });
+
+Route::get('/admin', function () {
+    return view('livewire.admin');
+});
+
+Route::get('/cliente', function () {
+    return view('livewire.cliente');
+});
