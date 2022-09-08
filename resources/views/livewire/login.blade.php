@@ -30,7 +30,7 @@
                             </div>
                         </div>
                         <div class="footerL py-3">
-                            <button type="submit" class="btn btn-submit" style="background-color:#df9f17;color:white">Ingresar</button>
+                            <button type="submit" class="btn btn-submit">Ingresar</button>
                             <div class="footerLog d-flex justify-content-center py-3" style="color:grey">¿Olvidaste tu contraseña?</div>
                         </div>
                     </form>

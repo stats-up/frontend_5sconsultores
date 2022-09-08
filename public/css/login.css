@@ -12,7 +12,7 @@
   .card {width: 22rem;}
   .form-floating{width: 18rem;font-size:13px;}
   .btn-submit{width: 18rem;}
-  .brandlogo{width:14rem;height:5rem;}
+  .brandlogo{width:15rem;height:5.5rem;}
   .phrase{font-size:13px;}
 }
 
@@ -42,4 +42,66 @@
   .footerLog{font-size:16px;}
   .brandlogo{width:18rem;height:7rem;}
   .phrase{font-size:16px;}
+}
+.card{
+  background-color: #fdfdfd;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border:none;
+}
+
+.title{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3rem;
+  padding-bottom:1rem;
+}
+
+.form-control:focus{
+  border-color:#f2b32e;
+  box-shadow: none;
+}
+
+.form-floating>.form-control,
+.form-floating>.form-control-plaintext {
+  padding: 0rem 0.75rem;
+}
+
+.form-floating>.form-control,
+.form-floating>.form-control-plaintext,
+.form-floating>.form-select {
+  height: calc(2.5rem + 5px);
+  line-height: 1;
+}
+
+.form-floating>label {
+  padding: 0.5rem 0.75rem;
+}
+
+.footerLog:hover{
+  text-decoration: underline;
+
+}
+
+.icon{
+  position:absolute;
+  top:1rem;
+  right:1rem;
+  height: 5rem;
+  color: rgba(128, 128, 128, 0.616);
+}
+
+.btn-submit:hover{
+  background-color: #df9f17;
+  color:black;
+  border: 1px solid #df9f17;
+}
+
+.btn-submit{
+  background-color: #df9f17;
+  color: white;
+}
+
+.card{
+  height: 10rem;
 }
