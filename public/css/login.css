@@ -1,5 +1,9 @@
 @media only screen and (max-width: 600px) {
-  .example {background: red;}
+  .card {width: 20rem;}
+  .form-floating{width: 17rem;font-size:13px;}
+  .btn-submit{width: 17rem;}
+  .footerLog{font-size:13px;}
+  .brandlogo{width: 15rem;height:7rem;}
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
