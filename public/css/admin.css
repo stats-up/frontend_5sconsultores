@@ -1,0 +1,22 @@
+.top{
+  border-bottom: 1px solid rgba(128, 128, 128, 0.329);
+}
+.head{
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 1rem;
+}
+.responsiveImg{
+  margin-left: 1rem;
+  max-width: 10rem;
+  height: 100%;
+  height: auto;
+}
+
+.titulo{
+  align-items:end;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-left: 6rem;
+  padding-top: 2rem;
+}
