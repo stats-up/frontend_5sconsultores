@@ -13,7 +13,7 @@
         <div class="row px-4 searchrow" style="max-width:65rem;" >
             <form method="POST" class="form-inline d-flex flex-row search">
                 <i class="bi bi-search d-flex align-items-center"></i>
-                <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" style="border:0;box-shadow:none;">
+                <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" style="border:0;box-shadow:none;background-color:#fdfdfd;">
             </form>
         </div>
     </div>
@@ -22,7 +22,7 @@
             @for ($i = 0; $i < 7; $i++)
             <div class="card row justify-content-center">
                 <div class="card-body row mx-0">
-                    <div class="col-lg-9">
+                    <div class="col-lg-9" style="height:fit-content">
                         <div class="cargo">Ingeniero Senior de Metalurgia</div>
                         <div class="descripcion py-2">
                             <div> Profesión: Ingeniero Civil/ Ejecución Quimica/ Metalurgico</div>
@@ -37,7 +37,9 @@
                         </div>
                     </div>
                     <div class="col-lg-3 py-2 text-center">
-                        <button class="btn-postulantes" style="width:80%">Ver postulantes (8)</button>
+                        <button class="btn-postulantes" style="width:80%;">
+                            <a href="/perfiles" class="btn-post">Ver postulantes (8)</a>
+                            </button>
                     </div>
                 </div>
             </div>   
@@ -45,17 +47,4 @@
         </div>
     </div>
 </div>
-<script>
-    document.getElementById('searchIcon').onclick = function() {
-    document.getElementById('search').classList.add("visible");
-    document.getElementById('clear').classList.add("visible");
-    document.getElementById('search').focus();
-    document.getElementById('searchIcon').classList.add("hide");
-    }
-    document.getElementById('clear').onclick = function() {
-    document.getElementById('searchIcon').classList.remove("hide");
-    document.getElementById('search').classList.remove("visible");
-    document.getElementById('clear').classList.remove("visible");
-    }
-</script>
 @endsection

@@ -32,3 +32,7 @@ Route::get('/admin', function () {
 Route::get('/cliente', function () {
     return view('livewire.cliente');
 });
+
+Route::get('/perfiles', function () {
+    return view('livewire.perfiles');
+});

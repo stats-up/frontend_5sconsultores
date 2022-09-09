@@ -174,5 +174,13 @@
 }
 .search{
   border-bottom: 1px solid grey;
-  
+}
+
+.btn-post{
+  text-decoration:none;
+  color:white;
+}
+.btn-postulantes:hover > .btn-post{
+  text-decoration:none;
+  color:#e0ae43de;
 }
