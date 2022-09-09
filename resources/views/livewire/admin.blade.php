@@ -8,10 +8,10 @@
         </div>
         <div class="row titulo">Clientes</div>
     </div>
-    <div class="d-flex justify-content-center">
-        <div class="row">
+    <div class="d-flex justify-content-center section">
+        <div class="row row-cols-auto group-cards" style="max-width:90rem">
             @for ($i = 0; $i < 7; $i++)
-            <div class="col-xl-3">
+            <div class="col">
                 <div class="card my-2" style="width: 18rem;">
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">

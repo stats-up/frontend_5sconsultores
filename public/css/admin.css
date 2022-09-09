@@ -17,6 +17,49 @@
   align-items:end;
   font-size: 2rem;
   font-weight: bold;
-  padding-left: 6rem;
+
   padding-top: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .group-cards{
+    width: 70rem;
+    justify-content: center;
+  }
+  .section{
+    padding-top:1rem;
+  }
+  .titulo{
+    justify-content: center;
+    padding: auto;
+  }
+}
+
+
+@media only screen and (min-width: 600px) {
+  .group-cards{
+    width: 80rem;
+    justify-content: center;
+  }
+  .section{
+    padding-top:1rem;
+  }
+  .titulo{
+    padding: auto;
+    justify-content: center;
+  }
+} 
+
+@media only screen and (min-width: 850px){
+  .group-cards{
+    width: 80rem;
+    justify-content: center;
+  }
+  .section{
+    padding-top:1rem;
+  }
+  .titulo{
+    padding-left:6rem;
+    justify-content: start;
+  }
 }
