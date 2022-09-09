@@ -25,9 +25,9 @@
   }
   .titulo{
     font-size: 1.2rem;
-    color: grey;
     padding: 0.6rem;
     padding-top: 1rem;
+    font-weight: bold;
   }
   .card{
     margin-left: 1rem;
@@ -37,6 +37,13 @@
   .cargo{
     font-size: 1.2rem;
   }
+  .search{
+    width: 10rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    padding-left: 0.5rem;
+  }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -77,6 +84,11 @@
   }
   .cargo{
     font-size: 1.2rem;
+  }
+  .search{
+    width: 12rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -121,64 +133,26 @@
   .card{
     max-width:65rem;
   }
-} 
-@media only screen and (min-width: 2000px) {
-  .descripcion {
-    font-size: 1.5rem;
-    padding-left: 3rem;
-  }
-  .condiciones {
-    font-size: 1.5rem;
-    padding-left: 3rem;
-  }
-  .cargo{
-    font-size: 2.5rem;
-  }
-  .nombrecliente{
-    font-size: 2rem;
-    margin:2rem;
-  }
-  .responsiveImg{
-    margin-left: 1rem;
-    max-width: 20rem;
-    height: 100%;
-    height: auto;
-  }
-  .head{
-    padding-left: 5rem;
-    padding-right: 5rem;
-    padding-top: 2rem;
-  }
-  .titulo{
-    font-size: 3rem;
-    color: grey;
-    padding: 2rem;
-    padding-top: 4rem;
-  }
-  .list{
-    padding-left:  4rem;
-    padding-right: 4rem;
-  }
-  .card{
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin: 1rem;
-    width:80rem;
+  .search{
+    width: 15rem;
+    margin-bottom: 1rem;
   }
 } 
+
 
 .top{
   border-bottom: 1px solid rgba(128, 128, 128, 0.329);
 }
 
 .cargo{
-  color: grey;
+  color:#595d60;
+  font-weight: bold;
 }
 
 .btn-postulantes{
-  background-color:#e2a522;
+  background-color:#e0ae43de;
   border-radius: 1rem;
-  border:1px solid #e2a522;
+  border:1px solid #e0ae43de;
   color:white;
   min-height: 2rem;
 }
@@ -186,11 +160,19 @@
 .btn-postulantes:hover{
   background-color: white;
   border-radius: 1rem;
-  border:1px solid #e2a522;
+  border:1px solid #e0ae43de;
   min-height: 2rem;
-  color:#e2a522;
+  color:#e0ae43de;
 }
 .card{
   border:none;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.titulo{
+  color:#595d60;
+}
+.search{
+  border-bottom: 1px solid grey;
+  
 }
