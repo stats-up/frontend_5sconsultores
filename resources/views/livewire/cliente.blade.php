@@ -30,8 +30,8 @@
                             <div> Faena:Mantos Blancos</div>
                         </div>
                     </div>
-                    <div class="col-lg-2 justify-content-center">
-                        <button style="width:100%">Ver postulantes</button>
+                    <div class="col-lg-2 py-2">
+                        <button class="btn-postulantes" style="width:100%">Ver postulantes</button>
                     </div>
                 </div>
             </div>   

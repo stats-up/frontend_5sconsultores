@@ -3,7 +3,8 @@
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Inicio de Sesión</title>
+      <title>5S Consultores</title>
+      <link rel = "icon" href = "http://www.5sconsultores.cl/wp-content/uploads/2019/11/isotipo_5s-50x50.jpg" type = "image/x-icon" style="border-radius: 5px">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
       <script src="https://kit.fontawesome.com/08d8c66f7b.js" crossorigin="anonymous"></script>
       <link href="{{ asset('css/global.css') }}" rel="stylesheet">
