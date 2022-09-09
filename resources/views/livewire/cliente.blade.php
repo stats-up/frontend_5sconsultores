@@ -19,7 +19,7 @@
     </div>
     <div class="row overflow-auto list" style="max-height:70vh;justify-content:center;">
         <div class="col" style="max-width:65rem;">
-            @for ($i = 0; $i < 7; $i++)
+            @for ($i = 0; $i < 13; $i++)
             <div class="card row justify-content-center">
                 <div class="card-body row mx-0">
                     <div class="col-lg-9" style="height:fit-content">
@@ -39,7 +39,7 @@
                     <div class="col-lg-3 py-2 text-center">
                         <button class="btn-postulantes" style="width:80%;">
                             <a href="/perfiles" class="btn-post">Ver postulantes (8)</a>
-                            </button>
+                        </button>
                     </div>
                 </div>
             </div>   

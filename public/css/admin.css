@@ -17,8 +17,35 @@
   align-items:end;
   font-size: 2rem;
   font-weight: bold;
-
   padding-top: 2rem;
+  justify-content: center;
+}
+
+.divbtn{
+  display: flex;
+  justify-content: center;
+}
+
+.btn-emp{
+    width:90%;
+    background-color:#e0ae43de;
+    border-radius: 1rem;
+    border:1px solid #e0ae43de;
+    color:white;
+    min-height: 2rem;
+}
+
+.btn-emp:hover{
+  background-color: white;
+  border-radius: 1rem;
+  border:1px solid #e0ae43de;
+  min-height: 2rem;
+  color:#e0ae43de;
+}
+
+
+.card:hover{
+  background-color: #1616150a;
 }
 
 @media only screen and (max-width: 600px) {
@@ -28,10 +55,6 @@
   }
   .section{
     padding-top:1rem;
-  }
-  .titulo{
-    justify-content: center;
-    padding: auto;
   }
 }
 
@@ -44,10 +67,6 @@
   .section{
     padding-top:1rem;
   }
-  .titulo{
-    padding: auto;
-    justify-content: center;
-  }
 } 
 
 @media only screen and (min-width: 850px){
@@ -57,9 +76,5 @@
   }
   .section{
     padding-top:1rem;
-  }
-  .titulo{
-    padding-left:6rem;
-    justify-content: start;
   }
 }
