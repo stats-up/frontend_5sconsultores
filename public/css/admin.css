@@ -27,27 +27,47 @@
 }
 
 .btn-emp{
-    width:90%;
-    background-color:#e0ae43de;
-    border-radius: 1rem;
-    border:1px solid #e0ae43de;
-    color:white;
-    min-height: 2rem;
-}
-
-.btn-emp:hover{
+  width:90%;
   background-color: white;
   border-radius: 1rem;
-  border:1px solid #e0ae43de;
+  border:2px solid #e0ae43de;
   min-height: 2rem;
   color:#e0ae43de;
 }
 
-
-.card:hover{
-  background-color: #1616150a;
+.btn-emp:hover{
+  font-weight: bold;
+  background-color: white;
+  border-radius: 1rem;
+  border:2px solid #f3b52fde;
+  color:#e0ae43de;
+  min-height: 2rem;
 }
 
+.card{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border:transparent;
+  background-color:  #fdfdfd;
+}
+
+.card:hover{
+  background-color: #f5f5f5;
+}
+
+.btn-post{
+  width: 15rem;
+  border:transparent;
+  border-radius: 0.5rem;
+  background-color:#e0ae43de;
+  border:1px solid #e0ae43de;
+  color:white;
+  min-height: 2rem;
+  padding: auto;
+}
+
+.group-cards{
+  justify-content: center;
+}
 @media only screen and (max-width: 600px) {
   .group-cards{
     width: 70rem;
