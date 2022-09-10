@@ -2,8 +2,19 @@
     <div class="row head">
         <div class="col-md-12 d-flex justify-content-between top">
             <img class="responsiveImg" src="http://5sconsultores.cl/portal/wp-content/uploads/2019/11/Logo_5s_web.jpg" alt="Logo"  class="brandlogo">
-            <div class="d-flex align-items-center nombrecliente">Nombre empresa cliente</div>
-        </div>
+            <div class="dropdown nombrecliente">
+                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black">      
+                    <div class="name" style="padding-right:0.5rem">Nombre empresa cliente</div>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown"  style="margin-top:4rem" >
+                    <li>
+                        <a class="dropdown-item" href="/logout" style="display:flex;flex-direction:row">
+                            <i class="bi bi-box-arrow-in-right" style="font-size:1.3rem;color:red;display:flex;align-items:center;padding-right:0.5rem"></i>
+                            Cerrar sesión
+                        </a>                        
+                    </li>
+                </ul>
+            </div> 
     </div>
     <div class="row  d-flex justify-content-center">
         <div class="col-md-12 d-flex justify-content-center titulo">Requerimientos</div>

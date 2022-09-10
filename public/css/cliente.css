@@ -11,6 +11,8 @@
     font-size: 1rem;
     margin:0rem;
     margin-left:0.5rem;
+    display:flex;
+    align-items: center;
   }
   .responsiveImg{
     margin-left: 0rem;
@@ -59,6 +61,8 @@
   .nombrecliente{
     font-size: 1rem;
     margin:0.5rem;
+    display:flex;
+    align-items: center;
   }
   .responsiveImg{
     margin-left: 0.7rem;
@@ -108,6 +112,8 @@
   .nombrecliente{
     font-size: 1rem;
     margin:1rem;
+    display:flex;
+    align-items: center;
   }
   .responsiveImg{
     margin-left: 1rem;
@@ -185,3 +191,23 @@
   text-decoration:none;
   color:#e0ae43de;
 }
+
+.dropdown-toggle{
+  display: flex;
+  align-items: center;
+  text-decoration: none; 
+}
+
+.dropdown-menu{
+  border: transparent;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 0.5rem;
+}
+
+.dropdown-item{
+  width: fit-content;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 0.5rem;
+}
+
