@@ -1,3 +1,42 @@
+
+.dottoggle::after {
+  content: none; 
+}
+
+.dottoggle{
+  color:grey;
+}
+
+.dotmenu{
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border:transparent;
+  min-width: 8rem;
+  font-size: 14px;
+}
+
+.nombrecliente{
+  font-size: 1rem;
+  margin:1rem;
+  display:flex;
+  align-items: center;
+}
+.sesiontoggle{
+  display: flex;
+  align-items: center;
+  text-decoration: none; 
+}
+
+.sessionmenu{
+  border: transparent;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 0.5rem;
+}
+
+.icon{
+  color:grey;
+  font-size: 14px;
+  padding-right: 10px;
+}
 .top{
   border-bottom: 1px solid rgba(128, 128, 128, 0.329);
 }
@@ -50,9 +89,7 @@
   background-color:  #fdfdfd;
 }
 
-.card:hover{
-  background-color: #f5f5f5;
-}
+
 
 .btn-post{
   width: 15rem;

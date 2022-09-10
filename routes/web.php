@@ -6,6 +6,7 @@ use App\Http\Livewire\Admin;
 use App\Http\Livewire\Cliente;
 use App\Http\Livewire\Perfiles;
 use App\Http\Controllers\GlobalController;
+use App\Http\Livewire\Administrador\Contactos;
 
 
 /*
@@ -28,3 +29,5 @@ Route::get('/logout',[GlobalController::class, 'logout']);
 Route::get('/cliente', Cliente::class);
 
 Route::get('/perfiles', Perfiles::class);
+
+Route::get('/contactos', Contactos::class);
