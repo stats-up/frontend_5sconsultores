@@ -1,6 +1,3 @@
-@extends('layout')
-@section('content')
-<link href="{{ asset('css/cliente.css') }}" rel="stylesheet">
 <div class="container-fluid" style="height:100vh;background-color:#fdfdfd;">
     <div class="row head">
         <div class="col-md-12 d-flex justify-content-between top">
@@ -47,4 +44,3 @@
         </div>
     </div>
 </div>
-@endsection

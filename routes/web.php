@@ -1,6 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Livewire\Login;
+use App\Http\Livewire\Admin;
+use App\Http\Livewire\Cliente;
+use App\Http\Livewire\Perfiles;
+use App\Http\Controllers\GlobalController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,26 +19,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', Login::class);
 
-Route::get('/test', function () {
-    return view('asd');
-});
+Route::get('/admin', Admin::class);
 
-Route::get('/login', function () {
-    return view('livewire.login');
-});
+Route::get('/logout',[GlobalController::class, 'logout']);
 
-Route::get('/admin', function () {
-    return view('livewire.admin');
-});
+Route::get('/cliente', Cliente::class);
 
-Route::get('/cliente', function () {
-    return view('livewire.cliente');
-});
-
-Route::get('/perfiles', function () {
-    return view('livewire.perfiles');
-});
+Route::get('/perfiles', Perfiles::class);

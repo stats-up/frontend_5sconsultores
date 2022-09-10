@@ -1,6 +1,4 @@
-@extends('layout')
-@section('content')
-<link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+
 <div class="container-fluid"  style="height:100vh;background-color:#fdfdfd;">
     <div class="row head">
         <div class="col-md-12 top">
@@ -27,4 +25,4 @@
     </div>
     
 </div>
-@endsection
+

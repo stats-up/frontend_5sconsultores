@@ -1,7 +1,4 @@
-@extends('layout')
-@section('content')
-    <div>
-        {{-- The best athlete wants his opponent at his best. --}}
-        <h1>Postulantes</h1>
-    </div>
-@endsection
+<div>
+    {{-- The best athlete wants his opponent at his best. --}}
+    <h1>Postulantes</h1>
+</div>
