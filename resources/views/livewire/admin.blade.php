@@ -25,13 +25,13 @@
     </div>
     <div class="d-flex justify-content-center section">
         <div class="row row-cols-auto group-cards overflow-auto" style="max-width:75rem;max-height:70vh">
-            @for ($i = 0; $i < 7; $i++)
+            @for ($i = 0; $i <6; $i++)
             <div class="col-md-12" style="width:18rem">
                 <div class="card my-2">
                     <div class="card-body">
                         <div class="row">
                             <h5 class="card-title col-10"> Nombre empresa</h5>
-                            <div class="dropdown col-2">
+                            <div class="dropdown col-2 d-flex align-items-center" >
                                 <a class=" dropdown-toggle dottoggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="icondrp bi bi-three-dots-vertical"></i>
                                 </a>
@@ -42,7 +42,7 @@
                             </div>
                         </div>
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <div class="divbtn">
+                      <div class="divbtn py-2">
                         <a href="/contactos" class="btn btn-emp">Ver Contactos</a>
                       </div>
                     </div>

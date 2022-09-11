@@ -35,26 +35,17 @@
                               <h5 class="card-title py-2">Area TI</h5>
                               @for($j=0;$j<3;$j++)
                                 <div class="row person">
-                                    <div class="col-md-10 ">
+                                    <div class="row row-contact">
                                         <div class="row person-info">
-                                            <h6 class="col-md-auto card-subtitle text-muted d-flex align-items-end">Nombre del contacto</h6>
-                                            <div class="col-md-3 person-info-item d-flex align-items-center">
-                                                <i class="icon bi bi-telephone-fill"></i>
-                                                <span class="px-2">+569 1234567</span>
-                                            </div>
-                                            <div class="col-md-3 person-info-item">
-                                                <i class="icon bi bi-envelope-fill"></i>
-                                                <span class="px-2">user@gmail.cl</span>
-                                            </div>
+                                            <h6 class="col-sm-auto card-subtitle text-muted d-flex align-items-end p-2">Nombre del contacto</h6>
                                         </div>
                                     </div>
-                                    <div class="col-md-2">
-                                        <button>Ver</button>
-                                    </div>
-                                    <div class="row requerimientos">
-                                        <div class="col-md-12">
-                                            a
-                                        </div>
+                                    <div class="row " style="margin-left:3rem">
+                                        @for($j=0;$j<3;$j++)
+                                            <div class="col-md-12 py-2 requerimientos" >
+                                                Ingeniero de sistemas
+                                            </div>
+                                        @endfor
                                     </div>
                                 </div>
                               @endfor
