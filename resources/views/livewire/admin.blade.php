@@ -30,10 +30,10 @@
                 <div class="card my-2">
                     <div class="card-body">
                         <div class="row">
-                            <h5 class="card-title col-10">Nombre empresa nombre empresa</h5>
+                            <h5 class="card-title col-10"> Nombre empresa</h5>
                             <div class="dropdown col-2">
                                 <a class=" dropdown-toggle dottoggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="bi bi-three-dots-vertical"></i>
+                                    <i class="icondrp bi bi-three-dots-vertical"></i>
                                 </a>
                                 <ul class="dropdown-menu dotmenu">
                                 <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-pen"></i>Editar</a></li>

@@ -58,6 +58,7 @@
   font-weight: bold;
   padding-top: 2rem;
   justify-content: center;
+  color:#595d60;
 }
 
 .divbtn{
@@ -87,9 +88,24 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   border:transparent;
   background-color:  #fdfdfd;
+  color:rgba(2, 2, 2, 0.699);
 }
 
+.card:hover{
+  color:black;
+}
 
+.icondrp{
+  display: none;
+}
+
+.card:hover .icondrp{
+  display:block;
+}
+
+.icondrp:hover{
+  color:#e0ae43de;
+}
 
 .btn-post{
   width: 15rem;
@@ -102,9 +118,14 @@
   padding: auto;
 }
 
+.btn-post:hover{
+  background-color: #d39b23;
+}
+
 .group-cards{
   justify-content: center;
 }
+
 @media only screen and (max-width: 600px) {
   .group-cards{
     width: 70rem;

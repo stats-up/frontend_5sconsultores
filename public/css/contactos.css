@@ -36,6 +36,19 @@
   align-items:end;
   font-size: 2rem;
   font-weight: bold;
-  padding-top: 2rem;
   justify-content: center;
+}
+
+.person:hover{
+  background-color: #f2f2f2;
+}
+
+.person{
+  border-radius: 0.5rem;
+  padding:1rem;
+}
+
+.icon{
+  font-size: 14px;
+  color:grey;
 }
