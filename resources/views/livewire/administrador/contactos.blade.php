@@ -1,3 +1,4 @@
+<livewire:administrador.modal-cliente/>
 <div class="container-fluid" style="height:100vh;background-color:#fdfdfd;">
     <div class="row head">
         <div class="col-md-12 d-flex justify-content-between top">
@@ -30,19 +31,31 @@
             <div class="col-12 body-contactos " style="width:65rem">
                 @for ($i = 0; $i < 7; $i++)
                     <div class="col-md-12 py-2">
-                        <div class="card">
+                        <div class="card" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;border:transparent">
                             <div class="card-body">
-                              <h5 class="card-title py-2">Area TI</h5>
+                                <div class="row headArea px-2 d-flex justify-content-between" >
+                                    <h5 class="card-title py-2" style="width:fit-content">Area TI</h5>
+                                    <div class="dropdown d-flex align-items-center" style="width:fit-content">
+                                      <a class=" dropdown-toggle dottoggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                          <i class="icondrp bi bi-three-dots-vertical"></i>
+                                      </a>
+                                      <ul class="dropdown-menu dotmenu">
+                                          <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-plus"></i>Nuevo contacto</a></li>
+                                          <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-pen"></i>Cambiar nombre</a></li>
+                                          <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
+                                      </ul>
+                                    </div>
+                                </div>
                               @for($j=0;$j<3;$j++)
                                 <div class="row person">
                                     <div class="row row-contact">
-                                        <div class="row person-info">
+                                        <div class="row person-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                             <h6 class="col-sm-auto card-subtitle text-muted d-flex align-items-end p-2">Nombre del contacto</h6>
                                         </div>
                                     </div>
                                     <div class="row " style="margin-left:3rem">
                                         @for($j=0;$j<3;$j++)
-                                            <div class="col-md-12 py-2 requerimientos" >
+                                            <div class="col-md-12 py-2 requerimientos" data-bs-toggle="modal" data-bs-target="#exampleModal" >
                                                 Ingeniero de sistemas
                                             </div>
                                         @endfor

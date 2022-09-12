@@ -52,13 +52,15 @@
 .person{
   border-radius: 0.5rem;
   padding:1rem;
+  padding-top: 0rem;
   display: flex;
   justify-content: center;
 }
 
 .icon{
-  font-size: 14px;
   color:grey;
+  font-size: 14px;
+  padding-right: 10px;
 }
 
 .row-contact{
@@ -69,3 +71,23 @@
   border-bottom: 1px solid rgba(128, 128, 128, 0.329);
 }
 
+.headArea{
+  display: flex;
+  flex-direction: row;
+}
+
+.dottoggle::after {
+  content: none; 
+  align-items: end;
+}
+
+.dottoggle{
+  color:grey;
+}
+
+.dotmenu{
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border:transparent;
+  min-width: 8rem;
+  font-size: 14px;
+}
