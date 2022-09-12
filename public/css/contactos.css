@@ -42,19 +42,41 @@
 .person-info:hover{
   background-color: #f2f2f2;
   cursor: pointer;
+  border-radius: 0.5rem;
 }
 
-.requerimientos:hover{
+.person-info{
+  width: fit-content;
+}
+
+.row-reque:hover{
   background-color: #f2f2f2;
+  border-radius: 0.5rem;
+}
+.addReqtoggle{
+  color:grey;
+  width:fit-content;
+  visibility: hidden;
+}
+.addReqtoggle::after {
+  content: none; 
+  align-items: end;
+}
+.row-reque:hover .addReqtoggle{
+  visibility: visible;
+}
+.requerimientos{
+  margin-right: 2rem;  
+  color:grey;
+}
+.requerimientos:hover{
+  color:black;
   cursor: pointer;
 }
-
 .person{
   border-radius: 0.5rem;
   padding:1rem;
   padding-top: 0rem;
-  display: flex;
-  justify-content: center;
 }
 
 .icon{
@@ -63,12 +85,15 @@
   padding-right: 10px;
 }
 
+.row-contact:hover{
+  background-color: #f2f2f2;
+ }
 .row-contact{
-  width: 98%;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-bottom: 0.5rem;
   border-bottom: 1px solid rgba(128, 128, 128, 0.329);
+}
+.row-reque{
+  margin-left:2rem;
+  width:58rem;
 }
 
 .headArea{
@@ -76,18 +101,56 @@
   flex-direction: row;
 }
 
-.dottoggle::after {
+.addContacttoggle::after {
+  content: none; 
+  align-items: end;
+}
+
+.addContacttoggle::after{
+  content: none; 
+  align-items: end;
+}
+
+.dottoggle::after{
   content: none; 
   align-items: end;
 }
 
 .dottoggle{
   color:grey;
+  width:fit-content;
 }
+
+.addContacttoggle{
+  color:grey;
+  width:fit-content;
+  visibility: hidden;
+}
+
+.row-contact:hover .addContacttoggle{
+  visibility: visible;
+}
+
 
 .dotmenu{
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   border:transparent;
   min-width: 8rem;
   font-size: 14px;
+}
+
+.btn-emp{
+  background-color: white;
+  border-radius: 1rem;
+  border:1px solid #e0ae43de;
+  min-height: 2rem;
+  color:#e0ae43de;
+}
+
+.btn-emp:hover{
+  background-color: white;
+  border-radius: 1rem;
+  border:2px solid #f3b52fde;
+  color:#e0ae43de;
+  min-height: 2rem;
 }

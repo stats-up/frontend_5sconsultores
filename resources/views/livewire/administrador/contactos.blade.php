@@ -49,17 +49,44 @@
                               @for($j=0;$j<3;$j++)
                                 <div class="row person">
                                     <div class="row row-contact">
-                                        <div class="row person-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <h6 class="col-sm-auto card-subtitle text-muted d-flex align-items-end p-2">Nombre del contacto</h6>
+                                        <div class="dropdown d-flex align-items-center col-1" style="width:fit-content">
+                                            <a class=" dropdown-toggle addContacttoggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="icondrp bi bi-three-dots-vertical"></i>
+                                            </a>
+                                            <ul class="dropdown-menu dotmenu">
+                                                <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-plus"></i>Nuevo requerimiento</a></li>
+                                                <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-pen"></i>Cambiar nombre</a></li>
+                                                <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
+                                            </ul>
+                                        </div>                                 
+                                        <div class="person-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            <h6 class="col-sm-auto card-subtitle text-muted d-flex align-items-end py-2">Nombre del contacto</h6>
                                         </div>
                                     </div>
-                                    <div class="row " style="margin-left:3rem">
+                                    
                                         @for($j=0;$j<3;$j++)
-                                            <div class="col-md-12 py-2 requerimientos" data-bs-toggle="modal" data-bs-target="#exampleModal" >
-                                                Ingeniero de sistemas
+                                        <div class="row row-reque py-2 d-flex justify-content-between" >
+                                            <div class="d-flex justify-content-start col-auto">
+                                                <div class="dropdown d-flex align-items-center col-1" style="width:fit-content">
+                                                    <a class=" dropdown-toggle addReqtoggle px-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="icondrp bi bi-three-dots-vertical"></i>
+                                                    </a>
+                                                    <ul class="dropdown-menu dotmenu">
+                                                        <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-pen"></i>Cambiar nombre</a></li>
+                                                        <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
+                                                    </ul>
+                                                </div> 
+                                                <div class=" py-2 requerimientos" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+                                                    Ingeniero de sistemas Ingeniero de sistemas
+                                                </div>
                                             </div>
+                                            
+                                            <div class="divbtn col-auto">
+                                                <a href="/contactos" class="btn btn-emp">Ver Postulantes</a>
+                                            </div>
+                                        </div>
                                         @endfor
-                                    </div>
+                                    
                                 </div>
                               @endfor
                             </div>
