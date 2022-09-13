@@ -1,4 +1,3 @@
-<livewire:administrador.modal-cliente/>
 <div class="container-fluid"  style="height:100vh;background-color:#fdfdfd;">
     <div class="row head d-flex justify-content-center">
         <div class="col-md-12 top d-flex justify-content-between">
@@ -22,6 +21,7 @@
                 <button href="#" class="btn-post" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 <i class="bi bi-plus"></i>Agregar nuevo cliente</button>
         </div>
+        <livewire:administrador.modal-cliente/>
     </div>
     <div class="d-flex justify-content-center section">
         <div class="row row-cols-auto group-cards overflow-auto" style="max-width:75rem;max-height:70vh">
@@ -80,4 +80,3 @@
         </div>
     </div> 
 </div>
-

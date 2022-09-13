@@ -10,7 +10,11 @@ class ModalCliente extends Component
     public $logo;
 
     public function nuevoCliente(){
-        dd($this->nombre);
+        $endpoint = getenv("API_URL")."/api/add_customer";
+        $response = Http::post($endpoint, [
+            'name' => $nombre,
+            'logo' => base64_encode($logo),
+        ]);
     }
 
     public function render()
