@@ -30,8 +30,10 @@
                 <div class="card my-2">
                     <div class="card-body">
                         <div class="row">
-                            <h5 class="card-title col-10"> Nombre empresa</h5>
-                            <div class="dropdown col-2 d-flex align-items-center" >
+                            <div class="text-center">
+                                <img class="responsiveImg" src="" alt="Logo"  class="brandlogo">
+                            </div>        
+                            <div class="dropdown d-flex align-items-start dropdot" >
                                 <a class=" dropdown-toggle dottoggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="icondrp bi bi-three-dots-vertical"></i>
                                 </a>
@@ -40,8 +42,10 @@
                                 <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
                                 </ul>
                             </div>
+                            <div>
+                                <h6 class="card-title text-muted row d-flex justify-content-center"> Nombre empresa</h6>
+                            </div>
                         </div>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                       <div class="divbtn py-2">
                         <a href="/contactos" class="btn btn-emp">Ver Contactos</a>
                       </div>
@@ -49,6 +53,30 @@
                 </div>
             </div>
             @endfor
+            <div class="col-md-12" style="width:18rem">
+                <div class="card my-2">
+                    <div class="card-body">
+                        <div class="row justify-content-end">
+                                <img class="responsiveImg col-10" src="https://1000marcas.net/wp-content/uploads/2020/02/logo-Google.png" alt="logo">
+                            <div class="dropdown col-2 d-flex align-items-start" >
+                                <a class=" dropdown-toggle dottoggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="icondrp bi bi-three-dots-vertical"></i>
+                                </a>
+                                <ul class="dropdown-menu dotmenu">
+                                <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-pen"></i>Editar</a></li>
+                                <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h6 class="card-title text-muted row d-flex justify-content-center"> Nombre empresa</h6>
+                            </div>
+                        </div>
+                      <div class="divbtn py-2">
+                        <a href="/contactos" class="btn btn-emp">Ver Contactos</a>
+                      </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div> 
 </div>

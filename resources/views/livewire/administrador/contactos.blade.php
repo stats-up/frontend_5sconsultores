@@ -76,7 +76,7 @@
                                                         <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
                                                     </ul>
                                                 </div> 
-                                                <div class=" py-2 requerimientos" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+                                                <div class=" py-2 requerimientos" href="/postulantes" >
                                                     Ingeniero de sistemas Ingeniero de sistemas
                                                 </div>
                                             </div>
