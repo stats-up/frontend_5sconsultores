@@ -3,6 +3,7 @@
   'administrador.contacto-modal' => 'App\\Http\\Livewire\\Administrador\\ContactoModal',
   'administrador.contactos' => 'App\\Http\\Livewire\\Administrador\\Contactos',
   'administrador.modal-cliente' => 'App\\Http\\Livewire\\Administrador\\ModalCliente',
+  'administrador.postulantes' => 'App\\Http\\Livewire\\Administrador\\Postulantes',
   'administrador.requer-modal' => 'App\\Http\\Livewire\\Administrador\\RequerModal',
   'cliente' => 'App\\Http\\Livewire\\Cliente',
   'components-cliente.navbar' => 'App\\Http\\Livewire\\ComponentsCliente\\Navbar',

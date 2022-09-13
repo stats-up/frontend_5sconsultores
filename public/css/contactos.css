@@ -77,6 +77,8 @@
   border-radius: 0.5rem;
   padding:1rem;
   padding-top: 0rem;
+  display: flex;
+  justify-content: center;
 }
 
 .icon{
@@ -90,10 +92,11 @@
  }
 .row-contact{
   border-bottom: 1px solid rgba(128, 128, 128, 0.329);
+  width:95%
 }
 .row-reque{
   margin-left:2rem;
-  width:58rem;
+  width:55rem;
 }
 
 .headArea{
@@ -153,4 +156,8 @@
   border:2px solid #f3b52fde;
   color:#e0ae43de;
   min-height: 2rem;
+}
+
+.row-contact:hover .card-subtitle{
+  color: #e0ae43de;
 }

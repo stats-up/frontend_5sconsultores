@@ -46,7 +46,7 @@
                                       </ul>
                                     </div>
                                 </div>
-                              @for($j=0;$j<3;$j++)
+                              @for($j=0;$j<4;$j++)
                                 <div class="row person">
                                     <div class="row row-contact">
                                         <div class="dropdown d-flex align-items-center col-1" style="width:fit-content">
@@ -64,7 +64,7 @@
                                         </div>
                                     </div>
                                     
-                                        @for($j=0;$j<3;$j++)
+                                        @for($k=0;$k<3;$k++)
                                         <div class="row row-reque py-2 d-flex justify-content-between" >
                                             <div class="d-flex justify-content-start col-auto">
                                                 <div class="dropdown d-flex align-items-center col-1" style="width:fit-content">
@@ -82,11 +82,10 @@
                                             </div>
                                             
                                             <div class="divbtn col-auto">
-                                                <a href="/contactos" class="btn btn-emp">Ver Postulantes</a>
+                                                <a href="/postulantes" class="btn btn-emp">Ver Postulantes</a>
                                             </div>
                                         </div>
-                                        @endfor
-                                    
+                                        @endfor    
                                 </div>
                               @endfor
                             </div>
