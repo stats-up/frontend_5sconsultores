@@ -22,6 +22,7 @@
                 <i class="bi bi-plus"></i>Agregar nuevo cliente</button>
         </div>
         <livewire:administrador.modal-cliente/>
+        <livewire:administrador.modal-editcliente/>
     </div>
     <div class="d-flex justify-content-center section">
         <div class="row row-cols-auto group-cards overflow-auto" style="max-width:75rem;max-height:70vh">
@@ -30,15 +31,16 @@
                 <div class="card my-2">
                     <div class="card-body">
                         <div class="row">
+                            <span class="badge badge-success">Activo</span>
                             <div class="text-center">
-                                <img class="responsiveImg" src="" alt="Logo"  class="brandlogo">
+                                <img class="responsiveImg" src="https://www.tailorbrands.com/wp-content/uploads/2020/07/mcdonalds-logo.jpg" alt="Logo"  class="brandlogo">
                             </div>        
                             <div class="dropdown d-flex align-items-start dropdot" >
                                 <a class=" dropdown-toggle dottoggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="icondrp bi bi-three-dots-vertical"></i>
                                 </a>
                                 <ul class="dropdown-menu dotmenu">
-                                <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-pen"></i>Editar</a></li>
+                                <li><a class="dropdown-item a" href="#" data-bs-toggle="modal" data-bs-target="#editModal"><i class="icon fa-solid fa-pen"></i>Editar</a></li>
                                 <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
                                 </ul>
                             </div>
@@ -53,30 +55,6 @@
                 </div>
             </div>
             @endfor
-            <div class="col-md-12" style="width:18rem">
-                <div class="card my-2">
-                    <div class="card-body">
-                        <div class="row justify-content-end">
-                                <img class="responsiveImg col-10" src="https://1000marcas.net/wp-content/uploads/2020/02/logo-Google.png" alt="logo">
-                            <div class="dropdown col-2 d-flex align-items-start" >
-                                <a class=" dropdown-toggle dottoggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="icondrp bi bi-three-dots-vertical"></i>
-                                </a>
-                                <ul class="dropdown-menu dotmenu">
-                                <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-pen"></i>Editar</a></li>
-                                <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h6 class="card-title text-muted row d-flex justify-content-center"> Nombre empresa</h6>
-                            </div>
-                        </div>
-                      <div class="divbtn py-2">
-                        <a href="/contactos" class="btn btn-emp">Ver Contactos</a>
-                      </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div> 
 </div>
