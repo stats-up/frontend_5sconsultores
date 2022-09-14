@@ -26,14 +26,22 @@
     </div>
     <div class="d-flex justify-content-center section">
         <div class="row row-cols-auto group-cards overflow-auto" style="max-width:75rem;max-height:70vh">
-            @for ($i = 0; $i <6; $i++)
+            @foreach ($clientes as $row)
             <div class="col-md-12" style="width:18rem">
                 <div class="card my-2" style="height:15rem">
                     <div class="card-body">
-                        <div class="row" >
-                            <span class="badge badge-success">Activo</span>
+                        <div class="row">
+                            @if ($row["status"] == "activo")
+                                <span class="badge badge-success">Activo</span>
+                            @elseif($row["status"] == "inactivo")
+                                <span class="badge badge-warning">Inactivo</span>
+                            @elseif($row["status"] == "eliminado")
+                                <span class="badge badge-danger">Eliminado</span>
+                            @endif
                             <div class="text-center d-flex align-items-center justify-content-center" style="min-height: 6rem;">
-                                <img class="responsiveImg" src="http://www.5sconsultores.cl/wp-content/uploads/2020/01/komatsu.jpg" alt="Logo"  class="brandlogo">
+                                @if ($row["logo_base64"] != null)    
+                                <img class="responsiveImg" src="{{$row["logo_base64"]}}" alt="Logo"  class="brandlogo">
+                                @endif
                             </div>        
                             <div class="dropdown d-flex align-items-start dropdot" >
                                 <a class=" dropdown-toggle dottoggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -45,7 +53,7 @@
                                 </ul>
                             </div>
                             <div>
-                                <h6 class="card-title text-muted row d-flex justify-content-center"> Nombre empresa</h6>
+                                <h6 class="card-title text-muted row d-flex justify-content-center">{{$row["name"]}}</h6>
                             </div>
                         </div>
                       <div class="divbtn py-2">
@@ -54,7 +62,7 @@
                     </div>
                 </div>
             </div>
-            @endfor
+            @endforeach
         </div>
     </div> 
 </div>
