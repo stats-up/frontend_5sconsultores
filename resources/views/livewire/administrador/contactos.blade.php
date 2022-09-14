@@ -1,4 +1,3 @@
-<livewire:administrador.modal-cliente/>
 <div class="container-fluid" style="height:100vh;background-color:#fdfdfd;">
     <div class="row head">
         <div class="col-md-12 d-flex justify-content-between top">
@@ -18,6 +17,8 @@
             </div>
         </div>
     </div>
+    <livewire:administrador.contacto-modal/>
+    <livewire:administrador.editcontacto-modal/>
         <div class="row p-2">            
               <nav aria-label="breadcrumb" style="padding-left:4rem">
                 <ol class="breadcrumb">
@@ -40,7 +41,7 @@
                                           <i class="icondrp bi bi-three-dots-vertical"></i>
                                       </a>
                                       <ul class="dropdown-menu dotmenu">
-                                          <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-plus"></i>Nuevo contacto</a></li>
+                                          <li><a class="dropdown-item a" href="#"  data-bs-toggle="modal" data-bs-target="#contactModal"><i class="icon fa-solid fa-plus"></i>Nuevo contacto</a></li>
                                           <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-pen"></i>Cambiar nombre</a></li>
                                           <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
                                       </ul>
@@ -55,18 +56,18 @@
                                             </a>
                                             <ul class="dropdown-menu dotmenu">
                                                 <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-plus"></i>Nuevo requerimiento</a></li>
-                                                <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-pen"></i>Cambiar nombre</a></li>
+                                                <li><a class="dropdown-item a" href="#" data-bs-toggle="modal" data-bs-target="#editcontactModal"><i class="icon fa-solid fa-pen"></i>Editar contacto</a></li>
                                                 <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
                                             </ul>
                                         </div>                                 
-                                        <div class="person-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <div class="person-info" data-bs-toggle="modal" data-bs-target="#contactModal">
                                             <h6 class="col-sm-auto card-subtitle text-muted d-flex align-items-end py-2">Nombre del contacto</h6>
                                         </div>
                                     </div>
                                     
                                         @for($k=0;$k<3;$k++)
                                         <div class="row row-reque py-2 d-flex justify-content-between" >
-                                            <div class="d-flex justify-content-start col-auto">
+                                            <div class="d-flex justify-content-start" style="width:100%">
                                                 <div class="dropdown d-flex align-items-center col-1" style="width:fit-content">
                                                     <a class=" dropdown-toggle addReqtoggle px-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                         <i class="icondrp bi bi-three-dots-vertical"></i>
@@ -76,14 +77,10 @@
                                                         <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
                                                     </ul>
                                                 </div> 
-                                                <div class=" py-2 requerimientos" href="/postulantes" >
-                                                    Ingeniero de sistemas Ingeniero de sistemas
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="divbtn col-auto">
-                                                <a href="/postulantes" class="btn btn-emp">Ver Postulantes</a>
-                                            </div>
+                                                <a class="py-2 requerimientos" href="/postulantes" style="width:90%" >
+                                                    Ingeniero en sistemas
+                                                </a>
+                                            </div>           
                                         </div>
                                         @endfor    
                                 </div>

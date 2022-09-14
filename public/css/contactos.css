@@ -1,3 +1,4 @@
+
 .responsiveImg{
   margin-left: 1rem;
   max-width: 12rem;
@@ -67,7 +68,8 @@
 }
 .requerimientos{
   margin-right: 2rem;  
-  color:grey;
+  color:black;
+  text-decoration: none;
 }
 .requerimientos:hover{
   color:black;

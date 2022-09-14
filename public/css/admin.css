@@ -1,5 +1,5 @@
 .badge-success{
-  background-color:#96F2D7 ;
+  background-color:#96F2D7;
   color:#37B24D;
 }
 .card-title{
@@ -12,7 +12,7 @@
 
 .badge{
   width: fit-content;
-  margin-left: 0.5rem;
+  margin-left: 1rem;
   margin-bottom: 0.5rem;
 }
 

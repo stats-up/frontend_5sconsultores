@@ -1,23 +1,23 @@
 <div>
-    <div wire:ignore.self class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"  >
+    <div wire:ignore.self class="modal fade" id="editcontactModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"  >
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Agregar nuevo contacto</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Información del contacto</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="recipient-name" class="col-form-label">Nombre:</label>
-                        <input wire:model="nombre" type="text" class="form-control" id="recipient-name">
+                        
                     </div>
                     <div class="mb-3">
                         <label for="message-text" class="col-form-label">Correo</label>
-                        <input wire:model="email" type="text" class="form-control" id="recipient-name">
+                        
                     </div>
                     <div class="mb-3">
                         <label for="message-text" class="col-form-label">Telefono</label>
-                        <input wire:model="telefono" type="text" class="form-control" id="recipient-name">
+                        
                     </div>
                     <div class="py-3 d-flex justify-content-center">
                         <div class="px-2">Inactivo</div>

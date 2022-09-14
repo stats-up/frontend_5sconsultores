@@ -2,6 +2,7 @@
   'admin' => 'App\\Http\\Livewire\\Admin',
   'administrador.contacto-modal' => 'App\\Http\\Livewire\\Administrador\\ContactoModal',
   'administrador.contactos' => 'App\\Http\\Livewire\\Administrador\\Contactos',
+  'administrador.editcontacto-modal' => 'App\\Http\\Livewire\\Administrador\\EditcontactoModal',
   'administrador.modal-cliente' => 'App\\Http\\Livewire\\Administrador\\ModalCliente',
   'administrador.modal-editcliente' => 'App\\Http\\Livewire\\Administrador\\ModalEditcliente',
   'administrador.postulantes' => 'App\\Http\\Livewire\\Administrador\\Postulantes',
