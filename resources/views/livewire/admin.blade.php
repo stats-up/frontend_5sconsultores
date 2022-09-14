@@ -28,12 +28,12 @@
         <div class="row row-cols-auto group-cards overflow-auto" style="max-width:75rem;max-height:70vh">
             @for ($i = 0; $i <6; $i++)
             <div class="col-md-12" style="width:18rem">
-                <div class="card my-2">
+                <div class="card my-2" style="height:15rem">
                     <div class="card-body">
-                        <div class="row">
+                        <div class="row" >
                             <span class="badge badge-success">Activo</span>
-                            <div class="text-center">
-                                <img class="responsiveImg" src="https://www.tailorbrands.com/wp-content/uploads/2020/07/mcdonalds-logo.jpg" alt="Logo"  class="brandlogo">
+                            <div class="text-center d-flex align-items-center justify-content-center" style="min-height: 6rem;">
+                                <img class="responsiveImg" src="http://www.5sconsultores.cl/wp-content/uploads/2020/01/komatsu.jpg" alt="Logo"  class="brandlogo">
                             </div>        
                             <div class="dropdown d-flex align-items-start dropdot" >
                                 <a class=" dropdown-toggle dottoggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
