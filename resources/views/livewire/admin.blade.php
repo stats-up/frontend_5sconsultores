@@ -18,11 +18,11 @@
         </div>
         <div class="row titulo">Clientes</div>
         <div class="row btn-addempresa" style="max-width:80rem;">
-                <button href="#" class="btn-post" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                <i class="bi bi-plus"></i>Agregar nuevo cliente</button>
+            <button href="#" class="btn-post" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <i class="bi bi-plus"></i>Agregar nuevo cliente</button>
         </div>
         <livewire:administrador.modal-cliente/>
-        <livewire:administrador.modal-editcliente/>
+        @livewire('administrador.modal-editcliente')
     </div>
     <div class="d-flex justify-content-center section">
         <div class="row row-cols-auto group-cards overflow-auto" style="max-width:75rem;max-height:70vh">
@@ -41,6 +41,8 @@
                             <div class="text-center d-flex align-items-center justify-content-center" style="min-height: 6rem;">
                                 @if ($row["logo_base64"] != null)    
                                 <img class="responsiveImg" src="{{$row["logo_base64"]}}" alt="Logo"  class="brandlogo">
+                                @else
+                                <img class="responsiveImg" src="/img/no-imagen.png" alt="Logo"  class="brandlogo">
                                 @endif
                             </div>        
                             <div class="dropdown d-flex align-items-start dropdot" >
@@ -48,8 +50,8 @@
                                     <i class="icondrp bi bi-three-dots-vertical"></i>
                                 </a>
                                 <ul class="dropdown-menu dotmenu">
-                                <li><a class="dropdown-item a" href="#" data-bs-toggle="modal" data-bs-target="#editModal"><i class="icon fa-solid fa-pen"></i>Editar</a></li>
-                                <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
+                                <li><a wire:click="selectClient({{$row["id"]}})" class="dropdown-item a" href="#" data-bs-toggle="modal" data-bs-target="#editModal"><i class="icon fa-solid fa-pen"></i>Editar</a></li>
+                                <li><a class="dropdown-item a deleteClient" data="{{$row["id"]}}" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
                                 </ul>
                             </div>
                             <div>
@@ -64,5 +66,29 @@
             </div>
             @endforeach
         </div>
-    </div> 
+    </div>
+    <script>
+        $(".deleteClient").click(function(){
+            let idCustomer = $(this).attr('data');
+            Swal.fire({
+                title: 'Quieres eliminar este cliente?',
+                text: "No se podrá revertir esta acción",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#959595',
+                confirmButtonText: 'Eliminar',
+                cancelButtonText: 'Cancelar'
+                }).then((result) => {
+                if (result.isConfirmed) {
+                    Livewire.emit('eliminarCliente',idCustomer);
+                    Swal.fire(
+                    'Eliminado!',
+                    'El cliente ha sido eliminado',
+                    'success'
+                    )
+                }
+            })
+        })
+    </script>
 </div>
