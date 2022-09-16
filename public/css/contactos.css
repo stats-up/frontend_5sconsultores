@@ -1,3 +1,28 @@
+.person-info{
+  display:flex;
+  flex-direction: row;
+
+}
+.badge-danger{
+  background-color: #FFC9C9;  
+  color:#FF6B6B;
+  height: fit-content;
+}
+.badge-warning{
+  background-color: #DEE2E6;
+  color: #868E96;
+}
+.badge-success{
+background-color:#96F2D7;
+color:#37B24D;
+height: fit-content;
+}
+
+.status{
+  display: flex;
+  align-items: center;
+  padding-right: 1rem;
+}
 
 .responsiveImg{
   margin-left: 1rem;
@@ -43,7 +68,7 @@
 .person-info:hover{
   background-color: #f2f2f2;
   cursor: pointer;
-  border-radius: 0.5rem;
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
 }
 
 .person-info{
@@ -89,12 +114,9 @@
   padding-right: 10px;
 }
 
-.row-contact:hover{
-  background-color: #f2f2f2;
- }
+
 .row-contact{
   border-bottom: 1px solid rgba(128, 128, 128, 0.329);
-  width:95%
 }
 .row-reque{
   margin-left:2rem;
@@ -106,16 +128,14 @@
   flex-direction: row;
 }
 
+
 .addContacttoggle::after {
   content: none; 
   align-items: end;
 }
-
-.addContacttoggle::after{
-  content: none; 
-  align-items: end;
+.addContacttoggle:hover{
+  background-color: #f2f2f2;
 }
-
 .dottoggle::after{
   content: none; 
   align-items: end;
@@ -134,6 +154,11 @@
 
 .row-contact:hover .addContacttoggle{
   visibility: visible;
+}
+
+.row-contact:hover .dropdot{
+  background-color: #f2f2f2;
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
 }
 
 .btn-post{
@@ -175,6 +200,6 @@
   min-height: 2rem;
 }
 
-.row-contact:hover .card-subtitle{
-  color: #e0ae43de;
+.card-subtitle{
+  width:51rem;
 }

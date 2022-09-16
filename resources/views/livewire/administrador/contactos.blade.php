@@ -30,7 +30,7 @@
               </nav>
         </div>
         <div class="row titulo">Contactos</div>
-        <div class="row btn-addempresa" style="max-width:80rem;margin-left:10rem">
+        <div class="row btn-addempresa" style="max-width:80rem;margin-left:10rem;margin-bottom:1rem">
             <button href="#" class="btn-post" data-bs-toggle="modal" data-bs-target="#addAreaModal">
             <i class="bi bi-plus"></i>Agregar nueva área</button>
     </div>
@@ -56,7 +56,7 @@
                               @for($j=0;$j<2;$j++)
                                 <div class="row person">
                                     <div class="row row-contact">
-                                        <div class="dropdown d-flex align-items-center col-1" style="width:fit-content">
+                                        <div class="dropdown dropdot d-flex align-items-center col-1" style="width:fit-content">
                                             <a class=" dropdown-toggle addContacttoggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                 <i class="icondrp bi bi-three-dots-vertical"></i>
                                             </a>
@@ -67,7 +67,10 @@
                                             </ul>
                                         </div>                                 
                                         <div class="person-info" data-bs-toggle="modal" data-bs-target="#contactModal">
-                                            <h6 class="col-sm-auto card-subtitle text-muted d-flex align-items-end py-2">Nombre del contacto</h6>
+                                            <div class="card-subtitle text-muted d-flex align-items-end py-2">Nombre del contacto</div>
+                                            <div class="status">
+                                                <span class="badge badge-success">Activo</span>
+                                            </div>
                                         </div>
                                     </div>
                                     

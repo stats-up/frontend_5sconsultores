@@ -1,3 +1,11 @@
+.badge-danger{
+    background-color: #FFC9C9;  
+    color:#FF6B6B;
+}
+.badge-warning{
+    background-color: #DEE2E6;
+    color: #868E96;
+}
 .badge-success{
   background-color:#96F2D7;
   color:#37B24D;
