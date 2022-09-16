@@ -22,4 +22,22 @@
 </head>
 <body>
     {{$slot}}
+    <script>
+        window.addEventListener('swalLoading', event =>{
+            Swal.fire({
+                title: 'Cargando...',
+                text: 'Espere un momento',
+                showConfirmButton: false,
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                allowEnterKey: false,
+                onBeforeOpen: () => {
+                    Swal.showLoading()
+                }
+            });
+        });
+        window.addEventListener('swalClose', event =>{
+            Swal.close();
+        });
+    </script>
 </body>    

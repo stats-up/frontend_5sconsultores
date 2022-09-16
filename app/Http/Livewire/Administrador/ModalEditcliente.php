@@ -38,6 +38,7 @@ class ModalEditcliente extends Component
         $this->nombre = $this->cliente_actual["name"];
         $this->old_logo = $this->cliente_actual["logo_base64"];
         $this->estado = $this->cliente_actual["status"] == "activo" ? true : false;
+        $this->dispatchBrowserEvent('swalClose');
     }
 
     public function editarCliente(){

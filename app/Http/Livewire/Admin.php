@@ -32,6 +32,7 @@ class Admin extends Component
     }
 
     public function selectClient($id_cliente){
+        $this->dispatchBrowserEvent('swalLoading');
         $this->emit('modalEditCliente', $id_cliente);
     }
 
