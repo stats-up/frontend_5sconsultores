@@ -1,5 +1,6 @@
 <?php return array (
   'admin' => 'App\\Http\\Livewire\\Admin',
+  'administrador.addarea-modal' => 'App\\Http\\Livewire\\Administrador\\AddareaModal',
   'administrador.contacto-modal' => 'App\\Http\\Livewire\\Administrador\\ContactoModal',
   'administrador.contactos' => 'App\\Http\\Livewire\\Administrador\\Contactos',
   'administrador.editcontacto-modal' => 'App\\Http\\Livewire\\Administrador\\EditcontactoModal',

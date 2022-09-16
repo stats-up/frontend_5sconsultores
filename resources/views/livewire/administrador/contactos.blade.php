@@ -19,6 +19,8 @@
     </div>
     <livewire:administrador.contacto-modal/>
     <livewire:administrador.editcontacto-modal/>
+    <livewire:administrador.addarea-modal/>
+    <livewire:administrador.requer-modal/>
         <div class="row p-2">            
               <nav aria-label="breadcrumb" style="padding-left:4rem">
                 <ol class="breadcrumb">
@@ -28,6 +30,10 @@
               </nav>
         </div>
         <div class="row titulo">Contactos</div>
+        <div class="row btn-addempresa" style="max-width:80rem;margin-left:10rem">
+            <button href="#" class="btn-post" data-bs-toggle="modal" data-bs-target="#addAreaModal">
+            <i class="bi bi-plus"></i>Agregar nueva área</button>
+    </div>
         <div class="row overflow-auto" style="display:flex;justify-content:center;padding-top:1rem;max-height:70vh">
             <div class="col-12 body-contactos " style="width:65rem">
                 @for ($i = 0; $i < 7; $i++)
@@ -47,7 +53,7 @@
                                       </ul>
                                     </div>
                                 </div>
-                              @for($j=0;$j<4;$j++)
+                              @for($j=0;$j<2;$j++)
                                 <div class="row person">
                                     <div class="row row-contact">
                                         <div class="dropdown d-flex align-items-center col-1" style="width:fit-content">
@@ -55,7 +61,7 @@
                                                 <i class="icondrp bi bi-three-dots-vertical"></i>
                                             </a>
                                             <ul class="dropdown-menu dotmenu">
-                                                <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-plus"></i>Nuevo requerimiento</a></li>
+                                                <li><a class="dropdown-item a" href="#" data-bs-toggle="modal" data-bs-target="#addreqModal"><i class="icon fa-solid fa-plus"></i>Nuevo requerimiento</a></li>
                                                 <li><a class="dropdown-item a" href="#" data-bs-toggle="modal" data-bs-target="#editcontactModal"><i class="icon fa-solid fa-pen"></i>Editar contacto</a></li>
                                                 <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
                                             </ul>
@@ -65,7 +71,7 @@
                                         </div>
                                     </div>
                                     
-                                        @for($k=0;$k<3;$k++)
+                                        @for($k=0;$k<1;$k++)
                                         <div class="row row-reque py-2 d-flex justify-content-between" >
                                             <div class="d-flex justify-content-start" style="width:100%">
                                                 <div class="dropdown d-flex align-items-center col-1" style="width:fit-content">

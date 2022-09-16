@@ -136,6 +136,21 @@
   visibility: visible;
 }
 
+.btn-post{
+  width: 15rem;
+  border:transparent;
+  border-radius: 0.5rem;
+  background-color:#e0ae43de;
+  border:1px solid #e0ae43de;
+  color:white;
+  min-height: 2rem;
+  padding: auto;
+}
+
+.btn-post:hover{
+  background-color: #d39b23;
+}
+
 
 .dotmenu{
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
