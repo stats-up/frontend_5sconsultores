@@ -161,6 +161,11 @@ height: fit-content;
   border-radius: 0.5rem 0rem 0rem 0.5rem;
 }
 
+.row-contact:hover .person-info{
+  background-color: #f2f2f2;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
 .btn-post{
   width: 15rem;
   border:transparent;

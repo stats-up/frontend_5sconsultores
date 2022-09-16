@@ -66,7 +66,7 @@
                                                 <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
                                             </ul>
                                         </div>                                 
-                                        <div class="person-info" data-bs-toggle="modal" data-bs-target="#contactModal">
+                                        <div class="person-info">
                                             <div class="card-subtitle text-muted d-flex align-items-end py-2">Nombre del contacto</div>
                                             <div class="status">
                                                 <span class="badge badge-success">Activo</span>
