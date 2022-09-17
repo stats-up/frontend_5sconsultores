@@ -17,10 +17,11 @@
             </div>
         </div>
     </div>
-    <livewire:administrador.contacto-modal/>
+    <livewire:administrador.addcontacto-modal/>
     <livewire:administrador.editcontacto-modal/>
     <livewire:administrador.addarea-modal/>
     <livewire:administrador.requer-modal/>
+    <livewire:administrador.vercontacto-modal/>
         <div class="row p-2">            
               <nav aria-label="breadcrumb" style="padding-left:4rem">
                 <ol class="breadcrumb">
@@ -47,7 +48,7 @@
                                           <i class="icondrp bi bi-three-dots-vertical"></i>
                                       </a>
                                       <ul class="dropdown-menu dotmenu">
-                                          <li><a class="dropdown-item a" href="#"  data-bs-toggle="modal" data-bs-target="#contactModal"><i class="icon fa-solid fa-plus"></i>Nuevo contacto</a></li>
+                                          <li><a class="dropdown-item a" href="#"  data-bs-toggle="modal" data-bs-target="#addcontactModal"><i class="icon fa-solid fa-plus"></i>Nuevo contacto</a></li>
                                           <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-pen"></i>Cambiar nombre</a></li>
                                           <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
                                       </ul>
@@ -66,7 +67,7 @@
                                                 <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
                                             </ul>
                                         </div>                                 
-                                        <div class="person-info">
+                                        <div class="person-info"  data-bs-toggle="modal" data-bs-target="#vercontactModal">
                                             <div class="card-subtitle text-muted d-flex align-items-end py-2">Nombre del contacto</div>
                                             <div class="status">
                                                 <span class="badge badge-success">Activo</span>

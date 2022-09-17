@@ -14,13 +14,16 @@
                     <label for="message-text" class="col-form-label">Logo:</label>
                     <input wire:model="logo" type="file" accept="image/*" class="form-control">
                 </div>
-                @if ($logo)
-                    <img class="rounded mx-auto d-block" src="{{ $logo->temporaryUrl() }}" style="height: 100px;">
-                @elseif($old_logo != "")
-                    <img class="rounded mx-auto d-block" src="{{$old_logo}}" style="height: 100px;">
-                @else
+                <div class="py-4">
+                    @if ($logo)
+                        <img class="rounded mx-auto d-block" src="{{ $logo->temporaryUrl() }}" style="height: 100px;">
+                    @elseif($old_logo != "")
+                        <img class="rounded mx-auto d-block" src="{{$old_logo}}" style="height: 100px;">
+                    @else
 
-                @endif
+                    @endif
+                </div>
+                
                 <div class="py-3 d-flex justify-content-center">
                     <div class="px-2">Inactivo</div>
                     <div class=" form-check form-switch d-flex justify-content-center">
