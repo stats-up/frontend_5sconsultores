@@ -80,6 +80,13 @@
   max-height: 6rem;
 }
 
+.responsivelogo{
+  margin-left: 1rem;
+  max-width: 9rem;
+  height: auto;
+}
+
+
 .titulo{
   align-items:end;
   font-size: 2rem;

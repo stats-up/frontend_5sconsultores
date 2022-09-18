@@ -7,19 +7,19 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="mb-3">
+                    <div class="mb-2 d-flex col">
                         <label for="recipient-name" class="col-form-label">Nombre:</label>
-                        <div>Client</div>
+                        <div class="d-flex align-items-center px-2">Client</div>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-2 d-flex col">
                         <label for="message-text" class="col-form-label">Correo:</label>
-                        <div>client@client.cl</div>
+                        <div class="d-flex align-items-center px-2">client@client.cl</div>
                     </div>
-                    <div class="mb-3">
+                    <div class="d-flex col">
                         <label for="message-text" class="col-form-label">Telefono:</label>
-                        <div>+569 1234 5678</div>
+                        <div class="d-flex align-items-center px-2">+569 1234 5678</div>
                     </div>
-                    <div class="mb-3 d-flex col" >
+                    <div class="mt-3 d-flex col" >
                         <div>Estado:</div>
                         <div class="status px-2">
                             <span class="badge badge-success">Activo</span>

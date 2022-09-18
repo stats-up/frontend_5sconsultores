@@ -8,6 +8,7 @@ use App\Http\Livewire\Perfiles;
 use App\Http\Controllers\GlobalController;
 use App\Http\Livewire\Administrador\Contactos;
 use App\Http\Livewire\Administrador\Postulantes;
+use App\Http\Livewire\Administrador\Cuentas;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,5 @@ Route::get('/perfiles', Perfiles::class);
 Route::get('/contactos', Contactos::class);
 
 Route::get('/postulantes', Postulantes::class);
+
+Route::get('/cuentas', Cuentas::class);

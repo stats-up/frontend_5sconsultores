@@ -4,11 +4,10 @@ namespace App\Http\Livewire\Administrador;
 
 use Livewire\Component;
 
-class Contactos extends Component
-{   
-
+class Cuentas extends Component
+{
     public function render()
     {
-        return view('livewire.administrador.contactos');
+        return view('livewire.administrador.cuentas');
     }
 }
