@@ -34,22 +34,35 @@
               </nav>
         </div>
         <div class="row titulo">Contactos</div>
-        <div class="row btn-addempresa d-flex col justify-content-between" style="max-width:80rem;margin-left:10rem;margin-bottom:1rem;margin-right:10rem">
+        <div class="row btn-addempresa d-flex col justify-content-between" style="max-width:80rem;margin-left:8rem;margin-bottom:1rem;margin-right:8rem">
             <button href="#" class="btn-post" data-bs-toggle="modal" data-bs-target="#addAreaModal">
             <i class="bi bi-plus"></i>Agregar nueva área</button>
-            <div class="row px-4 searchrow" style="width:fit-content;" >
-                <div class="form-inline d-flex flex-row search">
-                    <i class="bi bi-search d-flex align-items-center"></i>
-                    <input onkeyup="myFunction()" id="Search" class="form-control" type="search" placeholder="Buscar" aria-label="Search" style="border:0;box-shadow:none;background-color:#fdfdfd;" >
+            <div style="width:fit-content;display:flex" >
+                <div class="row px-4 searchrow" style="width:fit-content;" >
+                    <div class="form-inline d-flex flex-row search">
+                        <i class="bi bi-search d-flex align-items-center"></i>
+                        <input onkeyup="search()" id="Search" class="form-control" type="search" placeholder="Buscar" aria-label="Search" style="border:0;box-shadow:none;background-color:#fdfdfd;" >
+                    </div>
                 </div>
+                <button class="filter" style="width:fit-content">
+                    <div class="dropdown" >
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration:none;color:black">
+                            <i class="bi bi-filter">Filtrar</i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" href="#" onclick="filter('Activo')">Activo</a></li>
+                            <li><a class="dropdown-item" href="#" onclick="filter('Inactivo')">Inactivo</a></li>
+                        </ul>
+                    </div>
+                </button>                
             </div>
         </div>
         <div class="row overflow-auto" style="display:flex;justify-content:center;padding-top:1rem;max-height:70vh">
             <div class="col-12 body-contactos " style="width:65rem">
                 @for ($i = 0; $i < 7; $i++)
                     <div class="col-md-12 py-2  target">
-                        <div class="card" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;border:transparent">
-                            <div class="card-body">
+                        <div class="card" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;border:transparent" >
+                            <div class="card-body" id="square">
                                 <div class="row headArea px-2 d-flex justify-content-between" >
                                     <h5 class="card-title py-2" style="width:fit-content">Area TI</h5>
                                     <div class="dropdown d-flex align-items-center" style="width:fit-content">
@@ -63,7 +76,7 @@
                                       </ul>
                                     </div>
                                 </div>
-                              @for($j=0;$j<2;$j++)
+                              @for($j=0;$j<3;$j++)
                                 <div class="row person">
                                     <div class="row row-contact">
                                         <div class="dropdown dropdot d-flex align-items-center" style="width:fit-content">
@@ -78,40 +91,100 @@
                                         </div>                                 
                                         <div class="person-info"  data-bs-toggle="modal" data-bs-target="#vercontactModal">
                                             <div class="card-subtitle text-muted d-flex align-items-end py-2">Nombre del contacto</div>
-                                            <div class="status">
+                                            <div class="status" id="status">
                                                 <span class="badge badge-success">Activo</span>
                                             </div>
                                         </div>
                                     </div>
-                                    
-                                        @for($k=0;$k<1;$k++)
-                                        <div class="row row-reque py-2 d-flex justify-content-between" >
-                                            <div class="d-flex justify-content-start" style="width:100%">
-                                                <div class="dropdown d-flex align-items-center col-1" style="width:fit-content">
-                                                    <a class=" dropdown-toggle addReqtoggle px-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="icondrp bi bi-three-dots-vertical"></i>
-                                                    </a>
-                                                    <ul class="dropdown-menu dotmenu">
-                                                        <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-pen"></i>Cambiar nombre</a></li>
-                                                        <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
-                                                    </ul>
-                                                </div> 
-                                                <a class="py-2 requerimientos" href="/postulantes" style="width:90%" >
-                                                    Ingeniero en sistemas
+                                
+                                    @for($k=0;$k<1;$k++)
+                                    <div class="row row-reque py-2 d-flex justify-content-between" >
+                                        <div class="d-flex justify-content-start" style="width:100%">
+                                            <div class="dropdown d-flex align-items-center col-1" style="width:fit-content">
+                                                <a class=" dropdown-toggle addReqtoggle px-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="icondrp bi bi-three-dots-vertical"></i>
                                                 </a>
-                                            </div>           
-                                        </div>
-                                        @endfor    
+                                                <ul class="dropdown-menu dotmenu">
+                                                    <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-pen"></i>Cambiar nombre</a></li>
+                                                    <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
+                                                </ul>
+                                            </div> 
+                                            <a class="py-2 requerimientos" href="/postulantes" style="width:90%" >
+                                                Ingeniero en sistemas
+                                            </a>
+                                        </div>           
+                                    </div>
+                                    @endfor    
                                 </div>
                               @endfor
                             </div>
-                          </div>
+                        </div>
                     </div>
                 @endfor
+                <div class="col-md-12 py-2  target">
+                    <div class="card" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;border:transparent" >
+                        <div class="card-body" id="square">
+                            <div class="row headArea px-2 d-flex justify-content-between" >
+                                <h5 class="card-title py-2" style="width:fit-content">Area TI</h5>
+                                <div class="dropdown d-flex align-items-center" style="width:fit-content">
+                                  <a class=" dropdown-toggle dottoggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      <i class="icondrp bi bi-three-dots-vertical"></i>
+                                  </a>
+                                  <ul class="dropdown-menu dotmenu">
+                                      <li><a class="dropdown-item a" href="#"  data-bs-toggle="modal" data-bs-target="#addcontactModal"><i class="icon fa-solid fa-plus"></i>Nuevo contacto</a></li>
+                                      <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-pen"></i>Cambiar nombre</a></li>
+                                      <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
+                                  </ul>
+                                </div>
+                            </div>
+                          @for($j=0;$j<4;$j++)
+                            <div class="row person">
+                                <div class="row row-contact">
+                                    <div class="dropdown dropdot d-flex align-items-center" style="width:fit-content">
+                                        <a class=" dropdown-toggle addContacttoggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="icondrp bi bi-three-dots-vertical"></i>
+                                        </a>
+                                        <ul class="dropdown-menu dotmenu">
+                                            <li><a class="dropdown-item a" href="#" data-bs-toggle="modal" data-bs-target="#addreqModal"><i class="icon fa-solid fa-plus"></i>Nuevo requerimiento</a></li>
+                                            <li><a class="dropdown-item a" href="#" data-bs-toggle="modal" data-bs-target="#editcontactModal"><i class="icon fa-solid fa-pen"></i>Editar contacto</a></li>
+                                            <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
+                                        </ul>
+                                    </div>                                 
+                                    <div class="person-info"  data-bs-toggle="modal" data-bs-target="#vercontactModal">
+                                        <div class="card-subtitle text-muted d-flex align-items-end py-2">Nombre del contacto</div>
+                                        <div class="status" id="status">
+                                            <span class="badge badge-success">Activo</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                                @for($k=0;$k<1;$k++)
+                                <div class="row row-reque py-2 d-flex justify-content-between" >
+                                    <div class="d-flex justify-content-start" style="width:100%">
+                                        <div class="dropdown d-flex align-items-center col-1" style="width:fit-content">
+                                            <a class=" dropdown-toggle addReqtoggle px-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="icondrp bi bi-three-dots-vertical"></i>
+                                            </a>
+                                            <ul class="dropdown-menu dotmenu">
+                                                <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-pen"></i>Cambiar nombre</a></li>
+                                                <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
+                                            </ul>
+                                        </div> 
+                                        <a class="py-2 requerimientos" href="/postulantes" style="width:90%" >
+                                            Ingeniero en sistemas
+                                        </a>
+                                    </div>           
+                                </div>
+                                @endfor    
+                            </div>
+                          @endfor
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <script>
-            function myFunction() {
+            function search() {
                 var input = document.getElementById("Search");
                 var filter = input.value.toLowerCase();
                 var nodes = document.getElementsByClassName('target');
@@ -122,6 +195,17 @@
                     } else {
                     nodes[i].style.display = "none";
                     }
+                }
+            }
+
+            function filter(name){
+                var nodes = document.getElementsByClassName('person');
+                for (i = 0; i < nodes.length; i++) {
+                    if (nodes[i].innerText.includes(name)) {
+                        nodes[i].style.display = "flex";
+                    } else {
+                        nodes[i].style.display = "none";
+                    }                    
                 }
             }
         </script>
