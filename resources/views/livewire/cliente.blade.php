@@ -20,19 +20,19 @@
     <div class="row  d-flex justify-content-center">
         <div class="col-md-12 d-flex justify-content-center titulo">Requerimientos</div>
         <div class="row px-4 searchrow" style="max-width:65rem;" >
-            <form method="POST" class="form-inline d-flex flex-row search">
+            <div class="form-inline d-flex flex-row search">
                 <i class="bi bi-search d-flex align-items-center"></i>
-                <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" style="border:0;box-shadow:none;background-color:#fdfdfd;">
-            </form>
+                <input onkeyup="myFunction()" id="Search" class="form-control" type="search" placeholder="Buscar" aria-label="Search" style="border:0;box-shadow:none;background-color:#fdfdfd;" >
+            </div>
         </div>
     </div>
     <div class="row overflow-auto list" style="max-height:70vh;justify-content:center;">
         <div class="col" style="max-width:65rem;">
             @for ($i = 0; $i < 13; $i++)
-            <div class="card row justify-content-center">
+            <div class="card row justify-content-center target">
                 <div class="card-body row mx-0">
                     <div class="col-lg-9" style="height:fit-content">
-                        <div class="cargo">Ingeniero Senior de Metalurgia</div>
+                        <div class="cargo" >Ingeniero Senior de Metalurgia</div>
                         <div class="descripcion py-2">
                             <div> Profesión: Ingeniero Civil/ Ejecución Quimica/ Metalurgico</div>
                             <div> Experiencia: Al menos 8 años de en procesos de plantas</div>
@@ -55,4 +55,19 @@
             @endfor
         </div>
     </div>
+    <script>
+        function myFunction() {
+            var input = document.getElementById("Search");
+            var filter = input.value.toLowerCase();
+            var nodes = document.getElementsByClassName('target');
+
+            for (i = 0; i < nodes.length; i++) {
+                if (nodes[i].innerText.toLowerCase().includes(filter)) {
+                nodes[i].style.display = "block";
+                } else {
+                nodes[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </div>
