@@ -172,6 +172,11 @@ height: fit-content;
   height: auto;
 }
 
+.search{
+  border-bottom: 1px solid grey;
+  width: 13rem;
+}
+
 .btn-post{
   width: 15rem;
   border:transparent;

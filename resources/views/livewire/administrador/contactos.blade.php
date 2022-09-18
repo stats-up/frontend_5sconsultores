@@ -34,14 +34,20 @@
               </nav>
         </div>
         <div class="row titulo">Contactos</div>
-        <div class="row btn-addempresa" style="max-width:80rem;margin-left:10rem;margin-bottom:1rem">
+        <div class="row btn-addempresa d-flex col justify-content-between" style="max-width:80rem;margin-left:10rem;margin-bottom:1rem;margin-right:10rem">
             <button href="#" class="btn-post" data-bs-toggle="modal" data-bs-target="#addAreaModal">
             <i class="bi bi-plus"></i>Agregar nueva área</button>
-    </div>
+            <div class="row px-4 searchrow" style="width:fit-content;" >
+                <div class="form-inline d-flex flex-row search">
+                    <i class="bi bi-search d-flex align-items-center"></i>
+                    <input onkeyup="myFunction()" id="Search" class="form-control" type="search" placeholder="Buscar" aria-label="Search" style="border:0;box-shadow:none;background-color:#fdfdfd;" >
+                </div>
+            </div>
+        </div>
         <div class="row overflow-auto" style="display:flex;justify-content:center;padding-top:1rem;max-height:70vh">
             <div class="col-12 body-contactos " style="width:65rem">
                 @for ($i = 0; $i < 7; $i++)
-                    <div class="col-md-12 py-2">
+                    <div class="col-md-12 py-2  target">
                         <div class="card" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;border:transparent">
                             <div class="card-body">
                                 <div class="row headArea px-2 d-flex justify-content-between" >
@@ -104,4 +110,19 @@
                 @endfor
             </div>
         </div>
+        <script>
+            function myFunction() {
+                var input = document.getElementById("Search");
+                var filter = input.value.toLowerCase();
+                var nodes = document.getElementsByClassName('target');
+    
+                for (i = 0; i < nodes.length; i++) {
+                    if (nodes[i].innerText.toLowerCase().includes(filter)) {
+                    nodes[i].style.display = "block";
+                    } else {
+                    nodes[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
 </div>
