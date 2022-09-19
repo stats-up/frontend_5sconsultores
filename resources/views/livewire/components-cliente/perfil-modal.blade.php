@@ -9,10 +9,10 @@
                 <div class="modal-body row" style="d-flex col">
                     <div class="col-xl-6">
                         <div class="mb-2">
-                            <div class="d-flex align-items-center px-2 namecli">Cliente Cliente Cliente Cliente</div>
+                            <div class="d-flex align-items-center px-2 namecli">Nombre Completo Nombre Completo</div>
                         </div>
                         <div class="mb-2 ">
-                            <label for="message-text" class=" fw-bold rut">Rut:</label>
+                            <label for="message-text" class=" fw-bold">Rut:</label>
                             <div class="d-flex align-items-center px-2">19.876.543-2</div>
                         </div>
                         <div class="mb-2 ">
