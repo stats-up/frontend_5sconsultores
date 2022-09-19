@@ -19,10 +19,10 @@
     </div>
     <div class="row p-2">            
         <nav aria-label="breadcrumb" style="padding-left:4rem">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/cliente" style="color:#c99616">Requerimientos</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Perfiles</li>
-        </ol>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/cliente" style="color:#c99616">Requerimientos</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Perfiles</li>
+            </ol>
         </nav>
     </div>
     <livewire:components-cliente.perfil-modal/>
@@ -39,7 +39,7 @@
                             <div class=" py-4">
                                 <h5 class="card-title">Nombre Completo</h5>
                                 <p class="card-text">Descripción del perfil Descripción del perfilDescripción del perfil Descripción del perfilDescripción del perfil Descripción del perfilDescripción del perfil Descripción del perfilDescripción del perfil Descripción del perfil Descripción del perfil Descripción del perfil Descripción del perfil Descripción del perfil</p>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#verperfilModal" class="btn btn-primary">Ver perfil</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#verperfilModal" class="btn btn-post">Ver perfil</a>
                             </div>
                             
                         </div>

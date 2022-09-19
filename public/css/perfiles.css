@@ -48,11 +48,42 @@
   max-height: 15rem;
 
 }
-
 .card-text{
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
+}
+.btn-post{
+  border:transparent;
+  border-radius: 0.5rem;
+  background-color:#e0ae43de;
+  border:1px solid #e0ae43de;
+  color:white;
+  min-height: 2rem;
+  padding: auto;
+}
 
+.btn-post:hover{
+  background-color: white;
+  border-radius: 0.5rem;
+  border:1px solid #e0ae43de;
+  min-height: 2rem;
+  color:#e0ae43de;
+}
+
+.btn-emp{
+  background-color: white;
+  border-radius: 0.5rem;
+  border:1px solid #e0ae43de;
+  min-height: 2rem;
+  color:#e0ae43de;
+}
+
+.btn-emp:hover{
+  background-color: #f3b52fde;
+  border-radius: 0.5rem;
+  border:1px solid white;
+  color:white;
+  min-height: 2rem;
 }
