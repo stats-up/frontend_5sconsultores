@@ -11,7 +11,7 @@
   'administrador.requer-modal' => 'App\\Http\\Livewire\\Administrador\\RequerModal',
   'administrador.vercontacto-modal' => 'App\\Http\\Livewire\\Administrador\\VercontactoModal',
   'cliente' => 'App\\Http\\Livewire\\Cliente',
-  'components-cliente.navbar' => 'App\\Http\\Livewire\\ComponentsCliente\\Navbar',
+  'components-cliente.perfil-modal' => 'App\\Http\\Livewire\\ComponentsCliente\\PerfilModal',
+  'components-cliente.perfiles' => 'App\\Http\\Livewire\\ComponentsCliente\\Perfiles',
   'login' => 'App\\Http\\Livewire\\Login',
-  'perfiles' => 'App\\Http\\Livewire\\Perfiles',
 );

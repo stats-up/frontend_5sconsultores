@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Login;
 use App\Http\Livewire\Admin;
 use App\Http\Livewire\Cliente;
-use App\Http\Livewire\Perfiles;
+use App\Http\Livewire\ComponentsCliente\Perfiles;
 use App\Http\Controllers\GlobalController;
 use App\Http\Livewire\Administrador\Contactos;
 use App\Http\Livewire\Administrador\Postulantes;

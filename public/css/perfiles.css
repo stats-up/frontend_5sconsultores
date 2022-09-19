@@ -1,0 +1,58 @@
+
+.responsivelogo{
+  margin-left: 1rem;
+  max-width: 9rem;
+  height: auto;
+}
+.top{
+  border-bottom: 1px solid rgba(128, 128, 128, 0.329);
+}
+.head{
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 1rem;
+}
+.nombrecliente{
+  font-size: 1rem;
+  margin:1rem;
+  display:flex;
+  align-items: center;
+}
+.sesiontoggle{
+  display: flex;
+  align-items: center;
+  text-decoration: none; 
+}
+
+.sessionmenu{
+  border: transparent;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 0.5rem;
+}
+.head{
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 1rem;
+}
+
+.titulo{
+  font-size: 1.5rem;
+  color: grey;
+  padding: 1rem;
+  padding-top: 1rem;
+}
+.responsiveImg{
+  width: auto;
+  height: auto;
+  max-width: 18rem;
+  max-height: 15rem;
+
+}
+
+.card-text{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+
+}

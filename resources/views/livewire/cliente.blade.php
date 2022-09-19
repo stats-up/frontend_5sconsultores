@@ -4,7 +4,7 @@
             <img class="responsiveImg" src="http://5sconsultores.cl/portal/wp-content/uploads/2019/11/Logo_5s_web.jpg" alt="Logo"  class="brandlogo">
             <div class="dropdown nombrecliente">
                 <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black">      
-                    <div class="name" style="padding-right:0.5rem">Nombre empresa cliente</div>
+                    <div class="name" style="padding-right:0.5rem">{{Session::get('user')["email"]}}</div>
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown"  style="margin-top:4rem" >
                     <li>

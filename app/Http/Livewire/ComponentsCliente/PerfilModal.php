@@ -4,10 +4,10 @@ namespace App\Http\Livewire\ComponentsCliente;
 
 use Livewire\Component;
 
-class Navbar extends Component
+class PerfilModal extends Component
 {
     public function render()
     {
-        return view('livewire.components-cliente.navbar');
+        return view('livewire.components-cliente.perfil-modal');
     }
 }
