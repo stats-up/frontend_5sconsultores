@@ -8,38 +8,43 @@
                 </div>
                 <div class="modal-body row" style="d-flex col">
                     <div class="col-xl-6">
-                        <div class="mb-2 d-flex col">
-                            <label for="recipient-name" class="col-form-label">Nombre:</label>
-                            <div class="d-flex align-items-center px-2">Client</div>
+                        <div class="mb-2">
+                            <div class="d-flex align-items-center px-2 namecli">Cliente Cliente Cliente Cliente</div>
                         </div>
-                        <div class="mb-2 d-flex col">
-                            <label for="message-text" class="col-form-label">Rut:</label>
+                        <div class="mb-2 ">
+                            <label for="message-text" class=" fw-bold rut">Rut:</label>
                             <div class="d-flex align-items-center px-2">19.876.543-2</div>
                         </div>
-                        <div class="mb-2 d-flex col">
-                            <label for="message-text" class="col-form-label">Sexo:</label>
-                            <div class="d-flex align-items-center px-2">Masculino</div>
+                        <div class="mb-2 ">
+                            <label for="message-text" class=" fw-bold"></i> Sexo:</label>
+                            <div class="d-flex align-items-center px-2">Femenino</div>
                         </div>
-                        <div class="mb-2 d-flex col">
-                            <label for="message-text" class="col-form-label">Ciudad de residencia:</label>
+                        <div class="mb-2 ">
+                            <label for="message-text" class=" fw-bold">Ciudad de residencia:</label>
                             <div class="d-flex align-items-center px-2">Santiago</div>
                         </div>
-                        <div class="mb-2 d-flex col">
-                            <label for="message-text" class="col-form-label">Dirección:</label>
+                        <div class="mb-2 ">
+                            <label for="message-text" class=" fw-bold"></i>Dirección:</label>
                             <div class="d-flex align-items-center px-2"> Calle Leonardo da Vinci, 7, 41092.</div>
                         </div>
-                        <div class="d-flex col">
-                            <label for="message-text" class="col-auto">Descripción del perfil:</label>
-                            <div class="d-flex align-items-center px-2">Descripción del perfilDescripción del perfilDescripción del perfilDescripción del perfil</div>
+                        <div class="mb-2">
+                            <label for="message-text" class="col-auto fw-bold">Descripción del perfil:</label>
+                            <div class="d-flex align-items-center px-2" style="text-align: justify;text-justify: inter-word;">El Ingeniero en Minas posee conocimientos en las áreas de exploración y explotación, supervisión de
+                                procesos asociadas al desarrollo de cada etapa involucrada en el ciclo minero, como también en la
+                                planificación, administración y gestión de proyectos mineros. Su formación en materias relativas a
+                                Ciencias de la Tierra como base para la operación minero metalúrgica en faenas ya sea subterránea o
+                                de cielo abierto complementan el desarrollo de habilidades y destrezas para el quehacer profesional
+                                que lo capacitan para gestión proyectos mineros en las etapas de prospección, arranque, carguío,
+                                transporte y procesamiento de minerales.</div>
                         </div>
                     </div>
                     <div class="col-xl-6 py-4">
-                        <button onclick="openCv()" id="btn-cv" style="display:none" class="btn-emp">Ver curriculum vitae</button>
-                        <button onclick="openVp()" id="btn-vp" class="btn-emp">Ver video de presentación</button>
+                        <button onclick="openCv()" id="btn-cv" style="display:none" class="btn btn-secondary">Ver curriculum vitae</button>
+                        <button onclick="openVp()" id="btn-vp" class="btn btn-secondary">Ver video de presentación</button>
                         <div class="text-center py-2" id="vp" style="display:none">
                             <iframe width="500" height="300" src="https://www.youtube.com/embed/ThiCMd5kGbE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
-                        <div class="col-xl-6 py-2"  id="cv">
+                        <div class="py-2"  id="cv">
                             <iframe src="https://www.uv.mx/dgdaie/files/2012/11/CPP-DC-Angulo-Rasco-A-que-llamamos-curriculum.pdf" frameborder="0"  width="500px" height="500px"></iframe>
                         </div> 
                     </div>
@@ -93,5 +98,6 @@
             btnVp.style.display = 'none';
         }
     </script>
+
 </div>
 

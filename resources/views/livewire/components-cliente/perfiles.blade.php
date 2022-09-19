@@ -38,7 +38,13 @@
                             </div>
                             <div class=" py-4">
                                 <h5 class="card-title">Nombre Completo</h5>
-                                <p class="card-text">Descripción del perfil Descripción del perfilDescripción del perfil Descripción del perfilDescripción del perfil Descripción del perfilDescripción del perfil Descripción del perfilDescripción del perfil Descripción del perfil Descripción del perfil Descripción del perfil Descripción del perfil Descripción del perfil</p>
+                                <p class="card-text">El Ingeniero en Minas posee conocimientos en las áreas de exploración y explotación, supervisión de
+                                    procesos asociadas al desarrollo de cada etapa involucrada en el ciclo minero, como también en la
+                                    planificación, administración y gestión de proyectos mineros. Su formación en materias relativas a
+                                    Ciencias de la Tierra como base para la operación minero metalúrgica en faenas ya sea subterránea o
+                                    de cielo abierto complementan el desarrollo de habilidades y destrezas para el quehacer profesional
+                                    que lo capacitan para gestión proyectos mineros en las etapas de prospección, arranque, carguío,
+                                    transporte y procesamiento de minerales.</p>
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#verperfilModal" class="btn btn-post">Ver perfil</a>
                             </div>
                             
