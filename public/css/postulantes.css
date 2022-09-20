@@ -1,0 +1,124 @@
+
+.responsivelogo{
+  margin-left: 1rem;
+  max-width: 9rem;
+  height: auto;
+}
+.top{
+  border-bottom: 1px solid rgba(128, 128, 128, 0.329);
+}
+.head{
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 1rem;
+}
+.nombrecliente{
+  font-size: 1rem;
+  margin:1rem;
+  display:flex;
+  align-items: center;
+}
+.sesiontoggle{
+  display: flex;
+  align-items: center;
+  text-decoration: none; 
+}
+
+.sessionmenu{
+  border: transparent;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 0.5rem;
+}
+.head{
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 1rem;
+}
+
+.titulo{
+  font-size: 1.5rem;
+  color: grey;
+  padding: 1rem;
+  padding-top: 1rem;
+}
+.responsiveImg{
+  width: auto;
+  height: auto;
+  max-width: 18rem;
+  max-height: 15rem;
+
+}
+.card-text{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+.btn-post{
+  border:transparent;
+  border-radius: 0.5rem;
+  background-color:#e0ae43de;
+  border:1px solid #e0ae43de;
+  color:white;
+  min-height: 2rem;
+  padding: auto;
+}
+
+.btn-post:hover{
+  background-color: white;
+  border-radius: 0.5rem;
+  border:1px solid #e0ae43de;
+  min-height: 2rem;
+  color:#e0ae43de;
+}
+
+.btn-emp{
+  background-color: white;
+  border-radius: 0.5rem;
+  border:1px solid #e0ae43de;
+  min-height: 2rem;
+  color:#e0ae43de;
+}
+
+.btn-emp:hover{
+  background-color: #f3b52fde;
+  border-radius: 0.5rem;
+  border:1px solid white;
+  color:white;
+  min-height: 2rem;
+}
+
+.namecli{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #595d60;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.329);
+}
+.dropdot{
+  position: absolute;
+  left: 92%;
+  top: 1.2rem;
+  width:fit-content;
+}
+
+.dotmenu{
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border:transparent;
+  min-width: 8rem;
+  font-size: 14px;
+}
+
+.dottoggle{
+  color:grey;
+  display: absolute;
+}
+.sesiontoggle{
+  display: flex;
+  align-items: center;
+  text-decoration: none; 
+}
+
+.dottoggle::after {
+  content: none; 
+  align-items: end; 
+}
