@@ -63,6 +63,7 @@ height: fit-content;
   font-size: 2rem;
   font-weight: bold;
   justify-content: center;
+  color:#595d60;
 }
 
 .person-info:hover{
@@ -170,6 +171,7 @@ height: fit-content;
   border:1px solid rgba(128, 128, 128, 0.329);
   border-radius: 0.5rem;
   background-color: white;
+  margin-left: 1rem;
 }
 
 .responsivelogo{

@@ -54,6 +54,14 @@
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
 }
+
+.card-title{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
 .btn-post{
   border:transparent;
   border-radius: 0.5rem;

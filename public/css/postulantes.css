@@ -36,11 +36,14 @@
 }
 
 .titulo{
-  font-size: 1.5rem;
-  color: grey;
-  padding: 1rem;
-  padding-top: 1rem;
+  align-items:end;
+  font-size: 2rem;
+  font-weight: bold;
+  justify-content: center;
+  color:#595d60;
+  padding-bottom: 1rem;
 }
+
 .responsiveImg{
   width: auto;
   height: auto;
@@ -54,6 +57,14 @@
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
 }
+
+.card-title{
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
 .btn-post{
   border:transparent;
   border-radius: 0.5rem;
@@ -65,27 +76,39 @@
 }
 
 .btn-post:hover{
-  background-color: white;
+  background-color: #dba124de;
   border-radius: 0.5rem;
   border:1px solid #e0ae43de;
   min-height: 2rem;
-  color:#e0ae43de;
+  color:white;
 }
 
 .btn-emp{
   background-color: white;
-  border-radius: 0.5rem;
-  border:1px solid #e0ae43de;
+  border-radius: 1rem;
+  border:2px solid #e0ae43de;
   min-height: 2rem;
   color:#e0ae43de;
 }
 
 .btn-emp:hover{
-  background-color: #f3b52fde;
-  border-radius: 0.5rem;
-  border:1px solid white;
-  color:white;
+  background-color: white;
+  border-radius: 1rem;
+  border:2px solid grey;
+  color:grey;
   min-height: 2rem;
+}
+
+.search{
+  border-bottom: 1px solid grey;
+  width: 13rem;
+}
+
+.filter{
+  border:1px solid rgba(128, 128, 128, 0.329);
+  border-radius: 0.5rem;
+  background-color: white;
+  margin-left: 1rem;
 }
 
 .namecli{

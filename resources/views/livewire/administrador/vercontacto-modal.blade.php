@@ -8,19 +8,19 @@
                 </div>
                 <div class="modal-body">
                     <div class="mb-2 d-flex col">
-                        <label for="recipient-name" class="col-form-label">Nombre:</label>
+                        <label for="recipient-name" class="fw-bold">Nombre:</label>
                         <div class="d-flex align-items-center px-2">Client</div>
                     </div>
                     <div class="mb-2 d-flex col">
-                        <label for="message-text" class="col-form-label">Correo:</label>
+                        <label for="message-text" class="fw-bold">Correo:</label>
                         <div class="d-flex align-items-center px-2">client@client.cl</div>
                     </div>
-                    <div class="d-flex col">
-                        <label for="message-text" class="col-form-label">Telefono:</label>
+                    <div class="mb-2 d-flex col">
+                        <label for="message-text" class="fw-bold">Telefono:</label>
                         <div class="d-flex align-items-center px-2">+569 1234 5678</div>
                     </div>
-                    <div class="mt-3 d-flex col" >
-                        <div>Estado:</div>
+                    <div class="mb-2 d-flex col" >
+                        <div class="fw-bold">Estado:</div>
                         <div class="status px-2">
                             <span class="badge badge-success">Activo</span>
                         </div>
