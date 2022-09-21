@@ -11,7 +11,7 @@
                         <a class="dropdown-item sessionitem" href="/logout" style="display:flex;flex-direction:row">
                             <i class="bi bi-box-arrow-in-right" style="font-size:1.3rem;color:red;display:flex;align-items:center;padding-right:0.5rem"></i>
                             Cerrar sesión
-                        </a>                    
+                        </a>                  
                     </li>
                 </ul>
             </div>

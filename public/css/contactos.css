@@ -13,9 +13,9 @@
   color: #868E96;
 }
 .badge-success{
-background-color:#96F2D7;
-color:#37B24D;
-height: fit-content;
+  background-color:#B2F2BB;
+  color:#37B24D;
+  height: fit-content;
 }
 
 .status{
@@ -128,7 +128,6 @@ height: fit-content;
   display: flex;
   flex-direction: row;
 }
-
 
 .addContacttoggle::after {
   content: none; 
