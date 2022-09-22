@@ -15,7 +15,11 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.11.3/b-2.0.1/fh-3.2.0/r-2.2.9/datatables.min.css" />
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.11.3/b-2.0.1/fh-3.2.0/r-2.2.9/datatables.min.js"></script>
     @php
-        $css_path = substr($_SERVER['REQUEST_URI'],1);
+        if(strpos($_SERVER['REQUEST_URI'], '?') > 0){
+            $css_path = substr($_SERVER['REQUEST_URI'],1,strpos($_SERVER['REQUEST_URI'], '?')-1);
+        }else{
+            $css_path = substr($_SERVER['REQUEST_URI'],1);
+        }
         $css_path = ($css_path == '') ? 'login' : $css_path;
     @endphp
     <link href="{{ asset('css/'.$css_path.'.css') }}" rel="stylesheet">

@@ -62,7 +62,7 @@
                             </div>
                         </div>
                       <div class="divbtn py-2">
-                        <a href="/contactos" class="btn btn-emp">Ver Contactos</a>
+                        <a href="/contactos?c={{$row["id"]}}" class="btn btn-emp">Administrar</a>
                       </div>
                     </div>
                 </div>
