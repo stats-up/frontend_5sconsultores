@@ -25,6 +25,7 @@
     @livewire('administrador.addarea-modal', ["id_cliente" => $_GET["c"]])
     <livewire:administrador.requer-modal/>
     <livewire:administrador.vercontacto-modal/>
+    <livewire:administrador.editarea-modal/>
         <div class="row p-2">            
               <nav aria-label="breadcrumb" style="padding-left:4rem">
                 <ol class="breadcrumb">
@@ -71,7 +72,7 @@
                                   </a>
                                   <ul class="dropdown-menu dotmenu">
                                       <li><a class="dropdown-item a" href="#"  data-bs-toggle="modal" data-bs-target="#addcontactModal"><i class="icon fa-solid fa-plus"></i>Nuevo contacto</a></li>
-                                      <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-pen"></i>Cambiar nombre</a></li>
+                                      <li><a class="dropdown-item a" href="#" data-bs-toggle="modal" data-bs-target="#editareaModal"><i class="icon fa-solid fa-pen"></i>Cambiar nombre</a></li>
                                       <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
                                   </ul>
                                 </div>
