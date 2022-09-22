@@ -19,6 +19,15 @@
                         <label for="message-text" class="col-form-label">Telefono</label>
                         <input wire:model="telefono" type="text" class="form-control" id="recipient-name">
                     </div>
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Área</label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Seleccione...</option>
+                            <option value="1">Area1</option>
+                            <option value="2">Area2</option>
+                            <option value="3">Area3</option>
+                        </select>
+                    </div>
                     <div class="py-3 d-flex justify-content-center">
                         <div class="px-2">Inactivo</div>
                         <div class=" form-check form-switch d-flex justify-content-center">

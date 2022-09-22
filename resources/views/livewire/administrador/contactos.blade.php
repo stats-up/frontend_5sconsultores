@@ -71,7 +71,7 @@
                                       <i class="icondrp bi bi-three-dots-vertical"></i>
                                   </a>
                                   <ul class="dropdown-menu dotmenu">
-                                      <li><a class="dropdown-item a" href="#"  data-bs-toggle="modal" data-bs-target="#addcontactModal"><i class="icon fa-solid fa-plus"></i>Nuevo contacto</a></li>
+                                      <li><a class="dropdown-item a" href="/users"><i class="icon fa-solid fa-plus"></i>Nuevo contacto</a></li>
                                       <li><a class="dropdown-item a" href="#" data-bs-toggle="modal" data-bs-target="#editareaModal"><i class="icon fa-solid fa-pen"></i>Cambiar nombre</a></li>
                                       <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
                                   </ul>
@@ -86,7 +86,7 @@
                                             </a>
                                             <ul class="dropdown-menu dotmenu">
                                                 <li><a class="dropdown-item a" href="#" data-bs-toggle="modal" data-bs-target="#addreqModal"><i class="icon fa-solid fa-plus"></i>Nuevo requerimiento</a></li>
-                                                <li><a class="dropdown-item a" href="#" data-bs-toggle="modal" data-bs-target="#editcontactModal"><i class="icon fa-solid fa-pen"></i>Editar contacto</a></li>
+                                                <li><a class="dropdown-item a" href="/users" ><i class="icon fa-solid fa-pen"></i>Editar contacto</a></li>
                                                 <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
                                             </ul>
                                         </div>                                 

@@ -7,17 +7,20 @@
             Administración de usuarios
         </div> 
     </div>
+    <livewire:administrador.editcontacto-modal />
+    <livewire:administrador.addcontacto-modal/>
     <div class="searchrow">
-        <button href="#" class="btn-post col-md-2" data-bs-toggle="modal" data-bs-target="#addpostulanteModal">
-            <i class="bi bi-plus"></i>Agregar nuevo perfil
+        <button href="#" class="btn-post col-md-2" data-bs-toggle="modal" data-bs-target="#addcontactModal">
+            <i class="bi bi-plus"></i>Agregar nuevo contacto
         </button>
     </div>
-    <livewire:administrador.editcontacto-modal />
+    
     <div class="col-md-12 tabla">
         <table id="tabla-admin" class="table table-bordered table-hover">
             <thead>
                 <tr>
                     <th scope="col" class="col-md-3">Nombre completo</th>
+                    <th scope="col" class="col-md-3">Área</th>
                     <th scope="col" class="col-md-2">Correo</th>
                     <th scope="col" class="col-md-2">Telefono</th>
                     <th scope="col" class="col-md-1">Estado</th>
@@ -27,6 +30,7 @@
             <tbody>
                 @for ($i = 0; $i < 10; $i++) <tr>
                     <td scope="row">Nombres Apellidos  #{{20+$i}}</td>
+                    <td>Area 1</td>
                     <td>Correo</td>
                     <td>Telefono</td>
                     <td>
@@ -41,6 +45,7 @@
                     @endfor
                     @for ($i = 0; $i < 10; $i++) <tr>
                         <td scope="row">Nombres Apellidos #{{10+$i}}</td>
+                        <td>Area 2</td>
                         <td>Correo</td>
                         <td>Telefono</td>
                         <td>
