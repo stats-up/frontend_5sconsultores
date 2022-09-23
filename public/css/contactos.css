@@ -115,10 +115,6 @@
   padding-right: 10px;
 }
 
-
-.row-contact{
-  border-bottom: 1px solid rgba(128, 128, 128, 0.329);
-}
 .row-reque{
   margin-left:2rem;
   width:55rem;
@@ -145,6 +141,8 @@
   color:grey;
   width:fit-content;
 }
+
+
 
 .addContacttoggle{
   color:grey;
@@ -223,6 +221,75 @@
   min-height: 2rem;
 }
 
+
+@media only screen and (max-width: 720px) {
+  .group-cards{
+    width: 70rem;
+    justify-content: center;
+  }
+  .section{
+    padding-top:1rem;
+  }
+  .card-subtitle{
+    width:12rem;
+  }
+  .dropcard{
+    display:absolute;
+    right: 0;
+    top: 0rem;
+  }
+  .body-contactos{
+    width: 25rem;
+  }
+}
+
+
+@media only screen and (min-width: 720px) {
+  .group-cards{
+    width: 80rem;
+    justify-content: center;
+  }
+  .card-subtitle{
+    width:31rem;
+  }
+
+} 
+
+@media only screen and (min-width: 870px){
+  .group-cards{
+    width: 80rem;
+    justify-content: center;
+  }
+  .section{
+    padding-top:1rem;
+  }
+  .card-subtitle{
+      width:40rem;
+  }
+  .body-contactos{
+    width: 65rem;
+  }
+  .btn-addempresa{
+    max-width:80rem;
+    margin-left:8rem;
+    margin-bottom:1rem;
+    margin-right:8rem;
+  }
+}
+
 .card-subtitle{
-  width:51rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.activo{
+  border-bottom: 2px solid #e0ae43de;
+  color:#d39b23
+}
+.nav a {
+  color:black;
+}
+
+.nav a:hover {
+  color:#e0ae43de;
 }

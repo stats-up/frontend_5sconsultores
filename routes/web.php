@@ -10,6 +10,7 @@ use App\Http\Livewire\Administrador\Contactos;
 use App\Http\Livewire\Administrador\Postulantes;
 use App\Http\Livewire\Administrador\Cuentas;
 use App\Http\Livewire\Administrador\Users;
+use App\Http\Livewire\Administrador\Requerimientos;
 use App\Http\Livewire\ComponentsCliente\Perfiles;
 use App\Http\Middleware\SessionValidation;
 
@@ -34,3 +35,4 @@ Route::get('/contactos', Contactos::class)->middleware(SessionValidation::class)
 Route::get('/postulantes', Postulantes::class)->middleware(SessionValidation::class);
 Route::get('/cuentas', Cuentas::class)->middleware(SessionValidation::class);
 Route::get('/users', Users::class)->middleware(SessionValidation::class);
+Route::get('/requerimientos', Requerimientos::class)->middleware(SessionValidation::class);

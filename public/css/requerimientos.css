@@ -1,0 +1,59 @@
+.responsivelogo{
+  margin-left: 1rem;
+  max-width: 9rem;
+  height: auto;
+}
+
+.sesiontoggle{
+  display: flex;
+  align-items: center;
+  text-decoration: none; 
+}
+
+.sessionmenu{
+  border: transparent;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 0.5rem;
+}
+
+.nombrecliente{
+  margin:0rem;
+  margin-left:0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.head{
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 1rem;
+}
+
+.top{
+  border-bottom: 1px solid rgba(128, 128, 128, 0.329);
+}
+
+.activo{
+  border-bottom: 2px solid #e0ae43de;
+  color:#d39b23
+}
+.nav a {
+  color:black;
+}
+
+.nav a:hover {
+  color:#e0ae43de;
+}
+
+.tabla{
+  padding-left:5rem;
+  padding-right:5rem;
+  width:100%;
+}
+.titulo{
+  align-items:end;
+  font-size: 2rem;
+  font-weight: bold;
+  justify-content: center;
+  color:#595d60;
+}
