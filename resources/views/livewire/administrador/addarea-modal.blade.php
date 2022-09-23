@@ -9,7 +9,7 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="recipient-name" class="col-form-label">Nombre:</label>
-                        <input wire:model="nombre" type="text" class="form-control" id="recipient-name" placeholder="Ej: Ubicación">
+                        <input wire:model="nombre" type="text" class="form-control" id="recipient-name" placeholder="Ej: Área - Ubicación">
                     </div>
                 </div>
                 <div class="modal-footer">

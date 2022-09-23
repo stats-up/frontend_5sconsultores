@@ -11,6 +11,11 @@ class Contactos extends Component
 {
     public $customer_areas = [];
 
+    public function seleccionarArea($id_cliente,$id_area){
+        $this->dispatchBrowserEvent('swalLoading');
+        $this->emit('modalEditarArea', $id_cliente,$id_area);
+    }
+
     private function get_customer_areas($id_customer){
         $token = getenv("API_TOKEN");
         $array["token"] = $token;
