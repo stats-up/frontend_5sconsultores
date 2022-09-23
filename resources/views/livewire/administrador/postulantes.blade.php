@@ -25,7 +25,7 @@
         <nav aria-label="breadcrumb" style="padding-left:4rem">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/admin" style="color:#c99616">Clientes</a></li>
-                <li class="breadcrumb-item"><a href="/contactos" style="color:#c99616">Contactos</a></li>
+                <li class="breadcrumb-item"><a href="/requerimientos" style="color:#c99616">Requerimientos</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Perfiles</li>
             </ol>
         </nav>
@@ -35,7 +35,7 @@
     <livewire:administrador.addpostulante-modal/>
     <div class="col-md-12 d-flex justify-content-center titulo">Perfiles</div>
     <div class="head">
-        <div class="row d-flex col justify-content-between" style="max-width:80rem;margin-left:8rem;margin-bottom:1rem;margin-right:8rem">
+        <div class="row d-flex col justify-content-between" style=";margin-left:8rem;margin-bottom:1rem;margin-right:8rem">
             <button href="#" class="btn-post col-md-2" data-bs-toggle="modal" data-bs-target="#addpostulanteModal">
                 <i class="bi bi-plus"></i>Agregar nuevo perfil
             </button>

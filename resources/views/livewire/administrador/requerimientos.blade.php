@@ -28,7 +28,22 @@
             </div>
         </div>
     </div>
-    <div class="row titulo py-2">Requerimientos</div>
+    <div class="row p-2">            
+        <nav aria-label="breadcrumb" style="padding-left:4rem">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/admin" style="color:#c99616">Clientes</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Requerimientos</li>
+          </ol>
+        </nav>
+  </div>
+  <livewire:administrador.editreqer-modal/>
+  <livewire:administrador.requer-modal/>
+    <div class="row titulo">Requerimientos</div>
+    <div class="px-4 py-4">
+        <button href="#" class="btn-post col-md-2" data-bs-toggle="modal" data-bs-target="#addreqModal">
+            <i class="bi bi-plus"></i>Agregar nuevo perfil
+        </button>
+    </div>
     <div class="col-md-12 tabla">
         <table id="tabla-admin" class="table table-bordered table-hover">
             <thead>
@@ -51,7 +66,7 @@
                         </button>
                     </td>
                     <td class="text-center">
-                        <button class="btn btn-secondary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#editcontactModal">
+                        <button class="btn btn-secondary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#editreqModal">
                             Editar
                         </button>
                     </td>
@@ -67,7 +82,7 @@
                             </button>
                         </td>
                         <td class="text-center">
-                            <button class="btn btn-secondary btn-sm w-100"  data-bs-toggle="modal" data-bs-target="#editcontactModal">
+                            <button class="btn btn-secondary btn-sm w-100"  data-bs-toggle="modal" data-bs-target="#editreqModal">
                                 Editar
                             </button>
                         </td>

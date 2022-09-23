@@ -57,3 +57,18 @@
   justify-content: center;
   color:#595d60;
 }
+
+.btn-post{
+  width: 15rem;
+  border:transparent;
+  border-radius: 0.5rem;
+  background-color:#e0ae43de;
+  border:1px solid #e0ae43de;
+  color:white;
+  min-height: 2rem;
+  padding: auto;
+}
+
+.btn-post:hover{
+  background-color: #d39b23;
+}
