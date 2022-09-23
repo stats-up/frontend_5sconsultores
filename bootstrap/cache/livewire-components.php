@@ -9,6 +9,7 @@
   'administrador.editcontacto-modal' => 'App\\Http\\Livewire\\Administrador\\EditcontactoModal',
   'administrador.editpostulante-modal' => 'App\\Http\\Livewire\\Administrador\\EditpostulanteModal',
   'administrador.editreqer-modal' => 'App\\Http\\Livewire\\Administrador\\EditreqerModal',
+  'administrador.menu-cliente' => 'App\\Http\\Livewire\\Administrador\\MenuCliente',
   'administrador.modal-cliente' => 'App\\Http\\Livewire\\Administrador\\ModalCliente',
   'administrador.modal-editcliente' => 'App\\Http\\Livewire\\Administrador\\ModalEditcliente',
   'administrador.postulantes' => 'App\\Http\\Livewire\\Administrador\\Postulantes',

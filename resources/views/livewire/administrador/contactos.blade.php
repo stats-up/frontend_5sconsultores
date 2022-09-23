@@ -2,14 +2,7 @@
     <div class="row head">
         <div class="col-md-12 d-flex justify-content-between top">
             <img class="responsivelogo" src="http://5sconsultores.cl/portal/wp-content/uploads/2019/11/Logo_5s_web.jpg" alt="Logo"  class="brandlogo">
-            <ul class="nav justify-content-center align-items-center">
-                <li class="nav-item activo mx-2">
-                  <a class="nav-link" href="#">Contactos</a>
-                </li>
-                <li class="nav-item mx-2">
-                  <a class="nav-link" href="/requerimientos">Requerimientos</a>
-                </li>
-              </ul>
+            @livewire('administrador.menu-cliente', ["id_cliente" => $_GET["c"]])
             <div class="dropdown nombrecliente">
                 <a class="dropdown-toggle sesiontoggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black">      
                     <div class="name" style="padding-right:0.5rem">{{Session::get('user')["email"]}}</div>
