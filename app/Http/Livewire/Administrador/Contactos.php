@@ -9,7 +9,20 @@ use Illuminate\Support\Facades\Log;
 
 class Contactos extends Component
 {
+    public $id_customer;
     public $customer_areas = [];
+
+    protected $listeners = ['eliminarArea'];
+
+    public function eliminarArea($area){
+        $token = getenv("API_TOKEN");
+        $array["token"] = $token;
+        $array["data"]["id"] = $area;
+        $array["data"]["status"] = "eliminado";
+        $endpoint = getenv("API_URL")."/api/upd_customer_area_status";
+        $response = Http::withBody(json_encode($array), 'application/json')->post($endpoint);
+        return redirect()->to("/contactos?c=".$this->id_customer);
+    }
 
     public function seleccionarArea($id_cliente,$id_area){
         $this->dispatchBrowserEvent('swalLoading');
@@ -46,8 +59,8 @@ class Contactos extends Component
         if(!isset($_GET["c"])){
             return redirect()->to("/admin");
         }
-        $id_customer = $_GET["c"];
-        $this->get_customer_areas($id_customer);
+        $this->id_customer = $_GET["c"];
+        $this->get_customer_areas($this->id_customer);
     }
 
     public function render()

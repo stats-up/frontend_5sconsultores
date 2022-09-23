@@ -21,20 +21,13 @@
             </div>
         </div>
     </div>
-    <div class="row p-2">            
-        <nav aria-label="breadcrumb" style="padding-left:4rem">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/admin" style="color:#c99616">Clientes</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Requerimientos</li>
-          </ol>
-        </nav>
-  </div>
-  <livewire:administrador.editreqer-modal/>
-  <livewire:administrador.requer-modal/>
+    @livewire('administrador.ruta-admin', ["id_cliente" => $_GET["c"]])
+    <livewire:administrador.editreqer-modal/>
+    <livewire:administrador.requer-modal/>
     <div class="row titulo">Requerimientos</div>
     <div class="px-4 py-4">
         <button href="#" class="btn-post col-md-2" data-bs-toggle="modal" data-bs-target="#addreqModal">
-            <i class="bi bi-plus"></i>Agregar nuevo perfil
+            <i class="bi bi-plus"></i>Nuevo requerimiento
         </button>
     </div>
     <div class="col-md-12 tabla">

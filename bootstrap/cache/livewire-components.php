@@ -15,6 +15,7 @@
   'administrador.postulantes' => 'App\\Http\\Livewire\\Administrador\\Postulantes',
   'administrador.requer-modal' => 'App\\Http\\Livewire\\Administrador\\RequerModal',
   'administrador.requerimientos' => 'App\\Http\\Livewire\\Administrador\\Requerimientos',
+  'administrador.ruta-admin' => 'App\\Http\\Livewire\\Administrador\\RutaAdmin',
   'administrador.users' => 'App\\Http\\Livewire\\Administrador\\Users',
   'administrador.vercontacto-modal' => 'App\\Http\\Livewire\\Administrador\\VercontactoModal',
   'administrador.verpostulante-modal' => 'App\\Http\\Livewire\\Administrador\\VerpostulanteModal',

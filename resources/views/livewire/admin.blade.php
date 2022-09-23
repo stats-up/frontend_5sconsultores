@@ -74,7 +74,7 @@
         $(".deleteClient").click(function(){
             let idCustomer = $(this).attr('data');
             Swal.fire({
-                title: 'Quieres eliminar este cliente?',
+                title: '¿Eliminar este cliente?',
                 text: "No se podrá revertir esta acción",
                 icon: 'warning',
                 showCancelButton: true,
@@ -92,6 +92,6 @@
                     )
                 }
             })
-        })
+        });
     </script>
 </div>
