@@ -28,6 +28,10 @@ class Contactos extends Component
         $this->dispatchBrowserEvent('swalLoading');
         $this->emit('modalEditarArea', $id_cliente,$id_area);
     }
+    public function seleccionarNuevoContacto($id_cliente,$id_area){
+        $this->dispatchBrowserEvent('swalLoading');
+        $this->emit('addContactoModal', $id_cliente,$id_area);
+    }
 
     private function get_customer_areas($id_customer){
         $token = getenv("API_TOKEN");
@@ -51,7 +55,6 @@ class Contactos extends Component
             $ca[$index]["accounts"] = $response->json();
             $index++;
         }
-
         $this->customer_areas = $ca;
     }
 

@@ -21,6 +21,7 @@
             </div>
         </div>
     </div>
+    @livewire('administrador.addcontacto-modal')
     <livewire:administrador.addcontacto-modal/>
     <livewire:administrador.editcontacto-modal/>
     @livewire('administrador.addarea-modal', ["id_cliente" => $_GET["c"]])
@@ -65,7 +66,7 @@
                                         <i class="icondrp bi bi-three-dots-vertical"></i>
                                     </a>
                                     <ul class="dropdown-menu dotmenu">
-                                        <li><a class="dropdown-item a" href="/users"><i class="icon fa-solid fa-plus"></i>Nuevo contacto</a></li>
+                                        <li><a wire:click="seleccionarNuevoContacto({{$item["customer"]}},{{$item["id"]}})" class="dropdown-item a" href="#" data-bs-toggle="modal" data-bs-target="#addcontactModal"><i class="icon fa-solid fa-plus"></i>Nuevo contacto</a></li>
                                         <li><a wire:click="seleccionarArea({{$item["customer"]}},{{$item["id"]}})" class="dropdown-item a" href="#" data-bs-toggle="modal" data-bs-target="#editareaModal"><i class="icon fa-solid fa-pen"></i>Cambiar nombre</a></li>
                                         <li><a class="dropdown-item a deleteArea" href="#" data="{{$item["id"]}}"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
                                     </ul>
