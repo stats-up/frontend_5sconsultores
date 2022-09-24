@@ -45,18 +45,7 @@
                         <i class="bi bi-search d-flex align-items-center"></i>
                         <input onkeyup="search()" id="Search" class="form-control" type="search" placeholder="Buscar" aria-label="Search" style="border:0;box-shadow:none;background-color:#fdfdfd;" >
                     </div>
-                </div>
-                <button class="filter" style="width:fit-content">
-                    <div class="dropdown" >
-                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration:none;color:black">
-                            <i class="bi bi-filter">Filtrar</i>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <li><a class="dropdown-item" href="#" onclick="filter('Activo')">Activo</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="filter('Inactivo')">Inactivo</a></li>
-                        </ul>
-                    </div>
-                </button>                
+                </div>             
             </div>
         </div>
     </div>
