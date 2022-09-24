@@ -29,6 +29,7 @@ use App\Http\Middleware\SessionValidation;
 
 
 Route::get('/', Login::class);
+Route::get('/resetpassword', Resetpassword::class);
 Route::get('/logout',[GlobalController::class, 'logout']);
 Route::get('/admin', Admin::class)->middleware(SessionValidation::class);
 Route::get('/cliente', Cliente::class)->middleware(SessionValidation::class);
@@ -39,4 +40,3 @@ Route::get('/cuentas', Cuentas::class)->middleware(SessionValidation::class);
 Route::get('/users', Users::class)->middleware(SessionValidation::class);
 Route::get('/requerimientos', Requerimientos::class)->middleware(SessionValidation::class);
 
-Route::get('/resetpassword', Resetpassword::class)->middleware(SessionValidation::class);
