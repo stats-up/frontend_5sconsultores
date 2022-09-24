@@ -14,11 +14,11 @@
                         </div>
                         <div class="mb-3">
                             <label for="message-text" class="col-form-label">Rut</label>
-                            <input wire:model="email" type="text" class="form-control" id="recipient-name">
+                            <input wire:model="rut" type="text" class="form-control" id="recipient-name">
                         </div>
                         <div class="mb-3">
                             <label for="message-text" class="col-form-label">Sexo</label>
-                            <select class="form-select" aria-label="Default select example">
+                            <select wire:model="sexo" class="form-select" aria-label="Default select example">
                                 <option selected>Seleccione...</option>
                                 <option value="1">Femenino</option>
                                 <option value="2">Masculino</option>
@@ -27,17 +27,17 @@
                         </div>
                         <div class="mb-3">
                             <label for="message-text" class="col-form-label">Ciudad de residencia:</label>
-                            <input wire:model="email" type="text" class="form-control" id="recipient-name">
+                            <input wire:model="ciudad" type="text" class="form-control" id="recipient-name">
                         </div>
                         <div class="mb-3">
                             <label for="message-text" class="col-form-label">Dirección</label>
-                            <input wire:model="email" type="text" class="form-control" id="recipient-name">
+                            <input wire:model="direccion" type="text" class="form-control" id="recipient-name">
                         </div>
                     </div>
                     <div class="col-lg-6 px-4">
                         <div class="mb-3">
                             <label for="message-text" class="col-form-label" >Descripción del perfil</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea wire:model="descripcion" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
                         <div class="mb-3">
                             <label for="message-text" class="col-form-label" >Imagen</label>
@@ -45,15 +45,11 @@
                         </div>
                         <div class="mb-3">
                             <label for="message-text" class="col-form-label" >Curriculum vitae</label>
-                            <input name="userfile" type="file" accept=".doc, .docx, .pdf" class="form-control"/>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message-text" class="col-form-label" >Video de presentación</label>
-                            <input name="userfile" type="file" accept=".pdf" class="form-control"/>
+                            <input wire:model="cv" name="userfile" type="file" accept=".doc, .docx, .pdf" class="form-control"/>
                         </div>
                         <div class="mb-3">
                             <label for="message-text" class="col-form-label" >Video de presentación (URL Youtube)</label>
-                            <input type="text" class="form-control"/>
+                            <input wire:model="video" type="text" class="form-control"/>
                         </div>
                     </div>
                 </div>

@@ -30,9 +30,9 @@
             </ol>
         </nav>
     </div>
-    <livewire:administrador.editpostulante-modal/>
-    <livewire:administrador.verpostulante-modal/>
-    <livewire:administrador.addpostulante-modal/>
+
+    @livewire('administrador.addpostulante-modal');
+    @livewire('administrador.editpostulante-modal');
     <div class="col-md-12 d-flex justify-content-center titulo">Perfiles</div>
     <div class="head">
         <div class="row d-flex col justify-content-between" style=";margin-left:8rem;margin-bottom:1rem;margin-right:8rem">
@@ -113,7 +113,7 @@
             $(".deleteProfile").click(function(){
             let idArea = $(this).attr('data');
             Swal.fire({
-                title: '¿Eliminar este perfil?',
+                title: '¿Eliminar este área?',
                 text: "No se podrá revertir esta acción",
                 icon: 'warning',
                 showCancelButton: true,

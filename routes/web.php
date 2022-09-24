@@ -13,6 +13,7 @@ use App\Http\Livewire\Administrador\Users;
 use App\Http\Livewire\Administrador\Requerimientos;
 use App\Http\Livewire\ComponentsCliente\Perfiles;
 use App\Http\Livewire\ComponentsCliente\ResetPassword;
+use App\Http\Livewire\ComponentsCliente\Sendemail;
 use App\Http\Middleware\SessionValidation;
 
 
@@ -30,6 +31,7 @@ use App\Http\Middleware\SessionValidation;
 
 Route::get('/', Login::class);
 Route::get('/resetpassword', Resetpassword::class);
+Route::get('/sendemail', Sendemail::class);
 Route::get('/logout',[GlobalController::class, 'logout']);
 Route::get('/admin', Admin::class)->middleware(SessionValidation::class);
 Route::get('/cliente', Cliente::class)->middleware(SessionValidation::class);

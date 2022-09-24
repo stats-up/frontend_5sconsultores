@@ -7,7 +7,7 @@
                     <span class="text-muted" style="width:fit-content">
                         <i>Somos personas reclutando personas</i>
                     </span>
-                    <div class="title text-muted" style="font-size:20px">Restaurar contraseña</div>
+                    <div class="title text-muted" style="font-size:20px">Restablecer contraseña</div>
                 </div>
                 <div class="d-flex justify-content-center">
                     <form id="loginform">
