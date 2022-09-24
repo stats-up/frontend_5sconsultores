@@ -22,5 +22,6 @@
   'cliente' => 'App\\Http\\Livewire\\Cliente',
   'components-cliente.perfil-modal' => 'App\\Http\\Livewire\\ComponentsCliente\\PerfilModal',
   'components-cliente.perfiles' => 'App\\Http\\Livewire\\ComponentsCliente\\Perfiles',
+  'components-cliente.resetpassword' => 'App\\Http\\Livewire\\ComponentsCliente\\Resetpassword',
   'login' => 'App\\Http\\Livewire\\Login',
 );

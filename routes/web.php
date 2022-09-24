@@ -12,7 +12,9 @@ use App\Http\Livewire\Administrador\Cuentas;
 use App\Http\Livewire\Administrador\Users;
 use App\Http\Livewire\Administrador\Requerimientos;
 use App\Http\Livewire\ComponentsCliente\Perfiles;
+use App\Http\Livewire\ComponentsCliente\ResetPassword;
 use App\Http\Middleware\SessionValidation;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +38,5 @@ Route::get('/postulantes', Postulantes::class)->middleware(SessionValidation::cl
 Route::get('/cuentas', Cuentas::class)->middleware(SessionValidation::class);
 Route::get('/users', Users::class)->middleware(SessionValidation::class);
 Route::get('/requerimientos', Requerimientos::class)->middleware(SessionValidation::class);
+
+Route::get('/resetpassword', Resetpassword::class)->middleware(SessionValidation::class);

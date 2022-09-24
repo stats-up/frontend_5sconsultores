@@ -1,16 +1,13 @@
 <div class="container-fluid" style="height:100vh;background-color:#fdfdfd;">
     <div class="row head">
-        <div class="col-auto btn-back ">
-            <a onclick="history.back()"><i class="fa-solid fa-arrow-left"></i></a>
+        <div class="col-auto btn-back " onclick="history.back()">
+            <a ><i class="fa-solid fa-arrow-left"></i></a>
         </div>
         <div class="col titulo">
             Administración de usuarios
         </div>
     </div>
-    <div class="row px-4 searchrow" >
-        <button href="#" class="btn-post col-md-2 mx-2" data-bs-toggle="modal" data-bs-target="#addpostulanteModal">
-            <i class="bi bi-plus"></i>Agregar nuevo perfil
-        </button>
+    <div class="row px-4 searchrow d-flex justify-content-end" >
         <div class="form-inline d-flex flex-row search mx-2">
             <i class="bi bi-search d-flex align-items-center"></i>
             <input onkeyup="search()" id="Search" class="form-control" type="search" placeholder="Buscar" aria-label="Search" style="border:0;box-shadow:none;background-color:#fdfdfd;" >
@@ -18,7 +15,7 @@
     </div>
     <div class="d-flex justify-content-center section">
         <div class="row row-cols-auto group-cards overflow-auto" style="max-width:100vw;max-height:70vh">
-                <div class="col-md-12" style="width:18rem">
+                <div class="col-md-12 target" style="width:18rem">
                     <div class="card my-2" style="height:15rem">
                         <div class="card-body" style="display:flex;justify-content:space-between;flex-direction:column">
                             <div class="text-center d-flex align-items-center justify-content-center" style="display:flex;flex:1">
@@ -34,7 +31,7 @@
                     </div>
                 </div>        
                 @for($i=1;$i<10;$i++)
-                <div class="col-md-12" style="width:18rem">
+                <div class="col-md-12 target" style="width:18rem">
                     <div class="card my-2" style="height:15rem">
                         <div class="card-body" style="display:flex;justify-content:space-between;flex-direction:column">
                             <div class="text-center d-flex align-items-center justify-content-center" style="display:flex;flex:1">

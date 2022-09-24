@@ -23,9 +23,9 @@
                         <label for="message-text" class="col-form-label">Área</label>
                         <select class="form-select" aria-label="Default select example">
                             <option selected>Seleccione...</option>
-                            <option value="1">Area1</option>
-                            <option value="2">Area2</option>
-                            <option value="3">Area3</option>
+                            <option value="1">Area 1</option>
+                            <option value="2">Area 2</option>
+                            <option value="3">Area 3</option>
                         </select>
                     </div>
                     <div class="py-3 d-flex justify-content-center">

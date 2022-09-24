@@ -39,6 +39,7 @@
                     <th scope="col" class="col-md-2">Contacto</th>
                     <th scope="col" class="col-md-1">Perfiles</th>
                     <th scope="col" class="col-md-1"></th>
+                    <th scope="col" class="col-md-1"></th>
                 </tr>
             </thead>
             <tbody>
@@ -56,6 +57,11 @@
                             Editar
                         </button>
                     </td>
+                    <td class="text-center">
+                        <button class="btn btn-danger btn-sm w-100 deleteReq">
+                            Eliminar
+                        </button>
+                    </td>
                     </tr>
                     @endfor
                     @for ($i = 0; $i < 10; $i++) <tr>
@@ -70,6 +76,11 @@
                         <td class="text-center">
                             <button class="btn btn-secondary btn-sm w-100"  data-bs-toggle="modal" data-bs-target="#editreqModal">
                                 Editar
+                            </button>
+                        </td>
+                        <td class="text-center">
+                            <button class="btn btn-danger btn-sm w-100 deleteReq">
+                                Eliminar
                             </button>
                         </td>
                         </tr>
@@ -104,6 +115,28 @@
                         }
                 }
             });
+        });
+        $(".deleteReq").click(function(){
+            let idArea = $(this).attr('data');
+            Swal.fire({
+                title: '¿Eliminar este requerimiento?',
+                text: "No se podrá revertir esta acción",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#959595',
+                confirmButtonText: 'Eliminar',
+                cancelButtonText: 'Cancelar'
+                }).then((result) => {
+                if (result.isConfirmed) {
+                    Livewire.emit('eliminarArea',idArea);
+                    Swal.fire(
+                    'Eliminado!',
+                    'El cliente ha sido eliminado',
+                    'success'
+                    )
+                }
+            })
         });
     </script>
 </div>

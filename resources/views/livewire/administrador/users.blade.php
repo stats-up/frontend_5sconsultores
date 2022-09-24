@@ -1,7 +1,7 @@
 <div class="container-fluid" style="height:100vh;background-color:#fdfdfd;">
     <div class="row head">
-        <div class="col-auto btn-back ">
-            <a onclick="history.back()"><i class="fa-solid fa-arrow-left"></i></a>
+        <div class="col-auto btn-back " onclick="history.back()">
+            <a ><i class="fa-solid fa-arrow-left"></i></a>
         </div>
         <div class="col titulo">
             Administración de usuarios
@@ -25,6 +25,7 @@
                     <th scope="col" class="col-md-2">Telefono</th>
                     <th scope="col" class="col-md-1">Estado</th>
                     <th scope="col" class="col-md-1"></th>
+                    <th scope="col" class="col-md-1"></th>
                 </tr>
             </thead>
             <tbody>
@@ -41,6 +42,11 @@
                             Editar
                         </button>
                     </td>
+                    <td class="text-center">
+                        <button class="btn btn-danger btn-sm w-100 deleteUser">
+                            Eliminar
+                        </button>
+                    </td>
                     </tr>
                     @endfor
                     @for ($i = 0; $i < 10; $i++) <tr>
@@ -54,6 +60,11 @@
                         <td class="text-center">
                             <button class="btn btn-primary btn-sm w-100"  data-bs-toggle="modal" data-bs-target="#editcontactModal">
                                 Editar
+                            </button>
+                        </td>
+                        <td class="text-center">
+                            <button class="btn btn-danger btn-sm w-100 deleteUser">
+                                Eliminar
                             </button>
                         </td>
                         </tr>
@@ -88,6 +99,28 @@
                         }
                 }
             });
+        });
+        $(".deleteUser").click(function(){
+            let idArea = $(this).attr('data');
+            Swal.fire({
+                title: '¿Eliminar este usuario?',
+                text: "No se podrá revertir esta acción",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#959595',
+                confirmButtonText: 'Eliminar',
+                cancelButtonText: 'Cancelar'
+                }).then((result) => {
+                if (result.isConfirmed) {
+                    Livewire.emit('eliminarArea',idArea);
+                    Swal.fire(
+                    'Eliminado!',
+                    'El cliente ha sido eliminado',
+                    'success'
+                    )
+                }
+            })
         });
     </script>
 </div>
