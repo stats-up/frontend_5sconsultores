@@ -25,7 +25,7 @@
         <nav aria-label="breadcrumb" style="padding-left:4rem">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/admin" style="color:#c99616">Clientes</a></li>
-                <li class="breadcrumb-item"><a href="/requerimientos" style="color:#c99616">Requerimientos</a></li>
+                <li class="breadcrumb-item"><a href="/requerimientos?c={{$_GET["c"]}}" style="color:#c99616">Requerimientos</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Perfiles</li>
             </ol>
         </nav>

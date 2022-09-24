@@ -48,9 +48,9 @@
                     <td>Area 1</td>
                     <td>Nombre Completo</td>
                     <td>
-                        <button class="btn btn-primary btn-sm w-100" onclick="location.href='/postulantes'">
+                        <a class="btn btn-primary btn-sm w-100" href="/postulantes?c={{$_GET["c"]}}">
                                 Ver postulantes
-                        </button>
+                        </a>
                     </td>
                     <td class="text-center">
                         <button class="btn btn-secondary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#editreqModal">
