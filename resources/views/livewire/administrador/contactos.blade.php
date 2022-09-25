@@ -80,7 +80,7 @@
                                             </a>
                                             <ul class="dropdown-menu dotmenu">
                                                 <li><a wire:click="seleccionarEditarContacto({{$cuenta["id"]}})" class="dropdown-item a" href="#" data-bs-toggle="modal" data-bs-target="#editcontactModal"><i class="icon fa-solid fa-pen"></i>Editar contacto</a></li>
-                                                <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
+                                                <li><a class="dropdown-item a deleteContacto" data="{{$cuenta["id"]}}" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
                                             </ul>
                                         </div>                                 
                                         <div wire:click="seleccionarContactoModal({{$cuenta["id"]}})" class="person-info"  data-bs-toggle="modal" data-bs-target="#vercontactModal">
@@ -146,6 +146,28 @@
                     Swal.fire(
                     'Eliminado!',
                     'El cliente ha sido eliminado',
+                    'success'
+                    )
+                }
+            })
+        });
+        $(".deleteContacto").click(function(){
+            let idContacto = $(this).attr('data');
+            Swal.fire({
+                title: '¿Eliminar este contacto?',
+                text: "No se podrá revertir esta acción",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#959595',
+                confirmButtonText: 'Eliminar',
+                cancelButtonText: 'Cancelar'
+                }).then((result) => {
+                if (result.isConfirmed) {
+                    Livewire.emit('deleteuser',idContacto);
+                    Swal.fire(
+                    'Eliminado!',
+                    'El contacto ha sido eliminado',
                     'success'
                     )
                 }

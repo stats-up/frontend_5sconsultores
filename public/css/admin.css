@@ -1,3 +1,5 @@
+
+
 .badge-danger{
     background-color: #FFC9C9;  
     color:#FF6B6B;
@@ -11,7 +13,14 @@
   color:#37B24D;
 }
 .card-title{
-  padding-top:0.5rem
+  text-align: center;
+  padding-top:0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 .dottoggle::after {
   content: none; 

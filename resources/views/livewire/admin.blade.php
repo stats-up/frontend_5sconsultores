@@ -58,7 +58,7 @@
                                 </ul>
                             </div>
                             <div>
-                                <h6 class="card-title text-muted row d-flex justify-content-center">{{$row["name"]}}</h6>
+                                <h6 class="card-title text-muted row">{{$row["name"]}}</h6>
                             </div>
                         </div>
                       <div class="divbtn py-2">

@@ -12,7 +12,7 @@ class Contactos extends Component
     public $id_customer;
     public $customer_areas = [];
 
-    protected $listeners = ['eliminarArea'];
+    protected $listeners = ['eliminarArea','deleteuser'];
 
     public function eliminarArea($area){
         $token = getenv("API_TOKEN");
@@ -64,6 +64,16 @@ class Contactos extends Component
             $index++;
         }
         $this->customer_areas = $ca;
+    }
+
+    public function deleteuser($id){
+        $token = getenv("API_TOKEN");
+        $array["token"] = $token;
+        $array["data"]["id"] = $id;
+        $array["data"]["status"] = "eliminada";
+        $endpoint = getenv("API_URL")."/api/upd_account_status";
+        $response = Http::withBody(json_encode($array), 'application/json')->post($endpoint);
+        return redirect()->to("/contactos?c=".$this->id_customer);
     }
 
     public function mount(){

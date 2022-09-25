@@ -30,7 +30,7 @@
             </ol>
         </nav>
     </div>
-
+    @livewire('administrador.verpostulante-modal')
     @livewire('administrador.addpostulante-modal');
     @livewire('administrador.editpostulante-modal');
     <div class="col-md-12 d-flex justify-content-center titulo">Perfiles</div>
@@ -98,7 +98,7 @@
                     nodes[i].style.display = "none";
                     }
                 }
-            }
+        }
 
             function filter(name){      
                 var nodes = document.getElementsByClassName('person');
@@ -109,11 +109,11 @@
                         nodes[i].style.display = "none";
                     }                    
                 }
-            }
+        }
             $(".deleteProfile").click(function(){
             let idArea = $(this).attr('data');
             Swal.fire({
-                title: '¿Eliminar este área?',
+                title: '¿Eliminar este perfil?',
                 text: "No se podrá revertir esta acción",
                 icon: 'warning',
                 showCancelButton: true,
@@ -122,15 +122,15 @@
                 confirmButtonText: 'Eliminar',
                 cancelButtonText: 'Cancelar'
                 }).then((result) => {
-                if (result.isConfirmed) {
-                    Livewire.emit('eliminarArea',idArea);
-                    Swal.fire(
-                    'Eliminado!',
-                    'El cliente ha sido eliminado',
-                    'success'
-                    )
-                }
-            })
-        });
+                    if (result.isConfirmed) {
+                        Livewire.emit('eliminarArea',idArea);
+                        Swal.fire(
+                        'Eliminado!',
+                        'El perfil ha sido eliminado',
+                        'success'
+                        )
+                    }
+                })
+            });
     </script>
 </div>
