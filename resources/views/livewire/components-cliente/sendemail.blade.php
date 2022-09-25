@@ -8,7 +8,9 @@
                         <i>Somos personas reclutando personas</i>
                     </span>
                     <div class="title " style="font-size:20px">¿Tienes problemas para iniciar sesión?</div>
-                    <div class="text-muted px-4" style="text-align:justify;text-justify:inter-word">Ingresa tu correo electrónico y te enviaremos un enlace para que recuperes el acceso a tu cuenta.</div>
+                    <div class="px-4 text-muted d-flex row justify-content-center" style="font-size:14px;width:100%">
+                        <div style="width:fit-content">Ingresa tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña. </div>
+                    </div> 
                 </div>
                 <div class="d-flex justify-content-center">
                     <form id="loginform">
