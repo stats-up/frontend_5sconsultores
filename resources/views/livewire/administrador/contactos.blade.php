@@ -22,8 +22,7 @@
         </div>
     </div>
     @livewire('administrador.addcontacto-modal')
-    <livewire:administrador.addcontacto-modal/>
-    <livewire:administrador.editcontacto-modal/>
+    @livewire('administrador.editcontacto-modal', ["id_cliente" => $_GET["c"]])
     @livewire('administrador.addarea-modal', ["id_cliente" => $_GET["c"]])
     <livewire:administrador.vercontacto-modal/>
     <livewire:administrador.editarea-modal/>
@@ -80,14 +79,20 @@
                                                 <i class="icondrp bi bi-three-dots-vertical"></i>
                                             </a>
                                             <ul class="dropdown-menu dotmenu">
-                                                <li><a class="dropdown-item a" href="/users" ><i class="icon fa-solid fa-pen"></i>Editar contacto</a></li>
+                                                <li><a wire:click="seleccionarEditarContacto({{$cuenta["id"]}})" class="dropdown-item a" href="#" data-bs-toggle="modal" data-bs-target="#editcontactModal"><i class="icon fa-solid fa-pen"></i>Editar contacto</a></li>
                                                 <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
                                             </ul>
                                         </div>                                 
                                         <div class="person-info"  data-bs-toggle="modal" data-bs-target="#vercontactModal">
                                             <div class="card-subtitle text-muted">{{$cuenta["nombre_completo"]}}</div>
                                             <div class="status" id="status">
-                                                <span class="badge badge-success">Activo</span>
+                                                @if ($cuenta["estado_cuenta"] == "activa")
+                                                    <span class="badge badge-success">Activo</span>
+                                                @elseif($cuenta["estado_cuenta"] == "inactiva")
+                                                    <span class="badge badge-warning">Inactivo</span>
+                                                @elseif($cuenta["estado_cuenta"] == "eliminada")
+                                                    <span class="badge badge-danger">Eliminado</span>
+                                                @endif
                                             </div>
                                         </div>
                                     </div>
