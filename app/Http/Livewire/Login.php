@@ -31,9 +31,20 @@ class Login extends Component
         $endpint = getenv("API_URL")."/api/auth_user";
         $response = Http::withBody(json_encode($array), 'application/json')->post($endpint);
         if($response->json() != null){
-            session::put(['user' => $response->json()[0]]);
-            $user_type = $response->json()[0]["tipo_cuenta"];
-            return redirect()->to("/$user_type");
+            $user = $response->json()[0];
+
+            $estado_empresa = false;
+            if($user["estado_empresa"] == null || $user["estado_empresa"] == "activo"){
+                $estado_empresa = true;
+            }
+            if($user["estado_cuenta"] == "activa" &&  $estado_empresa){
+                session::put(['user' => $user]);
+                $user_type = $user["tipo_cuenta"];
+                return redirect()->to("/$user_type");
+            }else{
+                $this->dispatchBrowserEvent('disabled');
+            }
+            
         }else{
             $this->dispatchBrowserEvent('incorrect');
         }

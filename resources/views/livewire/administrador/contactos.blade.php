@@ -24,7 +24,7 @@
     @livewire('administrador.addcontacto-modal')
     @livewire('administrador.editcontacto-modal', ["id_cliente" => $_GET["c"]])
     @livewire('administrador.addarea-modal', ["id_cliente" => $_GET["c"]])
-    <livewire:administrador.vercontacto-modal/>
+    @livewire('administrador.vercontacto-modal')
     <livewire:administrador.editarea-modal/>
     @livewire('administrador.ruta-admin', ["id_cliente" => $_GET["c"]])
     <div class="row titulo">Contactos</div>
@@ -83,15 +83,15 @@
                                                 <li><a class="dropdown-item a" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
                                             </ul>
                                         </div>                                 
-                                        <div class="person-info"  data-bs-toggle="modal" data-bs-target="#vercontactModal">
+                                        <div wire:click="seleccionarContactoModal({{$cuenta["id"]}})" class="person-info"  data-bs-toggle="modal" data-bs-target="#vercontactModal">
                                             <div class="card-subtitle text-muted">{{$cuenta["nombre_completo"]}}</div>
                                             <div class="status" id="status">
                                                 @if ($cuenta["estado_cuenta"] == "activa")
-                                                    <span class="badge badge-success">Activo</span>
+                                                    <span class="badge badge-success">Activa</span>
                                                 @elseif($cuenta["estado_cuenta"] == "inactiva")
-                                                    <span class="badge badge-warning">Inactivo</span>
+                                                    <span class="badge badge-warning">Inactiva</span>
                                                 @elseif($cuenta["estado_cuenta"] == "eliminada")
-                                                    <span class="badge badge-danger">Eliminado</span>
+                                                    <span class="badge badge-danger">Eliminada</span>
                                                 @endif
                                             </div>
                                         </div>

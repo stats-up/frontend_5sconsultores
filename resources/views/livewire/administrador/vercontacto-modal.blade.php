@@ -9,20 +9,26 @@
                 <div class="modal-body">
                     <div class="mb-2 d-flex col">
                         <label for="recipient-name" class="fw-bold">Nombre:</label>
-                        <div class="d-flex align-items-center px-2">Client</div>
+                        <div class="d-flex align-items-center px-2">{{$name}}</div>
                     </div>
                     <div class="mb-2 d-flex col">
                         <label for="message-text" class="fw-bold">Correo:</label>
-                        <div class="d-flex align-items-center px-2">client@client.cl</div>
+                        <div class="d-flex align-items-center px-2">{{$email}}</div>
                     </div>
                     <div class="mb-2 d-flex col">
                         <label for="message-text" class="fw-bold">Telefono:</label>
-                        <div class="d-flex align-items-center px-2">+569 1234 5678</div>
+                        <div class="d-flex align-items-center px-2">{{$phone}}</div>
                     </div>
                     <div class="mb-2 d-flex col" >
                         <div class="fw-bold">Estado:</div>
                         <div class="status px-2">
-                            <span class="badge badge-success">Activo</span>
+                            @if ($status == "activa")
+                                <span class="badge badge-success">Activa</span>
+                            @elseif($status == "inactiva")
+                                <span class="badge badge-warning">Inactiva</span>
+                            @elseif($status == "eliminada")
+                                <span class="badge badge-danger">Eliminada</span>
+                            @endif
                         </div>
                     </div>
                 </div>

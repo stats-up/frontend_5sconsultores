@@ -66,6 +66,13 @@
                 text: 'Usuario o contraseña incorrecto',
             });
         });
+        window.addEventListener('disabled', event =>{
+            Swal.fire({
+                icon: 'info',
+                title: 'Oops...',
+                text: 'Cuenta inhabilitada',
+            });
+        });
         window.addEventListener('close_swal', event =>{
             Swal.close();
         });
@@ -75,7 +82,6 @@
         const password = document.querySelector('#floatingPassword');
     
         togglePassword.addEventListener('click', () => {
-    
             // Toggle the type attribute using
             // getAttribure() method
             const type = password
