@@ -43,38 +43,19 @@
                 </tr>
             </thead>
             <tbody>
-                @for ($i = 0; $i < 10; $i++) <tr>
-                    <td scope="row">Requerimiento  #{{20+$i}}</td>
-                    <td>Area 1</td>
-                    <td>Nombre Completo</td>
-                    <td>
-                        <a class="btn btn-primary btn-sm w-100" href="/postulantes?c={{$_GET["c"]}}">
-                                Ver postulantes
-                        </a>
-                    </td>
-                    <td class="text-center">
-                        <button class="btn btn-secondary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#editreqModal">
-                            Editar
-                        </button>
-                    </td>
-                    <td class="text-center">
-                        <button class="btn btn-danger btn-sm w-100 deleteReq">
-                            Eliminar
-                        </button>
-                    </td>
-                    </tr>
-                    @endfor
-                    @for ($i = 0; $i < 10; $i++) <tr>
-                        <td scope="row">Requerimiento #{{10+$i}}</td>
-                        <td>Area 2</td>
-                        <td>Nombre Completo</td>
+                @foreach ($request as $req)
+                    
+                    <tr>
+                        <td>{{$req["name"]}}</td>
+                        <td>{{$req["area"]}}</td>
+                        <td>{{$req["contact"]}}</td>
                         <td>
-                            <button class="btn btn-primary btn-sm w-100" onclick="location.href='/postulantes'">
+                            <a class="btn btn-primary btn-sm w-100" href="/postulantes?c={{$_GET["c"]}}">
                                 Ver postulantes
-                            </button>
+                            </a>
                         </td>
                         <td class="text-center">
-                            <button class="btn btn-secondary btn-sm w-100"  data-bs-toggle="modal" data-bs-target="#editreqModal">
+                            <button class="btn btn-secondary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#editreqModal">
                                 Editar
                             </button>
                         </td>
@@ -83,8 +64,8 @@
                                 Eliminar
                             </button>
                         </td>
-                        </tr>
-                        @endfor
+                    </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
