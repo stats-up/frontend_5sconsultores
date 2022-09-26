@@ -33,11 +33,11 @@ class EditcontactoModal extends Component
         $array["data"]["id"] = $id_account;
         $endpint = getenv("API_URL")."/api/get_account";
         $response = Http::withBody(json_encode($array), 'application/json')->post($endpint);
-        $this->name =  $response->json()[0]["full_name"];
+        $this->name =  $response->json()[0]["nombre_completo"];
         $this->email =  $response->json()[0]["email"];
-        $this->phone =  $response->json()[0]["cellphone"];
-        $this->id_area =  $response->json()[0]["customer_area"];
-        $this->status =  $response->json()[0]["status"] == "activa" ? true : false;
+        $this->phone =  $response->json()[0]["telefono"];
+        $this->id_area =  $response->json()[0]["id_area_empresa"];
+        $this->status =  $response->json()[0]["estado_cuenta"] == "activa" ? true : false;
         $this->dispatchBrowserEvent('swalClose');
     }
     public function submit(){

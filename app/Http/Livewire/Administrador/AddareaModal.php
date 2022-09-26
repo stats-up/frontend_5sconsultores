@@ -17,6 +17,7 @@ class AddareaModal extends Component
     ];
 
     public function submit(){
+        $this->dispatchBrowserEvent('swalLoading');
         $this->validate();
         $token = getenv("API_TOKEN");
         $array["token"] = $token;

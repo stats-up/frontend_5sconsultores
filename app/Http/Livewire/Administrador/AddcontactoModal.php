@@ -42,16 +42,37 @@ class AddcontactoModal extends Component
     public function submit(){
         $this->dispatchBrowserEvent('swalLoading');
         $this->validate();
+        $users = $this->getUserByEmail(strtolower($this->email));
+        $se_agrega = true;
+        if(count($users) > 0){
+            foreach ($users as $user) {
+                if($user["estado_empresa"] != "eliminado" && $user["estado_cuenta"] != "eliminada"){
+                    $se_agrega = false;
+                    $this->dispatchBrowserEvent('emailExist', $user);
+                }
+            }
+        }
+        if($se_agrega){
+            $token = getenv("API_TOKEN");
+            $array["token"] = $token;
+            $array["data"]["customer_id"] = $this->id_customer;
+            $array["data"]["customer_area"] = $this->id_area;
+            $array["data"]["email"] = strtolower($this->email);
+            $array["data"]["full_name"] = $this->name;
+            $array["data"]["cellphone"] = $this->phone;
+            $endpoint = getenv("API_URL")."/api/add_account";
+            $response = Http::withBody(json_encode($array), 'application/json')->post($endpoint);
+            return redirect()->to("/contactos?c=".$this->id_customer);
+        }
+    }
+
+    private function getUserByEmail($email){
         $token = getenv("API_TOKEN");
         $array["token"] = $token;
-        $array["data"]["customer_id"] = $this->id_customer;
-        $array["data"]["customer_area"] = $this->id_area;
-        $array["data"]["email"] = $this->email;
-        $array["data"]["full_name"] = $this->name;
-        $array["data"]["cellphone"] = $this->phone;
-        $endpoint = getenv("API_URL")."/api/add_account";
+        $array["data"]["email"] = $email;
+        $endpoint = getenv("API_URL")."/api/get_account_by_email";
         $response = Http::withBody(json_encode($array), 'application/json')->post($endpoint);
-        return redirect()->to("/contactos?c=".$this->id_customer);
+        return $response->json();
     }
 
     public function render()

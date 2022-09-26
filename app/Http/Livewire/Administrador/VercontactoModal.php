@@ -24,10 +24,10 @@ class VercontactoModal extends Component
         $array["data"]["id"] = $id_account;
         $endpint = getenv("API_URL")."/api/get_account";
         $response = Http::withBody(json_encode($array), 'application/json')->post($endpint);
-        $this->name =  $response->json()[0]["full_name"];
+        $this->name =  $response->json()[0]["nombre_completo"];
         $this->email =  $response->json()[0]["email"];
-        $this->phone =  $response->json()[0]["cellphone"];
-        $this->status =  $response->json()[0]["status"];
+        $this->phone =  $response->json()[0]["telefono"];
+        $this->status =  $response->json()[0]["estado_cuenta"];
         $this->dispatchBrowserEvent('swalClose');
     }
 

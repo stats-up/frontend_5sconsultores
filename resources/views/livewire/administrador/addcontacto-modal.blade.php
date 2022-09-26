@@ -31,4 +31,15 @@
             </form>
         </div>
     </div>
+    <script>
+        window.addEventListener('emailExist', event =>{
+            let user = event.detail;
+            Swal.fire({
+                icon: 'warning',
+                title: 'El correo ya existe',
+                text: 'El correo ' + user.email,
+                html: 'Este se encuentra en... <br> <b>Cliente:</b> ' + user.nombre_empresa + '<br> <b>Área:</b> ' + user.area_empresa + '<br><b>Correspondiente a:</b> ' + user.nombre_completo
+                });
+        });
+    </script>
 </div>

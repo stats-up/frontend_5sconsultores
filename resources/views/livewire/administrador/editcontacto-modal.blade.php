@@ -9,18 +9,18 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="recipient-name" class="col-form-label">Nombre:</label>
-                        <input wire:model="name" type="text" class="form-control" id="recipient-name">
+                        <input wire:model="name" type="text" class="form-control" >
                     </div>
                     <div class="mb-3">
-                        <label for="message-text" class="col-form-label">Correo</label>
-                        <input wire:model="email" type="text" class="form-control" id="recipient-name">
+                        <label class="col-form-label">Correo</label>
+                        <input wire:model="email" type="email" class="form-control" >
                     </div>
                     <div class="mb-3">
-                        <label for="message-text" class="col-form-label">Teléfono</label>
-                        <input wire:model="phone" type="text" class="form-control" id="recipient-name">
+                        <label class="col-form-label">Teléfono</label>
+                        <input wire:model="phone" type="text" class="form-control" >
                     </div>
                     <div class="mb-3">
-                        <label for="message-text" class="col-form-label">Área</label>
+                        <label class="col-form-label">Área</label>
                         <select wire:model="id_area" class="form-select" aria-label="Default select example">
                             @foreach ($areas as $area)
                                 @if($area["status"] == "activo")
