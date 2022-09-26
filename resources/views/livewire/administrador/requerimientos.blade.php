@@ -44,11 +44,10 @@
             </thead>
             <tbody>
                 @foreach ($request as $req)
-                    
                     <tr>
-                        <td>{{$req["name"]}}</td>
+                        <td>{{$req["nombre"]}}</td>
                         <td>{{$req["area"]}}</td>
-                        <td>{{$req["contact"]}}</td>
+                        <td>{{$req["nombre_completo_cuenta_solicitante"]}}</td>
                         <td>
                             <a class="btn btn-primary btn-sm w-100" href="/postulantes?c={{$_GET["c"]}}">
                                 Ver postulantes

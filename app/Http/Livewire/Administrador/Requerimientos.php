@@ -14,7 +14,7 @@ class Requerimientos extends Component
         $token = getenv("API_TOKEN");
         $array["token"] = $token;
         $array["data"]["id_customer"] = $this->id_cliente;
-        $endpoint = getenv("API_URL")."/api/get_requests";
+        $endpoint = getenv("API_URL")."/api/get_requests_by_id_customer";
         $response = Http::withBody(json_encode($array), 'application/json')->post($endpoint);
         $this->request = $response->json();
         $this->get_account();
@@ -26,10 +26,9 @@ class Requerimientos extends Component
         foreach($aux as $req){
             $token = getenv("API_TOKEN");
             $array["token"] = $token;
-            $array["data"]["id"] = $req["requester_account"];
+            $array["data"]["id"] = $req["id_cuenta_solicitante"];
             $endpoint = getenv("API_URL")."/api/get_account";
             $response = Http::withBody(json_encode($array), 'application/json')->post($endpoint);
-            $aux[$index]["contact"] = $response->json()[0]["nombre_completo"];
             $aux[$index]["area"] = $response->json()[0]["area_empresa"];
             $index++;
         }

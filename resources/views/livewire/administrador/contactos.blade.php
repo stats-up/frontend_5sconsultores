@@ -46,7 +46,6 @@
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                         <li><a class="dropdown-item" href="#" onclick="filter('Activa')">Activa</a></li>
                         <li><a class="dropdown-item" href="#" onclick="filter('Inactiva')">Inactiva</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="filter('Eliminada')">Eliminada</a></li>
                     </ul>
                 </div>
             </button>                
