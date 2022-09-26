@@ -72,31 +72,33 @@
                                 </div>
                             </div>
                             @foreach($item["accounts"] as $cuenta)
-                                <div class="row person">
-                                    <div class="row row-contact">
-                                        <div class="dropdown dropdot d-flex align-items-center" style="width:fit-content">
-                                            <a class=" dropdown-toggle addContacttoggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="icondrp bi bi-three-dots-vertical"></i>
-                                            </a>
-                                            <ul class="dropdown-menu dotmenu">
-                                                <li><a wire:click="seleccionarEditarContacto({{$cuenta["id"]}})" class="dropdown-item a" href="#" data-bs-toggle="modal" data-bs-target="#editcontactModal"><i class="icon fa-solid fa-pen"></i>Editar contacto</a></li>
-                                                <li><a class="dropdown-item a deleteContacto" data="{{$cuenta["id"]}}" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
-                                            </ul>
-                                        </div>                                 
-                                        <div wire:click="seleccionarContactoModal({{$cuenta["id"]}})" class="person-info"  data-bs-toggle="modal" data-bs-target="#vercontactModal">
-                                            <div class="card-subtitle text-muted">{{$cuenta["nombre_completo"]}}</div>
-                                            <div class="status" id="status">
-                                                @if ($cuenta["estado_cuenta"] == "activa")
-                                                    <span class="badge badge-success">Activa</span>
-                                                @elseif($cuenta["estado_cuenta"] == "inactiva")
-                                                    <span class="badge badge-warning">Inactiva</span>
-                                                @elseif($cuenta["estado_cuenta"] == "eliminada")
-                                                    <span class="badge badge-danger">Eliminada</span>
-                                                @endif
+                                @if($cuenta["estado_cuenta"] != "eliminada")
+                                    <div class="row person">
+                                        <div class="row row-contact">
+                                            <div class="dropdown dropdot d-flex align-items-center" style="width:fit-content">
+                                                <a class=" dropdown-toggle addContacttoggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <i class="icondrp bi bi-three-dots-vertical"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dotmenu">
+                                                    <li><a wire:click="seleccionarEditarContacto({{$cuenta["id"]}})" class="dropdown-item a" href="#" data-bs-toggle="modal" data-bs-target="#editcontactModal"><i class="icon fa-solid fa-pen"></i>Editar contacto</a></li>
+                                                    <li><a class="dropdown-item a deleteContacto" data="{{$cuenta["id"]}}" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
+                                                </ul>
+                                            </div>                                 
+                                            <div wire:click="seleccionarContactoModal({{$cuenta["id"]}})" class="person-info"  data-bs-toggle="modal" data-bs-target="#vercontactModal">
+                                                <div class="card-subtitle text-muted">{{$cuenta["nombre_completo"]}}</div>
+                                                <div class="status" id="status">
+                                                    @if ($cuenta["estado_cuenta"] == "activa")
+                                                        <span class="badge badge-success">Activa</span>
+                                                    @elseif($cuenta["estado_cuenta"] == "inactiva")
+                                                        <span class="badge badge-warning">Inactiva</span>
+                                                    @elseif($cuenta["estado_cuenta"] == "eliminada")
+                                                        <span class="badge badge-danger">Eliminada</span>
+                                                    @endif
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                @endif
                             @endforeach
                         </div>
                     </div>
