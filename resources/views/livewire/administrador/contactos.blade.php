@@ -44,8 +44,8 @@
                         <i class="bi bi-filter">Filtrar</i>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <li><a class="dropdown-item" href="#" onclick="filter('Activo')">Activo</a></li>
-                        <li><a class="dropdown-item" href="#" onclick="filter('Inactivo')">Inactivo</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="filter('Activa')">Activa</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="filter('Inactiva')">Inactiva</a></li>
                     </ul>
                 </div>
             </button>                
