@@ -47,6 +47,11 @@ class Requerimientos extends Component
         return redirect()->to("/requerimientos?c=".$this->id_cliente);
     }
 
+    public function seleccionarRequerModal($id_requer){
+        $this->dispatchBrowserEvent('swalLoading');
+        $this->emit('verRequerimientoModal', $id_requer);
+    }
+
     public function mount(){
         if(!isset($_GET["c"])){
             return redirect()->to("/admin");
