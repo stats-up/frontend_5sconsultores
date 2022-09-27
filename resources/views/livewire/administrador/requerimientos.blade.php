@@ -47,7 +47,7 @@
                 @foreach ($request as $req)
                     @if($req["estado_requerimiento"] != "eliminado")
                     <tr>
-                        <td data-bs-toggle="modal" data-bs-target="#verrequerModal" style="cursor: pointer">
+                        <td wire:click="seleccionarRequerModal({{$req["id"]}})" data-bs-toggle="modal" data-bs-target="#verrequerModal" style="cursor: pointer">
                             {{$req["nombre"]}}
                         </td>
                         <td>{{$req["nombre_completo_cuenta_solicitante"]}}</td>
@@ -56,7 +56,7 @@
                             {{date("d-m-Y H:i:s",strtotime($req["fecha_registro"]))}}
                         </td>
                         <td>
-                            <a class="btn btn-primary btn-sm w-100" href="/postulantes?c={{$_GET["c"]}}">
+                            <a class="btn btn-primary btn-sm w-100" href="/postulantes">
                                 Ver postulantes
                             </a>
                         </td>

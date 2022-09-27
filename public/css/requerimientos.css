@@ -72,3 +72,39 @@
 .btn-post:hover{
   background-color: #d39b23;
 }
+.card{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border:none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.cargo{
+  font-size: 1.2rem;
+  color:#595d60;
+  font-weight: bold;
+}
+
+.btn-postulantes{
+  background-color:#e0ae43de;
+  border-radius: 1rem;
+  border:1px solid #e0ae43de;
+  color:white;
+  min-height: 2rem;
+}
+
+.btn-postulantes:hover{
+  background-color: white;
+  border-radius: 1rem;
+  border:1px solid #e0ae43de;
+  min-height: 2rem;
+  color:#e0ae43de;
+}
+
+.btn-text{
+  text-decoration:none;
+  color:white;
+}
+.btn-postulantes:hover > .btn-text{
+  text-decoration:none;
+  color:#e0ae43de;
+}
