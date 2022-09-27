@@ -10,6 +10,8 @@ class Requerimientos extends Component
     public $id_cliente;
     public $request = [];
 
+    protected $listeners = ['eliminarRequerimiento'];
+
     public function get_all_request(){
         $token = getenv("API_TOKEN");
         $array["token"] = $token;
@@ -33,6 +35,16 @@ class Requerimientos extends Component
             $index++;
         }
         $this->request = $aux;
+    }
+
+    public function eliminarRequerimiento($id_Req){
+        $token = getenv("API_TOKEN");
+        $array["token"] = $token;
+        $array["data"]["id"] = $id_Req;
+        $array["data"]["status"] = "eliminado";
+        $endpoint = getenv("API_URL")."/api/upd_request_status";
+        $response = Http::withBody(json_encode($array), 'application/json')->post($endpoint);
+        return redirect()->to("/requerimientos?c=".$this->id_cliente);
     }
 
     public function mount(){

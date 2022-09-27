@@ -19,6 +19,7 @@
   'administrador.users' => 'App\\Http\\Livewire\\Administrador\\Users',
   'administrador.vercontacto-modal' => 'App\\Http\\Livewire\\Administrador\\VercontactoModal',
   'administrador.verpostulante-modal' => 'App\\Http\\Livewire\\Administrador\\VerpostulanteModal',
+  'administrador.verrequer-modal' => 'App\\Http\\Livewire\\Administrador\\VerrequerModal',
   'cliente' => 'App\\Http\\Livewire\\Cliente',
   'components-cliente.perfil-modal' => 'App\\Http\\Livewire\\ComponentsCliente\\PerfilModal',
   'components-cliente.perfiles' => 'App\\Http\\Livewire\\ComponentsCliente\\Perfiles',

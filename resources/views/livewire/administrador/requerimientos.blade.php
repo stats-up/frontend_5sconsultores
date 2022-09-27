@@ -24,9 +24,10 @@
     @livewire('administrador.ruta-admin', ["id_cliente" => $_GET["c"]])
     <livewire:administrador.editreqer-modal/>
     @livewire('administrador.requer-modal', ["id_cliente" => $_GET["c"]])
+    @livewire('administrador.verrequer-modal')
     <div class="row titulo">Requerimientos</div>
     <div class="px-4 py-4">
-        <button href="#" class="btn-post col-md-2" data-bs-toggle="modal" data-bs-target="#addreqModal">
+        <button href="#" class="btn-post col-md-2" data-bs-toggle="modal" data-bs-target="#addreqModal" >
             <i class="bi bi-plus"></i>Nuevo requerimiento
         </button>
     </div>
@@ -44,8 +45,11 @@
             </thead>
             <tbody>
                 @foreach ($request as $req)
+                    @if($req["estado_requerimiento"] != "eliminado")
                     <tr>
-                        <td>{{$req["nombre"]}}</td>
+                        <td data-bs-toggle="modal" data-bs-target="#verrequerModal" style="cursor: pointer">
+                            {{$req["nombre"]}}
+                        </td>
                         <td>{{$req["nombre_completo_cuenta_solicitante"]}}</td>
                         <td>
                             <span style="display: none;">{{$req["fecha_registro"]}}</span>
@@ -62,11 +66,12 @@
                             </button>
                         </td>
                         <td class="text-center">
-                            <button class="btn btn-danger btn-sm w-100 deleteReq">
+                            <button class="btn btn-danger btn-sm w-100 deleteReq" data="{{$req["id"]}}">
                                 Eliminar
                             </button>
                         </td>
                     </tr>
+                    @endif
                 @endforeach
             </tbody>
         </table>
@@ -100,7 +105,7 @@
             });
         });
         $(".deleteReq").click(function(){
-            let idArea = $(this).attr('data');
+            let idReq = $(this).attr('data');
             Swal.fire({
                 title: '¿Eliminar este requerimiento?',
                 text: "No se podrá revertir esta acción",
@@ -112,10 +117,10 @@
                 cancelButtonText: 'Cancelar'
                 }).then((result) => {
                 if (result.isConfirmed) {
-                    Livewire.emit('eliminarArea',idArea);
+                    Livewire.emit('eliminarRequerimiento',idReq);
                     Swal.fire(
                     'Eliminado!',
-                    'El cliente ha sido eliminado',
+                    'El requerimiento ha sido eliminado',
                     'success'
                     )
                 }
