@@ -23,7 +23,7 @@
     </div>
     @livewire('administrador.ruta-admin', ["id_cliente" => $_GET["c"]])
     <livewire:administrador.editreqer-modal/>
-    <livewire:administrador.requer-modal/>
+    @livewire('administrador.requer-modal', ["id_cliente" => $_GET["c"]])
     <div class="row titulo">Requerimientos</div>
     <div class="px-4 py-4">
         <button href="#" class="btn-post col-md-2" data-bs-toggle="modal" data-bs-target="#addreqModal">
@@ -35,8 +35,8 @@
             <thead>
                 <tr>
                     <th scope="col" class="col-md-3">Requerimiento</th>
-                    <th scope="col" class="col-md-3">Área</th>
-                    <th scope="col" class="col-md-2">Contacto</th>
+                    <th scope="col" class="col-md-2">Solicitado Por</th>
+                    <th scope="col" class="col-md-1">Fecha Ingreso</th>
                     <th scope="col" class="col-md-1">Perfiles</th>
                     <th scope="col" class="col-md-1"></th>
                     <th scope="col" class="col-md-1"></th>
@@ -46,8 +46,11 @@
                 @foreach ($request as $req)
                     <tr>
                         <td>{{$req["nombre"]}}</td>
-                        <td>{{$req["area"]}}</td>
                         <td>{{$req["nombre_completo_cuenta_solicitante"]}}</td>
+                        <td>
+                            <span style="display: none;">{{$req["fecha_registro"]}}</span>
+                            {{date("d-m-Y H:i:s",strtotime($req["fecha_registro"]))}}
+                        </td>
                         <td>
                             <a class="btn btn-primary btn-sm w-100" href="/postulantes?c={{$_GET["c"]}}">
                                 Ver postulantes
@@ -72,7 +75,7 @@
         $(document).ready(function() {
             $('#tabla-admin').DataTable({
                 "ordering": true,
-                "order": [],
+                "order": [[2,"desc"]],
                 "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Todos"]],
                 language: {
                     "decimal": "",
