@@ -1,4 +1,4 @@
-<div class="container-fluid" style="height:100vh;background-color:#fdfdfd;">
+<div class="container-fluid g-0" style="background-color:#fdfdfd;">
     <div class="row head">
         <div class="col-md-12 d-flex justify-content-between top">
             <img class="responsivelogo" src="http://5sconsultores.cl/portal/wp-content/uploads/2019/11/Logo_5s_web.jpg" alt="Logo"  class="brandlogo">
@@ -50,7 +50,7 @@
         </div>
     </div>
     <div class="d-flex justify-content-center section">
-        <div class="row row-cols-auto group-cards overflow-auto d-flex justify-content-center" style="max-width:100%;max-height:65vh">
+        <div class="row row-cols-auto group-cards overflow-auto d-flex justify-content-center" style="width:100%;max-height:65vh">
             @foreach ($applicants as $applicant)
                 <div class="col py-2">
                     <div class="card target" style="width:23rem;height:32rem;">
