@@ -20,7 +20,7 @@
                         <div class="card row justify-content-center">
                             <div class="card-body row mx-0">
                                 <div class="col-lg-9" style="height:fit-content">
-                                    <div class="cargo" >Ingeniero Senior de Metalurgia</div>
+                                    <div class="cargo" >{{$name}}</div>
                                     <div class="descripcion py-2">
                                         {{$descripcion}}
                                     </div>

@@ -31,7 +31,7 @@
             <i class="bi bi-plus"></i>Nuevo requerimiento
         </button>
     </div>
-    <div class="col-md-12 tabla">
+    <div wire:ignore class="col-md-12 tabla">
         <table id="tabla-admin" class="table table-bordered table-hover">
             <thead>
                 <tr>
@@ -56,8 +56,8 @@
                             {{date("d-m-Y H:i:s",strtotime($req["fecha_registro"]))}}
                         </td>
                         <td>
-                            <a class="btn btn-primary btn-sm w-100" href="/postulantes">
-                                Ver postulantes
+                            <a class="btn btn-primary btn-sm w-100" href="/postulantes?c={{$req["id_empresa"]}}">
+                                Ver Perfiles
                             </a>
                         </td>
                         <td class="text-center">
