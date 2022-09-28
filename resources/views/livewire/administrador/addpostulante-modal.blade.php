@@ -36,6 +36,14 @@
                     </div>
                     <div class="col-lg-6 px-4">
                         <div class="mb-3">
+                            <label for="areaDataList" class="form-label">Área de trabajo</label>
+                            <select class="form-select" aria-label="Default select example">
+                                @foreach ($areas as $area)
+                                    <option value="{{$area["id"]}}">{{$area["name"]}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="mb-3">
                             <label for="message-text" class="col-form-label" >Descripción del perfil</label>
                             <textarea wire:model="descripcion" class="form-control" rows="3"></textarea>
                         </div>
@@ -44,8 +52,8 @@
                             <input wire:model="profilePic" type="file" accept="image/*" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <label for="message-text" class="col-form-label" >Curriculum vitae</label>
-                            <input wire:model="cv" name="userfile" type="file" accept=".doc, .docx, .pdf" class="form-control"/>
+                            <label for="message-text" class="col-form-label" >PDF</label>
+                            <input wire:model="cv" name="userfile" type="file" accept=".pdf" class="form-control"/>
                         </div>
                         <div class="mb-3">
                             <label for="message-text" class="col-form-label" >Video de presentación (URL Youtube)</label>

@@ -39,7 +39,7 @@
                         </div>
                     </div>
                     <div class="col-xl-6 py-4">
-                        <button onclick="openCv()" id="btn-cv" style="display:none" class="btn btn-primary">Ver curriculum vitae</button>
+                        <button onclick="openCv()" id="btn-cv" style="display:none" class="btn btn-primary">Ver PDF</button>
                         <button onclick="openVp()" id="btn-vp" class="btn btn-primary">Ver video de presentación</button>
                         <div class="text-center py-2" id="vp" style="display:none">
                             <iframe width="500" height="300" src="https://www.youtube.com/embed/ThiCMd5kGbE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

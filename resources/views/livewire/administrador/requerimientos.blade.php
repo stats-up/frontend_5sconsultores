@@ -56,7 +56,7 @@
                             {{date("d-m-Y H:i:s",strtotime($req["fecha_registro"]))}}
                         </td>
                         <td>
-                            <a class="btn btn-primary btn-sm w-100" href="/postulantes?c={{$req["id_empresa"]}}">
+                            <a class="btn btn-primary btn-sm w-100" href="/postulantes?c={{$req["id_empresa"]}}&r={{$req["id"]}}">
                                 Ver Perfiles
                             </a>
                         </td>

@@ -25,7 +25,7 @@
         <nav aria-label="breadcrumb" style="padding-left:4rem">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/admin" style="color:#c99616">Clientes</a></li>
-                <li class="breadcrumb-item"><a href="/requerimientos?c={{$_GET["c"]}}" style="color:#c99616">Requerimientos</a></li>
+                <li wire:ignore class="breadcrumb-item"><a href="/requerimientos?c={{$id_client}}" style="color:#c99616">Requerimientos</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Perfiles</li>
             </ol>
         </nav>
@@ -51,7 +51,7 @@
     </div>
     <div class="d-flex justify-content-center section">
         <div class="row row-cols-auto group-cards overflow-auto d-flex justify-content-center" style="max-width:100%;max-height:65vh">
-            @for($i=0;$i<10;$i++)
+            @foreach ($applicants as $applicant)
                 <div class="col py-2">
                     <div class="card target" style="width:23rem;height:32rem;">
                         <div class="dropdown d-flex align-items-start dropdot" >
@@ -65,24 +65,22 @@
                         </div>
                         <div class="card-body" style="display:flex;justify-content:space-between;flex-direction:column">
                             <div class="d-flex justify-content-center align-items-center" style="display:flex;flex:1">
-                                <img class="responsiveImg" src="https://wac-cdn.atlassian.com/es/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=531" alt="Logo"  class="brandlogo">
+                                @if ($applicant["image_base_64"] != null)    
+                                    <img class="responsiveImg" src="{{$applicant["image_base_64"]}}" alt="Logo"  class="brandlogo">
+                                @else
+                                    <img class="responsiveImg" src="/img/no-imagen.png" alt="Logo"  class="brandlogo">
+                                @endif
                             </div>
                             <div class=" py-4">
-                                <h5 class="card-title">Nombre Completo</h5>
-                                <p class="card-text">El Ingeniero en Minas posee conocimientos en las áreas de exploración y explotación, supervisión de
-                                    procesos asociadas al desarrollo de cada etapa involucrada en el ciclo minero, como también en la
-                                    planificación, administración y gestión de proyectos mineros. Su formación en materias relativas a
-                                    Ciencias de la Tierra como base para la operación minero metalúrgica en faenas ya sea subterránea o
-                                    de cielo abierto complementan el desarrollo de habilidades y destrezas para el quehacer profesional
-                                    que lo capacitan para gestión proyectos mineros en las etapas de prospección, arranque, carguío,
-                                    transporte y procesamiento de minerales.</p>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#verperfilModal" class="btn btn-emp">Ver vista previa</a>
+                                <h5 class="card-title">{{$applicant["nombre_completo"]}}</h5>
+                                <p class="card-text">{{$applicant["descripcion"]}}</p>
+                                <a wire:click="seleccionarVistaPreviaModal({{$applicant["id"]}})" href="#" data-bs-toggle="modal" data-bs-target="#verperfilModal" class="btn btn-emp">Ver vista previa</a>
                             </div>
                             
                         </div>
                     </div>
                 </div>
-            @endfor
+            @endforeach
         </div>
     </div>    
     <script>

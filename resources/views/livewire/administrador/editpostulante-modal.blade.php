@@ -44,8 +44,8 @@
                             <input wire:model="profilePic" type="file" accept="image/*" class="form-control">
                         </div>
                         <div class="mb-3">
-                            <label for="message-text" class="col-form-label" >Curriculum vitae</label>
-                            <input wire:model="cv" name="userfile" type="file" accept=".doc, .docx, .pdf" class="form-control"/>
+                            <label for="message-text" class="col-form-label" >PDF</label>
+                            <input wire:model="cv" name="userfile" type="file" accept=".pdf" class="form-control"/>
                         </div>
                         <div class="mb-3">
                             <label for="message-text" class="col-form-label" >Video de presentación (URL Youtube)</label>
