@@ -24,6 +24,9 @@
                         </div>
                         <div class="footerL py-3">
                             <button type="submit" class="btn btn-submit">Enviar enlace de inicio de sesión</button>
+                            <div class="footerLog d-flex justify-content-center py-3" >
+                                <a href="/" style="color:grey">Volver al ingreso</a>
+                            </div>
                         </div>
                     </form>
                 </div>

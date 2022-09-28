@@ -29,11 +29,23 @@
                             @elseif($status == "eliminada")
                                 <span class="badge badge-danger">Eliminada</span>
                             @endif
+                            @if($password_status == "no activa")
+                                <span class="badge text-bg-warning mx-2">Sin Contraseña</span>
+                            @endif
                         </div>
+                        <br>
                     </div>
+                    @if($password_status == "no activa")
+                        <span><b>Por favor valide:</b></span>
+                        <br>
+                        <span>- Que el correo haya llegado a la bandeja de <span class="text-danger">SPAM</span></span>
+                        <br>
+                        <span>- Que el email esté bien escrito</span>
+                    @endif
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary">Enviar correo actualizar contraseña</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>

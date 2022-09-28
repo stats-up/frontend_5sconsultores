@@ -14,6 +14,7 @@ class VercontactoModal extends Component
     public $email;
     public $phone;
     public $status;
+    public $password_status;
 
     protected $listeners = ['verContactoModal'];
 
@@ -28,6 +29,7 @@ class VercontactoModal extends Component
         $this->email =  $response->json()[0]["email"];
         $this->phone =  $response->json()[0]["telefono"];
         $this->status =  $response->json()[0]["estado_cuenta"];
+        $this->password_status =  $response->json()[0]["estado_cuenta_clave"];
         $this->dispatchBrowserEvent('swalClose');
     }
 

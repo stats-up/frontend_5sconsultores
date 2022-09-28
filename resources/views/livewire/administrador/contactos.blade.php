@@ -87,6 +87,11 @@
                                             <div wire:click="seleccionarContactoModal({{$cuenta["id"]}})" class="person-info"  data-bs-toggle="modal" data-bs-target="#vercontactModal">
                                                 <div class="card-subtitle text-muted">{{$cuenta["nombre_completo"]}}</div>
                                                 <div class="status" id="status">
+                                                    @if($cuenta["estado_cuenta_clave"] == "no activa")
+                                                        <span class="badge text-bg-warning mx-2" data-bs-toggle="tooltip" data-bs-placement="top"
+                                                        data-bs-custom-class="custom-tooltip"
+                                                        data-bs-title="Esta cuenta no ha actualizado la contraseña">!</span>
+                                                    @endif
                                                     @if ($cuenta["estado_cuenta"] == "activa")
                                                         <span class="badge badge-success">Activa</span>
                                                     @elseif($cuenta["estado_cuenta"] == "inactiva")
