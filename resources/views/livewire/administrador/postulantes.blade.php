@@ -8,14 +8,14 @@
                 </a>
                 <ul class="dropdown-menu sessionmenu" aria-labelledby="navbarDropdown"  style="margin-top:4rem;width:fit-content" >
                     <li>
-                        <a class="dropdown-item sessionitem" href="/logout" style="display:flex;flex-direction:row">
-                            <i class="bi bi-box-arrow-in-right" style="font-size:1.3rem;color:red;display:flex;align-items:center;padding-right:0.5rem"></i>
-                            Cerrar sesión
-                        </a>    
                         <a href="/cuentas" class="dropdown-item adminacount d-flex col"  style="width:fit-content" >
                             <i class="fa-solid fa-user-gear" style="font-size:16px;color:grey;display:flex;align-items:center;padding-right:0.5rem"></i>
                             Administrar cuentas
-                        </a>                 
+                        </a>
+                        <a class="dropdown-item sessionitem" href="/logout" style="display:flex;flex-direction:row">
+                            <i class="bi bi-box-arrow-in-right" style="font-size:1.3rem;color:red;display:flex;align-items:center;padding-right:0.5rem"></i>
+                            Cerrar sesión
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -32,7 +32,7 @@
         </nav>
     </div>
     @livewire('administrador.verpostulante-modal')
-    @livewire('administrador.addpostulante-modal');
+    @livewire('administrador.addpostulante-modal', ["id_request" => $id_request]);
     @livewire('administrador.editpostulante-modal');
     <div class="col-md-12 d-flex justify-content-center titulo">Perfiles de {{$nombre_requerimiento}}</div>
     <div class="head">

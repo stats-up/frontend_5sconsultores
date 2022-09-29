@@ -10,8 +10,9 @@ use Illuminate\Support\Facades\Log;
 class AddpostulanteModal extends Component
 {
     public $areas = [];
+    public $id_request;
 
-    public function mount(){
+    public function mount($id_request){
         $token = getenv("API_TOKEN");
         $array["token"] = $token;
         $endpint = getenv("API_URL")."/api/get_applicant_areas";
