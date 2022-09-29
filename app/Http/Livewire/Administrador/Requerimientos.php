@@ -22,6 +22,11 @@ class Requerimientos extends Component
         $this->get_account();
     }
 
+    public function seleccionarContactoModal($id_contacto){
+        $this->dispatchBrowserEvent('swalLoading');
+        $this->emit('verContactoModal', $id_contacto);
+    }
+
     private function get_account(){
         $aux = $this->request;
         $index = 0;
@@ -50,6 +55,11 @@ class Requerimientos extends Component
     public function seleccionarRequerModal($id_requer){
         $this->dispatchBrowserEvent('swalLoading');
         $this->emit('verRequerimientoModal', $id_requer);
+    }
+
+    public function seleccionareditRequerModal($id_requer){
+        $this->dispatchBrowserEvent('swalLoading');
+        $this->emit('editRequerimientoModal', $id_requer);
     }
 
     public function mount(){

@@ -22,9 +22,10 @@
         </div>
     </div>
     @livewire('administrador.ruta-admin', ["id_cliente" => $_GET["c"]])
-    <livewire:administrador.editreqer-modal/>
+    @livewire('administrador.editreqer-modal', ["id_cliente" => $_GET["c"]])
     @livewire('administrador.requer-modal', ["id_cliente" => $_GET["c"]])
     @livewire('administrador.verrequer-modal')
+    @livewire('administrador.vercontacto-modal')
     <div class="row titulo">Requerimientos</div>
     <div class="px-4 py-4">
         <button href="#" class="btn-post col-md-2" data-bs-toggle="modal" data-bs-target="#addreqModal" >
@@ -51,7 +52,7 @@
                         <td wire:click="seleccionarRequerModal({{$req["id"]}})" data-bs-toggle="modal" data-bs-target="#verrequerModal" style="cursor: pointer">
                             {{$req["nombre"]}}
                         </td>
-                        <td>{{$req["nombre_completo_cuenta_solicitante"]}}</td>
+                        <td wire:click="seleccionarContactoModal({{$req["id_cuenta_solicitante"]}})" data-bs-toggle="modal" data-bs-target="#vercontactModal" style="cursor: pointer">{{$req["nombre_completo_cuenta_solicitante"]}}</td>
                         <td>
                             <span style="display: none;">{{$req["fecha_registro"]}}</span>
                             {{date("d-m-Y H:i:s",strtotime($req["fecha_registro"]))}}
@@ -69,7 +70,7 @@
                             </a>
                         </td>
                         <td class="text-center">
-                            <button class="btn btn-secondary btn-sm w-100" data-bs-toggle="modal" data-bs-target="#editreqModal">
+                            <button wire:click="seleccionareditRequerModal({{$req["id"]}})" class="btn btn-secondary btn-sm w-100 " data-bs-toggle="modal" data-bs-target="#editreqModal">
                                 Editar
                             </button>
                         </td>
