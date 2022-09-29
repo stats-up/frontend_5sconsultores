@@ -58,7 +58,9 @@
                             {{date("d-m-Y H:i:s",strtotime($req["fecha_registro"]))}}
                         </td>
                         <td class="text-center" style="vertical-align:middle">
-                            @if($req["estado_requerimiento"] == "inactivo")
+                            @if($req["perfil_seleccionado"] != "")
+                                <span class="badge text-bg-primary">Finalizado</span>
+                            @elseif($req["estado_requerimiento"] == "inactivo")
                                 <span class="badge badge-warning">Inactivo</span>
                             @elseif($req["estado_requerimiento"] == "activo")
                                 <span class="badge badge-success">Activo</span>
