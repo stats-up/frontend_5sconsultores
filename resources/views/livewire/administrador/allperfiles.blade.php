@@ -19,6 +19,14 @@
                 </ul>
             </div>
         </div>
+        <div class="row p-2">            
+            <nav aria-label="breadcrumb" style="padding-left:4rem">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/admin" style="color:#c99616">Clientes</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Todos los perfiles</li>
+                </ol>
+            </nav>
+        </div>
         <div class="row titulo">Perfiles</div>
         <div class="row">
             <div class="col-auto btn-p" style="width:fit-content">
@@ -30,7 +38,7 @@
             <table id="tabla-admin" class="table table-bordered table-hover">
                 <thead>
                     <tr>
-                        <th scope="col" class="col-3">Nombre de colaborador</th>
+                        <th scope="col" class="col-3">Nombre del colaborador</th>
                         <th scope="col" class="col-3">Empresa</th>
                         <th scope="col" class="col-3">Área</th>
                     </tr>
