@@ -51,12 +51,7 @@
   font-size: 14px;
 }
 
-.nombrecliente{
-  font-size: 1rem;
-  margin:1rem;
-  display:flex;
-  align-items: center;
-}
+
 .sesiontoggle{
   display: flex;
   align-items: center;
@@ -77,22 +72,12 @@
 .top{
   border-bottom: 1px solid rgba(128, 128, 128, 0.329);
 }
-.head{
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-top: 1rem;
-}
+
 .responsiveImg{
   width: auto;
   height: auto;
   max-width: 12rem;
   max-height: 6rem;
-}
-
-.responsivelogo{
-  margin-left: 1rem;
-  max-width: 9rem;
-  height: auto;
 }
 
 
@@ -105,14 +90,7 @@
   color:#595d60;
 }
 
-.btn-p{
-  background-color:#228BE6 ;
-  color: white;
-  border: transparent;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  width: 100%;
-}
+
 
 .divbtn{
   display: flex;
@@ -180,6 +158,57 @@
   .section{
     padding-top:1rem;
   }
+  .btn-p{
+    background-color:#228BE6 ;
+    color: white;
+    border: transparent;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    height: fit-content;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .text-btn{
+    display:none
+  }
+  .btn-post{
+    width: 12rem;
+    border:transparent;
+    border-radius: 0.5rem;
+    background-color:#e0ae43de;
+    border:1px solid #e0ae43de;
+    color:white;
+    min-height: 2rem;
+  }
+  
+  .btn-post:hover{
+    background-color: #d39b23;
+  }
+  .row{
+    width: 100%;
+  }
+  .head{
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+  }
+  .responsivelogo{
+    max-width: 7rem;
+    height: auto;
+  }
+  .nombrecliente{
+    font-size: 0.8rem;
+    margin:0.5rem;
+    display:flex;
+    align-items: center;
+    width: fit-content;
+  }
+  .buttons{
+    display: flex;
+    justify-content: start;
+    width:100%;
+  }
+  
 }
 
 
@@ -191,6 +220,45 @@
   .section{
     padding-top:1rem;
   }
+  .btn-p{
+    background-color:#228BE6 ;
+    color: white;
+    border: transparent;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+  .btn-post{
+    width: 13rem;
+    border:transparent;
+    border-radius: 0.5rem;
+    background-color:#e0ae43de;
+    border:1px solid #e0ae43de;
+    color:white;
+    min-height: 2rem;
+    padding: auto;
+  }
+  
+  .btn-post:hover{
+    background-color: #d39b23;
+  }
+  .head{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.8rem;
+  }
+  .responsivelogo{
+    margin-left: 1rem;
+    max-width: 9rem;
+    height: auto;
+  }
+  .nombrecliente{
+    font-size: 1rem;
+    margin:1rem;
+    display:flex;
+    align-items: center;
+  }
+  
 } 
 
 @media only screen and (min-width: 850px){
@@ -201,4 +269,43 @@
   .section{
     padding-top:1rem;
   }
+  .btn-p{
+    background-color:#228BE6 ;
+    color: white;
+    border: transparent;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+  .btn-post{
+    width: 15rem;
+    border:transparent;
+    border-radius: 0.5rem;
+    background-color:#e0ae43de;
+    border:1px solid #e0ae43de;
+    color:white;
+    min-height: 2rem;
+    padding: auto;
+  }
+  
+  .btn-post:hover{
+    background-color: #d39b23;
+  }
+  .head{
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+  }
+  .responsivelogo{
+    margin-left: 1rem;
+    max-width: 9rem;
+    height: auto;
+  }
+  .nombrecliente{
+    font-size: 1rem;
+    margin:1rem;
+    display:flex;
+    align-items: center;
+  }
+  
 }

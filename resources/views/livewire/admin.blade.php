@@ -20,10 +20,12 @@
             </div>
         </div>
         <div class="row titulo">Clientes</div>
-        <div class="row">
+        <div class="row buttons">
             <div class="col-auto btn-p" style="width:fit-content">
-                <a href="/allperfiles" class="px-2" style="text-decoration:none;display:flex;align-items:center;color:white;width:100%;height:100%">
-                    <i class="fa-solid fa-people-group" style="padding-right:0.5rem"></i>Perfiles</a>
+                <a href="/allperfiles" style="text-decoration:none;display:flex;align-items:center;color:white;width:100%;height:100%">
+                    <i class="fa-solid fa-people-group" ></i>
+                    <div style="padding-left:0.5rem" class="text-btn">Perfiles</div>    
+                </a>
             </div>
             <div class="col-auto" style="width:fit-content">
                 <button href="#" class="btn-post" data-bs-toggle="modal" data-bs-target="#exampleModal">
