@@ -32,7 +32,7 @@
         </nav>
     </div>
     @livewire('administrador.verpostulante-modal')
-    @livewire('administrador.addpostulante-modal', ["id_request" => $id_request]);
+    @livewire('administrador.addpostulante-modal', [ "id_client" => $id_client ,"id_request" => $id_request]);
     @livewire('administrador.editpostulante-modal');
     <div class="col-md-12 d-flex justify-content-center titulo">Perfiles de {{$nombre_requerimiento}}</div>
     <div class="head">

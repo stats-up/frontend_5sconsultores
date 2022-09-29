@@ -21,6 +21,7 @@ class ModalCliente extends Component
 
     public function submit(){
         $this->validate();
+        $this->dispatchBrowserEvent('swalLoading');
         $token = getenv("API_TOKEN");
         $array["token"] = $token;
         $base64 = null;
