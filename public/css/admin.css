@@ -105,7 +105,14 @@
   color:#595d60;
 }
 
-
+.btn-p{
+  background-color:#228BE6 ;
+  color: white;
+  border: transparent;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+}
 
 .divbtn{
   display: flex;

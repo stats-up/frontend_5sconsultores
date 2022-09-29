@@ -3,6 +3,7 @@
   'administrador.addarea-modal' => 'App\\Http\\Livewire\\Administrador\\AddareaModal',
   'administrador.addcontacto-modal' => 'App\\Http\\Livewire\\Administrador\\AddcontactoModal',
   'administrador.addpostulante-modal' => 'App\\Http\\Livewire\\Administrador\\AddpostulanteModal',
+  'administrador.allperfiles' => 'App\\Http\\Livewire\\Administrador\\Allperfiles',
   'administrador.contactos' => 'App\\Http\\Livewire\\Administrador\\Contactos',
   'administrador.cuentas' => 'App\\Http\\Livewire\\Administrador\\Cuentas',
   'administrador.editarea-modal' => 'App\\Http\\Livewire\\Administrador\\EditareaModal',

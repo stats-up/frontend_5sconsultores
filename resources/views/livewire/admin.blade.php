@@ -20,9 +20,15 @@
             </div>
         </div>
         <div class="row titulo">Clientes</div>
-        <div class="row btn-addempresa" style="max-width:80rem;">
-            <button href="#" class="btn-post" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <i class="bi bi-plus"></i>Agregar nuevo cliente</button>
+        <div class="row">
+            <div class="col-auto btn-p" style="width:fit-content">
+                <a href="/allperfiles" class="px-2" style="text-decoration:none;display:flex;align-items:center;color:white;width:100%;height:100%">
+                    <i class="fa-solid fa-people-group" style="padding-right:0.5rem"></i>Perfiles</a>
+            </div>
+            <div class="col-auto" style="width:fit-content">
+                <button href="#" class="btn-post" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <i class="bi bi-plus"></i>Agregar nuevo cliente</button>
+            </div>
         </div>
         <livewire:administrador.modal-cliente/>
         @livewire('administrador.modal-editcliente')

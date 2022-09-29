@@ -1,0 +1,61 @@
+.head{
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 1rem;
+}
+.responsiveImg{
+  width: auto;
+  height: auto;
+  max-width: 12rem;
+  max-height: 6rem;
+}
+
+.responsivelogo{
+  margin-left: 1rem;
+  max-width: 9rem;
+  height: auto;
+}
+
+.top{
+  border-bottom: 1px solid rgba(128, 128, 128, 0.329);
+}
+.head{
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 1rem;
+}
+
+
+.nombrecliente{
+  font-size: 1rem;
+  margin:1rem;
+  display:flex;
+  align-items: center;
+}
+.sesiontoggle{
+  display: flex;
+  align-items: center;
+  text-decoration: none; 
+}
+
+.sessionmenu{
+  border: transparent;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 0.5rem;
+}
+
+.icon{
+  color:grey;
+  font-size: 14px;
+  padding-right: 10px;
+}
+
+
+.titulo{
+  align-items:end;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-top: 2rem;
+  justify-content: center;
+  color:#595d60;
+}

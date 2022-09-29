@@ -9,7 +9,7 @@ class Requerimientos extends Component
 {
     public $id_cliente;
     public $request = [];
-
+    
     protected $listeners = ['eliminarRequerimiento'];
 
     public function get_all_request(){

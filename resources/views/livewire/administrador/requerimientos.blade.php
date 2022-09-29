@@ -38,6 +38,7 @@
                     <th scope="col" class="col-md-3">Requerimiento</th>
                     <th scope="col" class="col-md-2">Solicitado Por</th>
                     <th scope="col" class="col-md-1">Fecha Ingreso</th>
+                    <th scope="col" class="col-md-1">Estado</th>
                     <th scope="col" class="col-md-1">Perfiles</th>
                     <th scope="col" class="col-md-1"></th>
                     <th scope="col" class="col-md-1"></th>
@@ -54,6 +55,13 @@
                         <td>
                             <span style="display: none;">{{$req["fecha_registro"]}}</span>
                             {{date("d-m-Y H:i:s",strtotime($req["fecha_registro"]))}}
+                        </td>
+                        <td class="text-center" style="vertical-align:middle">
+                            @if($req["estado_requerimiento"] == "inactivo")
+                                <span class="badge badge-warning">Inactivo</span>
+                            @elseif($req["estado_requerimiento"] == "activo")
+                                <span class="badge badge-success">Activo</span>
+                            @endif
                         </td>
                         <td>
                             <a class="btn btn-primary btn-sm w-100" href="/postulantes?c={{$req["id_empresa"]}}&r={{$req["id"]}}">

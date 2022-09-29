@@ -4,6 +4,19 @@
   height: auto;
 }
 
+.badge-danger{
+  background-color: #FFC9C9;  
+  color:#FF6B6B;
+}
+.badge-warning{
+  background-color: #DEE2E6;
+  color: #868E96;
+}
+.badge-success{
+  background-color:#B2F2BB;
+  color:#37B24D;
+}
+
 .sesiontoggle{
   display: flex;
   align-items: center;
