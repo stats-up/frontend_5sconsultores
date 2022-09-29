@@ -34,11 +34,6 @@
 .top{
   border-bottom: 1px solid rgba(128, 128, 128, 0.329);
 }
-.head{
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-top: 1rem;
-}
 
 .nombrecliente{
   margin:0rem;
@@ -170,33 +165,6 @@
   margin-left: 1rem;
 }
 
-.responsivelogo{
-  margin-left: 1rem;
-  max-width: 9rem;
-  height: auto;
-}
-
-.search{
-  border-bottom: 1px solid grey;
-  width: 13rem;
-}
-
-.btn-post{
-  width: 15rem;
-  border:transparent;
-  border-radius: 0.5rem;
-  background-color:#e0ae43de;
-  border:1px solid #e0ae43de;
-  color:white;
-  min-height: 2rem;
-  padding: auto;
-}
-
-.btn-post:hover{
-  background-color: #d39b23;
-}
-
-
 .dotmenu{
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   border:transparent;
@@ -221,7 +189,7 @@
 }
 
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 600px) {
   .group-cards{
     width: 70rem;
     justify-content: center;
@@ -229,21 +197,73 @@
   .section{
     padding-top:1rem;
   }
-  .card-subtitle{
-    width:12rem;
-  }
-  .dropcard{
-    display:absolute;
-    right: 0;
-    top: 0rem;
-  }
   .body-contactos{
-    width: 25rem;
+    width: 4rem;
+  }
+  .btn-p{
+    background-color:#228BE6 ;
+    color: white;
+    border: transparent;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    height: fit-content;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .text-btn{
+    display:none
+  }
+  .head{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+  }
+
+  .btn-addempresa{
+    margin-bottom:1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding-top: 1rem;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+  .responsivelogo{
+    display: none;
+  }
+  .s-logo{
+    margin-top: 1rem;
+    width: 4rem;
+    height: 4rem;
+  }
+  .nav_back{
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  .btn-post{
+    width: 8rem;
+    border:transparent;
+    border-radius: 0.5rem;
+    background-color:#e0ae43de;
+    border:1px solid #e0ae43de;
+    color:white;
+    min-height: 2rem;
+    padding: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  
+  .btn-post:hover{
+    background-color: #d39b23;
   }
 }
 
 
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 600px) {
   .group-cards{
     width: 80rem;
     justify-content: center;
@@ -251,12 +271,164 @@
   .card-subtitle{
     width:31rem;
   }
-
+  .body-contactos{
+    width: 35rem;
+  }
+  .search{
+    border-bottom: 1px solid grey;
+    width: 10rem;
+  }
+  .btn-addempresa{
+    margin-bottom:1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding-top: 1rem;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+  .searchrow{
+    padding-right: 2rem;
+  }
+  .responsivelogo{
+    display: none;
+  }
+  .s-logo{
+    width: 4rem;
+    height: 4rem;
+  }
+  .head{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+  }
+  .btn-post{
+    width: 8rem;
+    border:transparent;
+    border-radius: 0.5rem;
+    background-color:#e0ae43de;
+    border:1px solid #e0ae43de;
+    color:white;
+    min-height: 2rem;
+    padding: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  
+  .btn-post:hover{
+    background-color: #d39b23;
+  }
+  
 } 
 
-@media only screen and (min-width: 870px){
+@media only screen and (max-width: 720px){
   .group-cards{
     width: 80rem;
+    justify-content: center;
+  }
+  .section{
+    padding-top:1rem;
+
+  }
+  .card-subtitle{
+      width:40rem;
+  }
+  .body-contactos{
+    width: 38rem;
+  }
+
+  .btn-addempresa{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1rem;
+    margin-bottom:1rem;
+    margin-right: 1rem;
+    width: 95%;
+  }
+  .search{
+    border-bottom: 1px solid grey;
+    width: 13rem;
+  }
+  .searchrow{
+    padding-right: 1rem;
+  }
+  .iconuser{
+    display: block;
+  }
+  .name{
+    display: none;
+  }
+  .responsivelogo{
+    display: none;
+  }
+  .s-logo{
+    width: 4rem;
+    height: 4rem;
+  }
+
+}
+
+@media only screen and (min-width: 720px){
+  .group-cards{
+    width: 75rem;
+    justify-content: center;
+  }
+  .section{
+    padding-top:1rem;
+  }
+  .card-subtitle{
+      width:40rem;
+  }
+  .body-contactos{
+    width: 42rem;
+  }
+  .btn-addempresa{
+    margin-left:4rem;
+    margin-bottom:1rem;
+    margin-right:8rem;
+  }
+  .search{
+    border-bottom: 1px solid grey;
+    width: 13rem;
+  }
+  .searchrow{
+    padding-right: 2rem;
+  }
+  .responsivelogo{
+    display:flex;
+    margin-left: 1rem;
+    max-width: 9rem;
+    height: auto;
+  }
+  .iconuser{
+    display: none;
+  }
+  .s-logo{
+    display: none;
+  }
+  .btn-post{
+    width: 15rem;
+    border:transparent;
+    border-radius: 0.5rem;
+    background-color:#e0ae43de;
+    border:1px solid #e0ae43de;
+    color:white;
+    min-height: 2rem;
+    padding: auto;
+  }
+  
+  .btn-post:hover{
+    background-color: #d39b23;
+  }
+  
+
+}
+
+@media only screen and (min-width: 1050px){
+  .group-cards{
+    width: 75rem;
     justify-content: center;
   }
   .section{
@@ -269,10 +441,40 @@
     width: 65rem;
   }
   .btn-addempresa{
-    margin-left:8rem;
+    margin-left:6rem;
     margin-bottom:1rem;
     margin-right:8rem;
   }
+  .search{
+    border-bottom: 1px solid grey;
+    width: 13rem;
+  }
+  .searchrow{
+    padding-right: 4rem;
+  }
+  .responsivelogo{
+    margin-left: 1rem;
+    max-width: 9rem;
+    height: auto;
+  }
+  .iconuser{
+    display: none;
+  }
+  .btn-post{
+    width: 15rem;
+    border:transparent;
+    border-radius: 0.5rem;
+    background-color:#e0ae43de;
+    border:1px solid #e0ae43de;
+    color:white;
+    min-height: 2rem;
+    padding: auto;
+  }
+  
+  .btn-post:hover{
+    background-color: #d39b23;
+  }
+  
 }
 
 .card-subtitle{
