@@ -33,7 +33,7 @@
             <i class="bi bi-plus"></i>Nuevo requerimiento
         </button>
     </div>
-    <div wire:ignore class="col-md-12 tabla">
+    <div wire:ignore class="col-md-12 tabla table-responsive">
         <table id="tabla-admin" class="table table-bordered table-hover">
             <thead>
                 <tr>

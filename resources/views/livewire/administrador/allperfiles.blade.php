@@ -35,7 +35,7 @@
                     <i class="fa-solid fa-people-group" style="padding-right:0.5rem"></i>Perfiles</a>
             </div>
         </div>
-        <div wire:ignore class="col-md-12 tabla">
+        <div wire:ignore class="col-md-12 tabla table-responsive">
             <table id="tabla-admin" class="table table-bordered table-hover">
                 <thead>
                     <tr>

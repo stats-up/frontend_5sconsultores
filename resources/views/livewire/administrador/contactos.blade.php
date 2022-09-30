@@ -66,8 +66,7 @@
                 <div class="col-md-12 py-2  target">
                     <div class="card" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;border:transparent" >
                         <div class="card-body" id="square">
-                            <div class="row headArea px-2 d-flex justify-content-between" >
-                                <h5 class="card-title py-2" style="width:fit-content">{{$item["name"]}}</h5>
+                            <div class="row headArea flex-nowrap px-2 d-flex justify-content-start" >
                                 <div class="dropdown d-flex align-items-center dropcard" style="width:fit-content">
                                     <a class=" dropdown-toggle dottoggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="icondrp bi bi-three-dots-vertical"></i>
@@ -78,11 +77,13 @@
                                         <li><a class="dropdown-item a deleteArea" href="#" data="{{$item["id"]}}"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
                                     </ul>
                                 </div>
+                                <h5 class="card-title py-2">{{$item["name"]}}</h5>
+
                             </div>
                             @foreach($item["accounts"] as $cuenta)
                                 @if($cuenta["estado_cuenta"] != "eliminada")
                                     <div class="row person">
-                                        <div class="row row-contact">
+                                        <div class="row row-contact flex-nowrap">
                                             <div class="dropdown dropdot d-flex align-items-center" style="width:fit-content">
                                                 <a class=" dropdown-toggle addContacttoggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                                     <i class="icondrp bi bi-three-dots-vertical"></i>
@@ -92,7 +93,7 @@
                                                     <li><a class="dropdown-item a deleteContacto" data="{{$cuenta["id"]}}" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
                                                 </ul>
                                             </div>                                 
-                                            <div wire:click="seleccionarContactoModal({{$cuenta["id"]}})" class="person-info"  data-bs-toggle="modal" data-bs-target="#vercontactModal">
+                                            <div wire:click="seleccionarContactoModal({{$cuenta["id"]}})" class="col person-info"  data-bs-toggle="modal" data-bs-target="#vercontactModal">
                                                 <div class="card-subtitle text-muted">{{$cuenta["nombre_completo"]}}</div>
                                                 <div class="status" id="status">
                                                     @if($cuenta["estado_cuenta_clave"] == "no activa")

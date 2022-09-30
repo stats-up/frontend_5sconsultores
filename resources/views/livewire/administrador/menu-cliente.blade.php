@@ -7,9 +7,6 @@
           <a class="nav-link" href="/requerimientos?c={{$id_cliente}}">Requerimientos</a>
         </li>
     </ul>
-    <ul class="">
-
-    </ul>
     <script>
         $('.nav-item').each(function(){
             if($(this).find('a').attr('href') == (window.location.pathname + window.location.search)){
