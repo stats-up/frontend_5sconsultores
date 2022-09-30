@@ -1,7 +1,6 @@
 .person-info{
   display:flex;
   flex-direction: row;
-
 }
 .badge-danger{
   background-color: #FFC9C9;  
@@ -197,8 +196,8 @@
   .section{
     padding-top:1rem;
   }
-  .body-contactos{
-    width: 4rem;
+  .card-subtitle{
+      width:fit-content;
   }
   .btn-p{
     background-color:#228BE6 ;
@@ -233,7 +232,6 @@
     display: none;
   }
   .s-logo{
-    margin-top: 1rem;
     width: 4rem;
     height: 4rem;
   }
@@ -255,10 +253,20 @@
     flex-direction: row;
     align-items: center;
     flex-wrap: nowrap;
+    justify-content:center;
   }
   
   .btn-post:hover{
     background-color: #d39b23;
+  }
+  .person-info{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card-title{
+    padding-right: 0;
+    width:80%;
   }
 }
 
@@ -269,11 +277,11 @@
     justify-content: center;
   }
   .card-subtitle{
-    width:31rem;
-  }
-  .body-contactos{
-    width: 35rem;
-  }
+    width:fit-content;
+}
+  .card-subtitle{
+    width:fit-content;
+}
   .search{
     border-bottom: 1px solid grey;
     width: 10rem;
@@ -315,12 +323,21 @@
     flex-direction: row;
     align-items: center;
     flex-wrap: nowrap;
+    justify-content:center;
   }
   
   .btn-post:hover{
     background-color: #d39b23;
   }
-  
+  .nav_back{
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  .person-info{
+    display: flex;
+    justify-content: space-between;
+  }
 } 
 
 @media only screen and (max-width: 720px){
@@ -333,8 +350,8 @@
 
   }
   .card-subtitle{
-      width:40rem;
-  }
+    width:fit-content;
+}
   .body-contactos{
     width: 38rem;
   }
@@ -367,7 +384,15 @@
     width: 4rem;
     height: 4rem;
   }
-
+  .nav_back{
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  .person-info{
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 @media only screen and (min-width: 720px){
@@ -379,8 +404,9 @@
     padding-top:1rem;
   }
   .card-subtitle{
-      width:40rem;
-  }
+    width:fit-content;
+}
+
   .body-contactos{
     width: 42rem;
   }
@@ -417,13 +443,21 @@
     color:white;
     min-height: 2rem;
     padding: auto;
+    justify-content:center;
   }
   
   .btn-post:hover{
     background-color: #d39b23;
   }
-  
-
+  .nav_back{
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  .person-info{
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 @media only screen and (min-width: 1050px){
@@ -435,8 +469,8 @@
     padding-top:1rem;
   }
   .card-subtitle{
-      width:40rem;
-  }
+    width:fit-content;
+}
   .body-contactos{
     width: 65rem;
   }
@@ -469,12 +503,21 @@
     color:white;
     min-height: 2rem;
     padding: auto;
+    justify-content:center;
   }
   
   .btn-post:hover{
     background-color: #d39b23;
   }
-  
+  .nav_back{
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  .person-info{
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .card-subtitle{
