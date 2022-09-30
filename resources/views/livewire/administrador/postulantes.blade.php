@@ -61,7 +61,7 @@
                             </a>
                             <ul class="dropdown-menu dotmenu">
                             <li><a wire:click="seleccionarEditPostulanteModal({{$applicant["id"]}})" class="dropdown-item a" href="#" data-bs-toggle="modal" data-bs-target="#editpostulanteModal" ><i class="icon fa-solid fa-pen  px-2" style="color:grey"></i>Editar</a></li>
-                            <li><a class="dropdown-item a deleteProfile"  href="#"><i class="icon fa-solid fa-trash px-2" style="color:#d52b2baf"></i>Eliminar</a></li>
+                            <li><a class="dropdown-item a deleteProfile" data="{{$applicant["id"]}}" href="#"><i class="icon fa-solid fa-trash px-2" style="color:#d52b2baf"></i>Eliminar</a></li>
                             </ul>
                         </div>
                         <div class="card-body" style="display:flex;justify-content:space-between;flex-direction:column">
@@ -110,7 +110,7 @@
                 }
         }
             $(".deleteProfile").click(function(){
-            let idArea = $(this).attr('data');
+            let idPerfil = $(this).attr('data');
             Swal.fire({
                 title: '¿Eliminar este perfil?',
                 text: "No se podrá revertir esta acción",
@@ -122,7 +122,7 @@
                 cancelButtonText: 'Cancelar'
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        Livewire.emit('eliminarArea',idArea);
+                        Livewire.emit('eliminarPerfil',idPerfil);
                         Swal.fire(
                         'Eliminado!',
                         'El perfil ha sido eliminado',

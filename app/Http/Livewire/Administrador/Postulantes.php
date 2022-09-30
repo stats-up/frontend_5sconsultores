@@ -13,6 +13,8 @@ class Postulantes extends Component
     public $nombre_cliente;
     public $nombre_requerimiento;
 
+    protected $listeners = ['eliminarPerfil'];
+
     private function get_applicants(){
         $token = getenv("API_TOKEN");
         $array["token"] = $token;
@@ -37,6 +39,14 @@ class Postulantes extends Component
         $endpoint = getenv("API_URL")."/api/get_request";
         $response = Http::withBody(json_encode($array), 'application/json')->post($endpoint);
         $this->nombre_requerimiento = $response->json()[0]["nombre"];
+    }
+    public function eliminarPerfil($id_perfil){
+        $token = getenv("API_TOKEN");
+        $array["token"] = $token;
+        $array["data"]["id"] = $id_perfil;
+        $endpoint = getenv("API_URL")."/api/del_applicant";
+        $response = Http::withBody(json_encode($array), 'application/json')->post($endpoint);
+        return redirect()->to("/postulantes?c=$this->id_client&r=$this->id_request");
     }
 
     public function seleccionarVistaPreviaModal($id_applicant){
