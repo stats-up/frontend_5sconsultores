@@ -39,25 +39,53 @@
             <table id="tabla-admin" class="table table-bordered table-hover">
                 <thead>
                     <tr>
-                        <th scope="col" class="col-3">Nombre del colaborador</th>
-                        <th scope="col" class="col-3">Empresa</th>
-                        <th scope="col" class="col-3">Área</th>
+                        <th>Nombre Completo</th>
+                        <th>Rut</th>
+                        <th>Sexo</th>
+                        <th>Ciudad</th>
+                        <th>Comuna</th>
+                        <th>Dirección</th>
+                        <th>Área de trabajo</th>
+                        <th>Video de presentación</th>
+                        <th>Requerimiento</th>
+                        <th>Nombre solicitante</th>
+                        <th>Email solicitante</th>
+                        <th>Telefono solicitante</th>
+                        <th>Cliente</th>
+                        <th>Fecha de registro</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @for($i=0;$i<6;$i++)
-                        <tr>
-                            <td>Nombre {{$i}}</td>
-                            <td>Empresa {{$i}}</td>
-                            <td>Área {{$i}}</td>
-                        </tr>
-                    @endfor
+                    @foreach ($applicants as $applicant)
+                    <tr>
+                        <td>{{$applicant["nombre_completo"]}}</td>
+                        <td>{{$applicant["rut"]}}</td>
+                        <td>{{$applicant["genero"]}}</td>
+                        <td>{{$applicant["ciudad"]}}</td>
+                        <td>{{$applicant["comuna"]}}</td>
+                        <td>{{$applicant["direccion"]}}</td>
+                        <td>{{$applicant["nombre_area_postulante"]}}</td>
+                        <td>{{$applicant["youtube_url"]}}</td>
+                        <td>{{$applicant["nombre_requerimiento"]}}</td>
+                        <td>{{$applicant["nombre_solicitante"]}}</td>
+                        <td>{{$applicant["email_solicitante"]}}</td>
+                        <td>{{$applicant["telefono_solicitante"]}}</td>
+                        <td>{{$applicant["nombre_cliente"]}}</td>
+                        <td>{{$applicant["fecha_ingreso"]}}</td>
+                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
         <script>
             $(document).ready(function() {
                 $('#tabla-admin').DataTable({
+                    "dom" : 'Blfrtip',
+                    "buttons": {
+                        "buttons": [
+                            { extend: 'excel', className: 'btn btn-primary mb-2', text: "Descargar Excel (xlsx)" }
+                        ]
+                    },
                     "ordering": true,
                     "order": [[2,"desc"]],
                     "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Todos"]],
@@ -79,9 +107,10 @@
                             "last": "Ultimo",
                             "next": "Siguiente",
                             "previous": "Anterior"
-                            }
+                        }
                     }
                 });
+                $(".buttons-excel").removeClass("btn-secondary");
             });
         </script>
     </div>
