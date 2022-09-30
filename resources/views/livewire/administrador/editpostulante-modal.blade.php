@@ -1,7 +1,7 @@
 <div>
-    <div wire:ignore.self class="modal fade  modal-lg" id="editpostulanteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+    <div wire:ignore.self class="modal fade modal-lg" id="editpostulanteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
         <div class="modal-dialog">
-            <div class="modal-content">
+            <form wire:submit.prevent="submit" class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Editar perfil</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -9,55 +9,68 @@
                 <div class="modal-body row">
                     <div class="col-lg-6 px-4">
                         <div class="mb-3">
-                            <label for="recipient-name" class="col-form-label">Nombre Completo:</label>
-                            <input wire:model="nombre" type="text" class="form-control" id="recipient-name">
+                            <label class="col-form-label">Nombre Completo:</label>
+                            <input wire:model="full_name" type="text" class="form-control" placeholder="Nombre completo de perfil" minlength="3" required>
                         </div>
                         <div class="mb-3">
-                            <label for="message-text" class="col-form-label">Rut</label>
-                            <input wire:model="rut" type="text" class="form-control" id="recipient-name">
+                            <label class="col-form-label">Rut</label>
+                            <input wire:model="dni" type="text" class="form-control" placeholder="XX.XXX.XXX-X" minlength="7" required>
                         </div>
                         <div class="mb-3">
-                            <label for="message-text" class="col-form-label">Sexo</label>
-                            <select wire:model="sexo" class="form-select" aria-label="Default select example">
-                                <option selected>Seleccione...</option>
-                                <option value="1">Femenino</option>
-                                <option value="2">Masculino</option>
-                                <option value="3">Otro</option>
+                            <label class="col-form-label">Sexo</label>
+                            <select wire:model="gender" class="form-select" aria-label="Default select example">
+                                <option>Femenino</option>
+                                <option>Masculino</option>
+                                <option>Otro</option>
                             </select>
                         </div>
                         <div class="mb-3">
-                            <label for="message-text" class="col-form-label">Ciudad de residencia:</label>
-                            <input wire:model="ciudad" type="text" class="form-control" id="recipient-name">
+                            <label class="col-form-label">Ciudad de residencia:</label>
+                            <input wire:model="city" type="text" class="form-control" placeholder="Ciudad" minlength="3" required>
                         </div>
                         <div class="mb-3">
-                            <label for="message-text" class="col-form-label">Dirección</label>
-                            <input wire:model="direccion" type="text" class="form-control" id="recipient-name">
+                            <label class="col-form-label">Comuna</label>
+                            <input wire:model="commune" type="text" class="form-control" placeholder="Comuna" minlength="3" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-form-label">Dirección</label>
+                            <input wire:model="address" type="text" class="form-control" placeholder="Calle #numero - #Dpto/Casa" minlength="5" required>
                         </div>
                     </div>
                     <div class="col-lg-6 px-4">
                         <div class="mb-3">
-                            <label for="message-text" class="col-form-label" >Descripción del perfil</label>
-                            <textarea wire:model="descripcion" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <label class="form-label">Área de trabajo</label>
+                            <select wire:model="applicant_area" class="form-select" aria-label="Default select example">
+                                @foreach ($areas as $area)
+                                    <option value="{{$area["id"]}}">{{$area["name"]}}</option>
+                                @endforeach
+                            </select>
                         </div>
                         <div class="mb-3">
-                            <label for="message-text" class="col-form-label" >Imagen</label>
-                            <input wire:model="profilePic" type="file" accept="image/*" class="form-control">
+                            <label class="col-form-label" >Descripción del perfil</label>
+                            <textarea wire:ignore.self wire:model="description" class="form-control" rows="3" maxlength="600"></textarea>
                         </div>
                         <div class="mb-3">
-                            <label for="message-text" class="col-form-label" >PDF</label>
-                            <input wire:model="cv" name="userfile" type="file" accept=".pdf" class="form-control"/>
+                            <label class="col-form-label" >Imagen</label>
+                            <div>
+                                <input wire:model="image" id="profileImage" type="file" accept="image/*" class="form-control">
+                            </div>
                         </div>
                         <div class="mb-3">
-                            <label for="message-text" class="col-form-label" >Video de presentación (URL Youtube)</label>
-                            <input wire:model="video" type="text" class="form-control"/>
+                            <label class="col-form-label" >PDF</label>
+                            <input wire:model="pdf" name="userfile" type="file" accept=".pdf" class="form-control"/>
+                        </div>
+                        <div class="mb-3">
+                            <label class="col-form-label" >Video de presentación (URL Youtube)</label>
+                            <input wire:model="youtube_url" type="text" class="form-control" placeholder="https://youtu.be/XXXXXXXXXXX"/>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button wire:click="nuevoCliente()" type="button" class="btn btn-primary">Guardar cambios</button>
+                    <button type="submit" class="btn btn-primary">Guardar cambios</button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>

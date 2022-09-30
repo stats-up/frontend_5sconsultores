@@ -43,6 +43,10 @@ class Postulantes extends Component
         $this->dispatchBrowserEvent('swalLoading');
         $this->emit('verPostulanteModal', $id_applicant);
     }
+    public function seleccionarEditPostulanteModal($id_applicant){
+        $this->dispatchBrowserEvent('swalLoading');
+        $this->emit('editPostulanteModal', $id_applicant);
+    }
 
     public function mount(){
         if(!isset($_GET["c"])){

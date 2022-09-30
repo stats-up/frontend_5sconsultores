@@ -1,4 +1,4 @@
-<div class="container-fluid g-0" style="background-color:#fdfdfd;">
+<div class="container-fluid" style="background-color:#fdfdfd;">
     <div class="row head">
         <div class="col-md-12 d-flex justify-content-between top">
             <img class="responsivelogo" src="http://5sconsultores.cl/portal/wp-content/uploads/2019/11/Logo_5s_web.jpg" alt="Logo"  class="brandlogo">
@@ -32,8 +32,8 @@
         </nav>
     </div>
     @livewire('administrador.verpostulante-modal')
-    @livewire('administrador.addpostulante-modal', [ "id_client" => $id_client ,"id_request" => $id_request]);
-    @livewire('administrador.editpostulante-modal');
+    @livewire('administrador.addpostulante-modal', [ "id_client" => $id_client ,"id_request" => $id_request])
+    @livewire('administrador.editpostulante-modal', [ "id_client" => $id_client ,"id_request" => $id_request])
     <div class="col-md-12 d-flex justify-content-center titulo">Perfiles de {{$nombre_requerimiento}}</div>
     <div class="head">
         <div class="row d-flex col justify-content-between" style=";margin-left:8rem;margin-bottom:1rem;margin-right:8rem">
@@ -60,7 +60,7 @@
                                 <i class="icondrp bi bi-three-dots-vertical"></i>
                             </a>
                             <ul class="dropdown-menu dotmenu">
-                            <li><a  class="dropdown-item a" href="#" data-bs-toggle="modal" data-bs-target="#editpostulanteModal" ><i class="icon fa-solid fa-pen  px-2" style="color:grey"></i>Editar</a></li>
+                            <li><a wire:click="seleccionarEditPostulanteModal({{$applicant["id"]}})" class="dropdown-item a" href="#" data-bs-toggle="modal" data-bs-target="#editpostulanteModal" ><i class="icon fa-solid fa-pen  px-2" style="color:grey"></i>Editar</a></li>
                             <li><a class="dropdown-item a deleteProfile"  href="#"><i class="icon fa-solid fa-trash px-2" style="color:#d52b2baf"></i>Eliminar</a></li>
                             </ul>
                         </div>
@@ -75,7 +75,7 @@
                             <div class=" py-4">
                                 <h5 class="card-title">{{$applicant["nombre_completo"]}}</h5>
                                 <p class="card-text">{{$applicant["descripcion"]}}</p>
-                                <a wire:click="seleccionarVistaPreviaModal({{$applicant["id"]}})" href="#" data-bs-toggle="modal" data-bs-target="#verperfilModal" class="btn btn-emp">Ver vista previa</a>
+                                <a wire:click="seleccionarVistaPreviaModal({{$applicant["id"]}})" href="#" data-bs-toggle="modal" data-bs-target="#verperfilModal" class="btn btn-emp">Ver detalles</a>
                             </div>
                             
                         </div>
