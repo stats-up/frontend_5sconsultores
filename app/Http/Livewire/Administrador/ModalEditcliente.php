@@ -27,7 +27,9 @@ class ModalEditcliente extends Component
         $this->logo = null;
         $this->getClientData();
     }
-
+    public function updatedLogo(){
+        $this->dispatchBrowserEvent('swalClose');
+    }
     private function getClientData(){
         $token = getenv("API_TOKEN");
         $array["token"] = $token;

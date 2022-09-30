@@ -19,6 +19,10 @@ class ModalCliente extends Component
         'nombre' => 'required|min:2'
     ];
 
+    public function updatedLogo(){
+        $this->dispatchBrowserEvent('swalClose');
+    }
+
     public function submit(){
         $this->validate();
         $this->dispatchBrowserEvent('swalLoading');

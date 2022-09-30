@@ -12,15 +12,13 @@
                 </div>
                 <div class="mb-3">
                     <label for="message-text" class="col-form-label">Logo:</label>
-                    <input wire:model="logo" type="file" accept="image/*" class="form-control">
+                    <input wire:model="logo" type="file" accept="image/*" class="form-control edit-logo">
                 </div>
                 <div class="py-4">
                     @if ($logo)
                         <img class="rounded mx-auto d-block" src="{{ $logo->temporaryUrl() }}" style="height: 100px;">
                     @elseif($old_logo != "")
                         <img class="rounded mx-auto d-block" src="{{$old_logo}}" style="height: 100px;">
-                    @else
-
                     @endif
                 </div>
                 
@@ -39,4 +37,19 @@
             </div>
         </div>
     </div>
+    <script>
+        $(".edit-logo").change(function(){
+            Swal.fire({
+                title: 'Cargando...',
+                text: 'Espere un momento',
+                showConfirmButton: false,
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                allowEnterKey: false,
+                onBeforeOpen: () => {
+                    Swal.showLoading()
+                }
+            });
+        });
+    </script>
 </div>
