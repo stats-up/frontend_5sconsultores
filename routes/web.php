@@ -13,7 +13,7 @@ use App\Http\Livewire\Administrador\Users;
 use App\Http\Livewire\Administrador\Allperfiles;
 use App\Http\Livewire\Administrador\Requerimientos;
 use App\Http\Livewire\ComponentsCliente\Perfiles;
-use App\Http\Livewire\ComponentsCliente\ResetPassword;
+use App\Http\Livewire\ComponentsCliente\Resetpassword;
 use App\Http\Livewire\ComponentsCliente\Sendemail;
 use App\Http\Middleware\SessionValidation;
 
