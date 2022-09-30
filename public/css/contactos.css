@@ -253,6 +253,7 @@
     flex-direction: row;
     align-items: center;
     flex-wrap: nowrap;
+    justify-content:center;
   }
   
   .btn-post:hover{
@@ -322,6 +323,7 @@
     flex-direction: row;
     align-items: center;
     flex-wrap: nowrap;
+    justify-content:center;
   }
   
   .btn-post:hover{
@@ -441,6 +443,7 @@
     color:white;
     min-height: 2rem;
     padding: auto;
+    justify-content:center;
   }
   
   .btn-post:hover{
@@ -500,6 +503,7 @@
     color:white;
     min-height: 2rem;
     padding: auto;
+    justify-content:center;
   }
   
   .btn-post:hover{
