@@ -143,3 +143,372 @@
   content: none; 
   align-items: end; 
 }
+
+@media only screen and (max-width: 600px) {
+  .group-cards{
+    width: 70rem;
+    justify-content: center;
+  }
+  .section{
+    padding-top:1rem;
+  }
+  .card-subtitle{
+      width:fit-content;
+  }
+  .btn-p{
+    background-color:#228BE6 ;
+    color: white;
+    border: transparent;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    height: fit-content;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .text-btn{
+    display:none
+  }
+  .head{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+  }
+
+  .btn-addempresa{
+    margin-bottom:1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding-top: 1rem;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+  .responsivelogo{
+    display: none;
+  }
+  .s-logo{
+    width: 4rem;
+    height: 4rem;
+  }
+  .nav_back{
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    width:90%;
+  }
+  .titulo{
+    font-size: 1.2rem;
+  }
+  .head2{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    display:flex;
+    justify-content: center;
+  }
+  .btn-post{
+    width: fit-content;
+    border:transparent;
+    border-radius: 0.5rem;
+    background-color:#e0ae43de;
+    border:1px solid #e0ae43de;
+    color:white;
+    min-height: 2rem;
+    padding: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content:center;
+  }
+  
+  .btn-post:hover{
+    background-color: #d39b23;
+  }
+  .person-info{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .card-title{
+    padding-right: 0;
+    width:80%;
+  }
+}
+
+
+@media only screen and (min-width: 600px) {
+  .group-cards{
+    width: 80rem;
+    justify-content: center;
+  }
+  .card-subtitle{
+    width:fit-content;
+}
+  .card-subtitle{
+    width:fit-content;
+}
+  .search{
+    border-bottom: 1px solid grey;
+    width: 10rem;
+  }
+  .head2{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    display:flex;
+    justify-content: center;
+  }
+  .btn-addempresa{
+    margin-bottom:1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding-top: 1rem;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+  .searchrow{
+    padding-right: 2rem;
+  }
+  .responsivelogo{
+    display: none;
+  }
+  .s-logo{
+    width: 4rem;
+    height: 4rem;
+  }
+  .head{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+  }
+  .btn-post{
+    width: fit-content;
+    border:transparent;
+    border-radius: 0.5rem;
+    background-color:#e0ae43de;
+    border:1px solid #e0ae43de;
+    color:white;
+    min-height: 2rem;
+    padding: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content:center;
+  }
+  
+  .btn-post:hover{
+    background-color: #d39b23;
+  }
+  .nav_back{
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  .person-info{
+    display: flex;
+    justify-content: space-between;
+  }
+} 
+
+@media only screen and (max-width: 720px){
+  .group-cards{
+    width: 80rem;
+    justify-content: center;
+  }
+  .section{
+    padding-top:1rem;
+
+  }
+  .card-subtitle{
+    width:fit-content;
+}
+  .body-contactos{
+    width: 38rem;
+  }
+  .head2{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    display:flex;
+    justify-content: center;
+  }
+  .btn-addempresa{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1rem;
+    margin-bottom:1rem;
+    margin-right: 1rem;
+    width: 95%;
+  }
+  .search{
+    border-bottom: 1px solid grey;
+    width: 13rem;
+  }
+  .searchrow{
+    padding-right: 1rem;
+  }
+  .iconuser{
+    display: block;
+  }
+  .name{
+    display: none;
+  }
+  .responsivelogo{
+    display: none;
+  }
+  .s-logo{
+    width: 4rem;
+    height: 4rem;
+  }
+  .nav_back{
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  .person-info{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 720px){
+  .group-cards{
+    width: 75rem;
+    justify-content: center;
+  }
+  .section{
+    padding-top:1rem;
+  }
+  .card-subtitle{
+    width:fit-content;
+}
+.head2{
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.5rem;
+  display:flex;
+  justify-content: center;
+}
+  .body-contactos{
+    width: 42rem;
+  }
+  .btn-addempresa{
+    margin-left:4rem;
+    margin-bottom:1rem;
+    margin-right:8rem;
+  }
+  .search{
+    border-bottom: 1px solid grey;
+    width: 13rem;
+  }
+  .searchrow{
+    padding-right: 2rem;
+  }
+  .responsivelogo{
+    display:flex;
+    margin-left: 1rem;
+    max-width: 9rem;
+    height: auto;
+  }
+  .iconuser{
+    display: none;
+  }
+  .s-logo{
+    display: none;
+  }
+  .btn-post{
+    width: 15rem;
+    border:transparent;
+    border-radius: 0.5rem;
+    background-color:#e0ae43de;
+    border:1px solid #e0ae43de;
+    color:white;
+    min-height: 2rem;
+    padding: auto;
+    justify-content:center;
+  }
+  
+  .btn-post:hover{
+    background-color: #d39b23;
+  }
+  .nav_back{
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  .person-info{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 1050px){
+  .group-cards{
+    width: 75rem;
+    justify-content: center;
+  }
+  .section{
+    padding-top:1rem;
+  }
+  .card-subtitle{
+    width:fit-content;
+}
+  .body-contactos{
+    width: 65rem;
+  }
+  .head2{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    display:flex;
+    justify-content: center;
+  }
+  .btn-addempresa{
+    margin-left:6rem;
+    margin-bottom:1rem;
+    margin-right:8rem;
+  }
+  .search{
+    border-bottom: 1px solid grey;
+    width: 13rem;
+  }
+  .searchrow{
+    padding-right: 4rem;
+  }
+  .responsivelogo{
+    margin-left: 1rem;
+    max-width: 9rem;
+    height: auto;
+  }
+  .iconuser{
+    display: none;
+  }
+  .btn-post{
+    width: 15rem;
+    border:transparent;
+    border-radius: 0.5rem;
+    background-color:#e0ae43de;
+    border:1px solid #e0ae43de;
+    color:white;
+    min-height: 2rem;
+    padding: auto;
+    justify-content:center;
+  }
+  
+  .btn-post:hover{
+    background-color: #d39b23;
+  }
+  .nav_back{
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  .person-info{
+    display: flex;
+    justify-content: space-between;
+  }
+}
