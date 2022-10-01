@@ -26,9 +26,6 @@ class SessionValidation
                     case '/admin':
                         $flag = true;
                         break;
-                    case '/perfiles':
-                        $flag = true;
-                        break;
                     case '/contactos':
                         $flag = true;
                         break;
@@ -49,6 +46,9 @@ class SessionValidation
             if($type == "cliente"){
                 switch ($path) {
                     case '/cliente':
+                        $flag = true;
+                        break;
+                    case '/perfiles':
                         $flag = true;
                         break;
                 }

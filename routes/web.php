@@ -36,7 +36,6 @@ Route::get('/sendemail', Sendemail::class);
 Route::get('/logout',[GlobalController::class, 'logout']);
 //ADMIN
 Route::get('/admin', Admin::class)->middleware(SessionValidation::class);
-Route::get('/perfiles', Perfiles::class)->middleware(SessionValidation::class);
 Route::get('/contactos', Contactos::class)->middleware(SessionValidation::class);
 Route::get('/postulantes', Postulantes::class)->middleware(SessionValidation::class);
 Route::get('/cuentas', Cuentas::class)->middleware(SessionValidation::class);
@@ -44,6 +43,7 @@ Route::get('/requerimientos', Requerimientos::class)->middleware(SessionValidati
 Route::get('/allperfiles', Allperfiles::class)->middleware(SessionValidation::class);
 //CLIENTE
 Route::get('/cliente', Cliente::class)->middleware(SessionValidation::class);
+Route::get('/perfiles', Perfiles::class)->middleware(SessionValidation::class);
 //???
 Route::get('/users', Users::class)->middleware(SessionValidation::class);
 
