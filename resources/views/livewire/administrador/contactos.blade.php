@@ -1,4 +1,4 @@
-<div class="container-fluid gx-0" style="height:100vh;background-color:#fdfdfd;">
+<div class="container-fluid" style="height:100vh;background-color:#fdfdfd;">
     <div class="row head">
         <div class="col-md-12 d-flex justify-content-between top">
             <img class="responsivelogo" src="http://5sconsultores.cl/portal/wp-content/uploads/2019/11/Logo_5s_web.jpg" alt="Logo"  >
