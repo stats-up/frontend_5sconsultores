@@ -33,20 +33,22 @@
                 <div class="col py-2">
                     <div class="card" style="width:26rem;height:32rem;">
                         <div class="card-body" style="display:flex;justify-content:space-between;flex-direction:column">
-                            <div class="d-flex justify-content-center align-items-center" style="display:flex;flex:1">
+                            <div class="d-flex justify-content-center align-items-center">
                                 <img class="responsiveImg" src="https://wac-cdn.atlassian.com/es/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=531" alt="Logo"  class="brandlogo">
                             </div>
                             <div class=" py-4">
                                 <h5 class="card-title">{{$perfil['nombre_completo']}}</h5>
                                 <p class="card-text">{{$perfil['descripcion']}}</p>
-                                <a href="#" data-bs-toggle="modal" data-bs-target="#verperfilModal" class="btn btn-post">Ver perfil</a>
+                            </div>
+                            <div  style="display:flex;flex:1;align-items:end;padding-bottom:1rem">
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#verperfilModal" class="btn btn-post" style="height:fit-content">Ver perfil</a>
                             </div>
                             
                         </div>
                     </div>
                 </div>
             @endforeach
-            
         </div>
     </div>    
 </div>
+
