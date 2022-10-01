@@ -232,8 +232,10 @@
     display: none;
   }
   .s-logo{
+    display: flex;
     width: 4rem;
     height: 4rem;
+    align-items: center;
   }
   .nav_back{
     margin-left: 0.5rem;
