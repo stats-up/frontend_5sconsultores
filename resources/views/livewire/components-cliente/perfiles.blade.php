@@ -28,8 +28,8 @@
     <livewire:components-cliente.perfil-modal/>
     <div class="col-md-12 d-flex justify-content-center titulo">Perfiles</div>
     <div class="d-flex justify-content-center section">
-        <div class="row row-cols-auto group-cards overflow-auto d-flex justify-content-center" style="max-width:100%;max-height:70vh">
-            @for($i=0;$i<10;$i++)
+        <div class="row row-cols-auto group-cards overflow-auto d-flex justify-content-center" style="width:100%;max-height:70vh">
+            @foreach($perfiles as $perfil)
                 <div class="col py-2">
                     <div class="card" style="width:26rem;height:32rem;">
                         <div class="card-body" style="display:flex;justify-content:space-between;flex-direction:column">
@@ -37,21 +37,16 @@
                                 <img class="responsiveImg" src="https://wac-cdn.atlassian.com/es/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=531" alt="Logo"  class="brandlogo">
                             </div>
                             <div class=" py-4">
-                                <h5 class="card-title">Nombre Completo</h5>
-                                <p class="card-text">El Ingeniero en Minas posee conocimientos en las áreas de exploración y explotación, supervisión de
-                                    procesos asociadas al desarrollo de cada etapa involucrada en el ciclo minero, como también en la
-                                    planificación, administración y gestión de proyectos mineros. Su formación en materias relativas a
-                                    Ciencias de la Tierra como base para la operación minero metalúrgica en faenas ya sea subterránea o
-                                    de cielo abierto complementan el desarrollo de habilidades y destrezas para el quehacer profesional
-                                    que lo capacitan para gestión proyectos mineros en las etapas de prospección, arranque, carguío,
-                                    transporte y procesamiento de minerales.</p>
+                                <h5 class="card-title">{{$perfil['nombre_completo']}}</h5>
+                                <p class="card-text">{{$perfil['descripcion']}}</p>
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#verperfilModal" class="btn btn-post">Ver perfil</a>
                             </div>
                             
                         </div>
                     </div>
                 </div>
-            @endfor
+            @endforeach
+            
         </div>
     </div>    
 </div>

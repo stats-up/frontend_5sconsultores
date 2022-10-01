@@ -39,7 +39,7 @@
                     </div>
                     <div class="col-lg-3 py-2 text-center">
                         <button class="btn-postulantes" style="width:80%;">
-                            <a href="/perfiles" class="btn-post">Ver postulantes</a>
+                            <a href="/perfiles?r={{$req["id"]}}" class="btn-post">Ver postulantes</a>
                         </button>
                     </div>
                 </div>
