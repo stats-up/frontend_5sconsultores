@@ -1,5 +1,5 @@
-<div class="row p-2">            
-    <nav aria-label="breadcrumb" style="padding-left:4rem">
+<div class="row p-2 nav_back">            
+    <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/admin" style="color:#c99616">Clientes</a></li>
         <li class="breadcrumb-item active" aria-current="page">{{$nombre_cliente}}</li>

@@ -50,14 +50,7 @@
                                     <span class="badge badge-warning">Inactivo</span>
                                 @elseif($row["status"] == "eliminado")
                                     <span class="badge badge-danger">Eliminado</span>
-                                @endif
-                                <div class="text-center d-flex align-items-center justify-content-center" style="min-height: 6rem;">
-                                    @if ($row["logo_base64"] != null)    
-                                    <img class="responsiveImg" src="{{$row["logo_base64"]}}" alt="Logo"  class="brandlogo">
-                                    @else
-                                    <img class="responsiveImg" src="/img/no-imagen.png" alt="Logo"  class="brandlogo">
-                                    @endif
-                                </div>        
+                                @endif   
                                 <div class="dropdown d-flex align-items-start dropdot" >
                                     <a class=" dropdown-toggle dottoggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="icondrp bi bi-three-dots-vertical"></i>
@@ -67,9 +60,17 @@
                                     <li><a class="dropdown-item a deleteClient" data="{{$row["id"]}}" href="#"><i class="icon fa-solid fa-trash" style="color:#d52b2baf"></i>Eliminar</a></li>
                                     </ul>
                                 </div>
-                                <div>
-                                    <h6 class="card-title text-muted row">{{$row["name"]}}</h6>
-                                </div>
+                                    <div class="text-center">
+                                        @if ($row["logo_base64"] != null)    
+                                        <img class="responsiveImg" src="{{$row["logo_base64"]}}" alt="Logo"  class="brandlogo">
+                                        @else
+                                        <img class="responsiveImg" src="/img/no-imagen.png" alt="Logo"  class="brandlogo">
+                                        @endif
+                                    </div>     
+                                    <div>
+                                        <h6 class="card-title text-muted row">{{$row["name"]}}</h6>
+                                    </div>
+  
                             </div>
                           <div class="divbtn py-2">
                             <a href="/contactos?c={{$row["id"]}}" class="btn btn-emp">Administrar</a>
