@@ -25,7 +25,7 @@
                                 </div>
                                 <div class="col-lg-3 py-2 text-center">
                                     <button class="btn-postulantes" style="width:80%;">
-                                        <a  href="/requerimientos?c={{$id_cliente}}" class="btn-text" >Ver postulantes</a>
+                                        <a  href="#" class="btn-text" >Ver postulantes</a>
                                     </button>
                                 </div>
                             </div>

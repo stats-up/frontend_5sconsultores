@@ -16,6 +16,7 @@ class EditreqerModal extends Component
     public $id_contacto;
     public $requester_account;
     public $email_contacto;
+    public $estado;
 
     public $customer_areas = [];
     public $accounts = [];
@@ -39,6 +40,7 @@ class EditreqerModal extends Component
         $this->requester_account = $response->json()[0]["nombre_completo_cuenta_solicitante"];
         $this->id_contacto = $response->json()[0]["id_cuenta_solicitante"];
         $this->email_contacto = $response->json()[0]["email_cuenta_solicitante"];
+        $this->estado = $response->json()[0]["estado_requerimiento"] == "activo" ? true : false;;
         $this->dispatchBrowserEvent('swalClose');  
     }
 
@@ -50,7 +52,10 @@ class EditreqerModal extends Component
         $array["data"]["id"] = $this->id_requerimiento;
         $array["data"]["name"] = $this->name;
         $array["data"]["description"] = $this->description;
+        $array["data"]["status"] = $this->estado ? "activo" : "inactivo";
         $endpoint = getenv("API_URL")."/api/upd_request";
+        $response = Http::withBody(json_encode($array), 'application/json')->post($endpoint);
+        $endpoint = getenv("API_URL")."/api/upd_request_status";
         $response = Http::withBody(json_encode($array), 'application/json')->post($endpoint);
         return redirect()->to("/requerimientos?c=".$this->id_customer);
     }
