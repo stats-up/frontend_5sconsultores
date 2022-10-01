@@ -42,6 +42,7 @@
   padding-top: 1rem;
 }
 .responsiveImg{
+  border-radius: 0.5rem;
   width: auto;
   height: auto;
   max-width: 18rem;
