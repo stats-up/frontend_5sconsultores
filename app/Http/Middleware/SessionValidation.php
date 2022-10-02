@@ -19,7 +19,7 @@ class SessionValidation
     {
         if(Session::has('user')){
             $type = Session::get('user')["tipo_cuenta"];
-            $path = $_SERVER["PATH_INFO"];
+            $path = "/".$request->path();
             $flag = false;
             if ($type == "admin") {
                 switch ($path) {
