@@ -28,23 +28,34 @@
     </div>
     <div class="row overflow-auto list" style="max-height:70vh;justify-content:center;">
         <div class="col" style="max-width:65rem;">
+            @php
+                $cont = 0;    
+            @endphp
             @foreach ($requerimientos as $req)
-            <div class="card row justify-content-center target">
-                <div class="card-body row mx-0">
-                    <div class="col-lg-9" style="height:fit-content">
-                        <div class="cargo" >{{$req["nombre"]}}</div>
-                        <div class="descripcion py-2">
-                            {{$req["descripcion"]}}
+                @if ($req["estado_requerimiento"] == "activo")
+                    <div class="card row justify-content-center target">
+                        <div class="card-body row mx-0">
+                            <div class="col-lg-9" style="height:fit-content">
+                                <div class="cargo" >{{$req["nombre"]}}</div>
+                                <div class="descripcion py-2">
+                                    {{$req["descripcion"]}}
+                                </div>
+                            </div>
+                            <div class="col-lg-3 py-2 text-center">
+                                <button class="btn-postulantes" style="width:80%;">
+                                    <a href="/perfiles?r={{$req["id"]}}" class="btn-post">Ver postulantes</a>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 py-2 text-center">
-                        <button class="btn-postulantes" style="width:80%;">
-                            <a href="/perfiles?r={{$req["id"]}}" class="btn-post">Ver postulantes</a>
-                        </button>
-                    </div>
-                </div>
-            </div>   
+                    @php
+                        $cont++;
+                    @endphp
+                @endif
             @endforeach
+            @if ($cont == 0)
+                <h2 class="text-center mt-3 text-secondary">No se han encontrado requerimientos disponibles</h2>
+            @endif
         </div>
     </div>
     <script>
