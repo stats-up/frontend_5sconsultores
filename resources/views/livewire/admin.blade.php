@@ -25,7 +25,7 @@
             <div class="col-auto btn-p" style="width:fit-content">
                 <a href="/allperfiles" style="text-decoration:none;display:flex;align-items:center;color:white;width:100%;height:100%">
                     <i class="fa-solid fa-people-group" ></i>
-                    <div style="padding-left:0.5rem" class="text-btn">Perfiles</div>    
+                    <div style="padding-left:0.5rem" class="text-btn">Candidatas</div>    
                 </a>
             </div>
             <div class="col-auto" style="width:fit-content">

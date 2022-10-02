@@ -73,7 +73,7 @@
                         </td>
                         <td>
                             <a class="btn btn-primary btn-sm w-100" href="/postulantes?c={{$req["id_empresa"]}}&r={{$req["id"]}}">
-                                Ver Perfiles
+                                Ver Candidatas
                             </a>
                         </td>
                         <td class="text-center">

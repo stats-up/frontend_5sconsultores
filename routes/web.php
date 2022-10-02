@@ -46,4 +46,6 @@ Route::get('/cliente', Cliente::class)->middleware(SessionValidation::class);
 Route::get('/perfiles', Perfiles::class)->middleware(SessionValidation::class);
 //???
 Route::get('/users', Users::class)->middleware(SessionValidation::class);
+//GENERAR PASSWD
+Route::get('/generar',[GlobalController::class, 'generar_hash']);
 

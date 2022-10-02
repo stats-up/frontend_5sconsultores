@@ -31,14 +31,14 @@
                 <li class="breadcrumb-item"><a href="/admin" style="color:#c99616">Clientes</a></li>
                 <li class="breadcrumb-item active" aria-current="page">{{$nombre_cliente}}</li>
                 <li wire:ignore class="breadcrumb-item"><a href="/requerimientos?c={{$id_client}}" style="color:#c99616">Requerimientos</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Perfiles</li>
+                <li class="breadcrumb-item active" aria-current="page">Candidatas</li>
             </ol>
         </nav>
     </div>
     @livewire('administrador.verpostulante-modal')
     @livewire('administrador.addpostulante-modal', [ "id_client" => $id_client ,"id_request" => $id_request])
     @livewire('administrador.editpostulante-modal', [ "id_client" => $id_client ,"id_request" => $id_request])
-    <div class="col-md-12 d-flex justify-content-center titulo">Perfiles de {{$nombre_requerimiento}}</div>
+    <div class="col-md-12 d-flex justify-content-center titulo">Candidatas de {{$nombre_requerimiento}}</div>
     <div class="head2">
         <div class="row d-flex col justify-content-between">
             <button href="#" class="btn-post col-md-2" data-bs-toggle="modal" data-bs-target="#addpostulanteModal">

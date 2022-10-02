@@ -28,15 +28,16 @@
             <nav aria-label="breadcrumb" >
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="/admin" style="color:#c99616">Clientes</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Todos los perfiles</li>
+                    <li class="breadcrumb-item active" aria-current="page">Todos los Candidatos</li>
                 </ol>
             </nav>
         </div>
-        <div class="row titulo">Perfiles</div>
+        <div class="row titulo">Candidatas</div>
         <div class="row">
             <div class="col-auto btn-p" style="width:fit-content">
                 <a href="/allperfiles" class="px-2" style="text-decoration:none;display:flex;align-items:center;color:white;width:100%;height:100%">
-                    <i class="fa-solid fa-people-group" style="padding-right:0.5rem"></i>Perfiles</a>
+                    <i class="fa-solid fa-people-group" style="padding-right:0.5rem"></i>Candidatas
+                </a>
             </div>
         </div>
         <div wire:ignore class="col-md-12 tabla table-responsive">
@@ -50,7 +51,6 @@
                         <th>Comuna</th>
                         <th>Dirección</th>
                         <th>Área de trabajo</th>
-                        <th>Video de presentación</th>
                         <th>Requerimiento</th>
                         <th>Nombre solicitante</th>
                         <th>Email solicitante</th>
@@ -69,7 +69,6 @@
                         <td>{{$applicant["comuna"]}}</td>
                         <td>{{$applicant["direccion"]}}</td>
                         <td>{{$applicant["nombre_area_postulante"]}}</td>
-                        <td>{{$applicant["youtube_url"]}}</td>
                         <td>{{$applicant["nombre_requerimiento"]}}</td>
                         <td>{{$applicant["nombre_solicitante"]}}</td>
                         <td>{{$applicant["email_solicitante"]}}</td>
