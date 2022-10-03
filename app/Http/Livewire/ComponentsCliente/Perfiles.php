@@ -11,6 +11,7 @@ class Perfiles extends Component
 {   
     public $perfiles = [];
     public $id_req;
+    public $requerimiento;
 
     public function getallperfiles(){
         $token = getenv("API_TOKEN");
@@ -49,6 +50,7 @@ class Perfiles extends Component
         }elseif($req["estado_requerimiento"] != "activo"){
             return redirect()->to("/cliente");
         }
+        $this->requerimiento = $req["nombre"];
         if(Session::get('user')["id"] != $req["id_cuenta_solicitante"]){
             return redirect()->to("/cliente");
         }

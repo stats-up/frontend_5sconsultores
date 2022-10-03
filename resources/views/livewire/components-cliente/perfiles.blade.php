@@ -21,6 +21,7 @@
         <nav aria-label="breadcrumb" style="padding-left:4rem">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/cliente" style="color:#c99616">Requerimientos</a></li>
+                <li class="breadcrumb-item active" aria-current="page">{{$requerimiento}}</li>
                 <li class="breadcrumb-item active" aria-current="page">Perfiles</li>
             </ol>
         </nav>

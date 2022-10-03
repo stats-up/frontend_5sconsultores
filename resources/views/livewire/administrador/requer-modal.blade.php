@@ -1,5 +1,5 @@
 <div>
-    <div wire:ignore.self class="modal fade" id="addreqModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"  >
+    <div wire:ignore.self class="modal fade" id="addreqModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"  >
         <div class="modal-dialog">
             <form wire:submit.prevent="submit" class="modal-content">
                 <div class="modal-header">

@@ -45,7 +45,7 @@
                     <th scope="col" class="col-md-2">Solicitado Por</th>
                     <th scope="col" class="col-md-1">Fecha Ingreso</th>
                     <th scope="col" class="col-md-1">Estado</th>
-                    <th scope="col" class="col-md-1">Perfiles</th>
+                    <th scope="col" class="col-md-1">Candidatas</th>
                     <th scope="col" class="col-md-1"></th>
                     <th scope="col" class="col-md-1"></th>
                 </tr>

@@ -44,6 +44,7 @@ class ModalEditcliente extends Component
     }
 
     public function editarCliente(){
+        $this->dispatchBrowserEvent('swalLoading');
         $token = getenv("API_TOKEN");
         $array["token"] = $token;
         $array["data"]["id"] = $this->id_cliente;
