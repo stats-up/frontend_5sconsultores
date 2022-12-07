@@ -1,7 +1,7 @@
 <div class="container-fluid" style="height:100vh;background-color:#fdfdfd;">
     <div class="row head d-flex justify-content-center">
         <div class="col-md-12 top d-flex justify-content-between">
-            <img class="responsivelogo" src="http://5sconsultores.cl/portal/wp-content/uploads/2019/11/Logo_5s_web.jpg" alt="Logo" class="brandlogo">
+            <img class="responsivelogo" src="img/logo_5s_web.jpg" alt="Logo" class="brandlogo">
             <div class="nav_back">
                 <ul class="nav justify-content-center align-items-center">
                     <li class="nav-item mx-2">

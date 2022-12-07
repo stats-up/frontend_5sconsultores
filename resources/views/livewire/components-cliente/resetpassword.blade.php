@@ -3,7 +3,7 @@
         <div class="card " style="max-width:30rem; height:40rem">
             <div class="card-body">
                 <div class="d-flex row justify-content-center py-3">
-                    <img src="http://5sconsultores.cl/portal/wp-content/uploads/2019/11/Logo_5s_web.jpg" alt="Logo" class="brandlogo">
+                    <img src="img/logo_5s_web.jpg" alt="Logo" class="brandlogo">
                     <span class="text-muted" style="width:fit-content">
                         <i>Somos personas reclutando personas</i>
                     </span>

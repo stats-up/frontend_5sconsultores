@@ -35,7 +35,7 @@
                 <div class="col-md-6">
                     <div class="text-center">
                         <div class="card-body">
-                            <img src="http://5sconsultores.cl/portal/wp-content/uploads/2019/11/Logo_5s_web.jpg" alt="Logo">
+                            <img src="img/logo_5s_web.jpg" alt="Logo">
                             <br>
                             <span class="text-muted" style="">
                                 <i>Solo los usuarios con privilegios pueden ingresar.</i>
@@ -90,7 +90,7 @@
             <div class="col-md-12">
                 <nav class="navbar navbar-expand-lg bg-white mb-3" style="border-bottom-style: groove; border-width: 1px;border-color: #ffffff57;">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#"><img src="http://5sconsultores.cl/portal/wp-content/uploads/2019/11/Logo_5s_web.jpg" alt="Logo" style="max-height: 60px;margin-top: -24px;margin-bottom: -14px;"></a>
+                        <a class="navbar-brand" href="#"><img src="img/logo_5s_web.jpg" alt="Logo" style="max-height: 60px;margin-top: -24px;margin-bottom: -14px;"></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -391,7 +391,7 @@
             <div class="col-md-12">
                 <nav class="navbar navbar-expand-lg bg-white" style="border-bottom-style: groove; border-width: 1px;border-color: #ffffff57;">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#"><img src="http://5sconsultores.cl/portal/wp-content/uploads/2019/11/Logo_5s_web.jpg" alt="Logo" style="max-height: 60px;margin-top: -24px;margin-bottom: -14px;"></a>
+                        <a class="navbar-brand" href="#"><img src="img/logo_5s_web.jpg" alt="Logo" style="max-height: 60px;margin-top: -24px;margin-bottom: -14px;"></a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
