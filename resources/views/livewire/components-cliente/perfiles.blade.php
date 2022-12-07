@@ -1,7 +1,7 @@
 <div class="container-fluid" style="height:100vh;background-color:#fdfdfd;">
     <div class="row head">
         <div class="col-md-12 d-flex justify-content-between top">
-            <img class="responsivelogo" src="img/logo_5s_web.jpg" alt="Logo"  class="brandlogo">
+            <img class="responsivelogo" src="img/Logo_5s_web.jpg" alt="Logo"  class="brandlogo">
             <div class="dropdown nombrecliente">
                 <a class="dropdown-toggle sesiontoggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black">      
                     <div class="name" style="padding-right:0.5rem">{{Session::get('user')["email"]}}</div>

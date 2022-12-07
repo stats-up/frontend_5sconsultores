@@ -19,7 +19,7 @@
                     <div class="card my-2" style="height:15rem">
                         <div class="card-body" style="display:flex;justify-content:space-between;flex-direction:column">
                             <div class="text-center d-flex align-items-center justify-content-center" style="display:flex;flex:1">
-                                <img class="responsiveimg" src="img/logo_5s_web.jpg" alt="Logo"  class="brandlogo">
+                                <img class="responsiveimg" src="img/Logo_5s_web.jpg" alt="Logo"  class="brandlogo">
                             </div>              
                             <div>
                                 <h6 class="card-title text-muted row d-flex justify-content-center">Administadores</h6>
