@@ -24,6 +24,10 @@ class Login extends Component
         }
     }
     public function autenticar(){
+        if($this->email == "" || $this->passwd == ""){
+            $this->dispatchBrowserEvent('incomplete');
+            return null;
+        }
         $token = getenv("API_TOKEN");
         $array["token"] = $token;
         $array["data"]["email"] = strtolower($this->email);

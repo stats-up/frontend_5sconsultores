@@ -21,7 +21,7 @@
                             <div class="card-body row mx-0">
                                 <div class="col-lg-9" style="height:fit-content">
                                     <div class="cargo" >{{$name}}</div>
-                                    <div class="descripcion py-2" style="white-space: pre;">{{$descripcion}}</div>
+                                    <div class="descripcion py-2">{{$descripcion}}</div>
                                 </div>
                                 <div class="col-lg-3 py-2 text-center">
                                     <button class="btn-postulantes" style="width:80%;">

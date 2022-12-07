@@ -41,6 +41,9 @@ class SessionValidation
                     case '/allperfiles':
                         $flag = true;
                         break;
+                    case '/users':
+                        $flag = true;
+                        break;
                 }
             }
             if($type == "cliente"){

@@ -13,7 +13,7 @@
                 </a>
                 <ul class="dropdown-menu sessionmenu" aria-labelledby="navbarDropdown"  style="margin-top:4rem;width:fit-content" >
                     <li>
-                        <a href="/cuentas" class="dropdown-item adminacount d-flex col"  style="width:fit-content" >
+                        <a href="/users" class="dropdown-item adminacount d-flex col"  style="width:fit-content" >
                             <i class="fa-solid fa-user-gear" style="font-size:16px;color:grey;display:flex;align-items:center;padding-right:0.5rem"></i>
                             Administrar cuentas
                         </a>

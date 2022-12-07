@@ -38,14 +38,20 @@ Route::get('/logout',[GlobalController::class, 'logout']);
 Route::get('/admin', Admin::class)->middleware(SessionValidation::class);
 Route::get('/contactos', Contactos::class)->middleware(SessionValidation::class);
 Route::get('/postulantes', Postulantes::class)->middleware(SessionValidation::class);
-Route::get('/cuentas', Cuentas::class)->middleware(SessionValidation::class);
+//Route::get('/cuentas', Cuentas::class)->middleware(SessionValidation::class);
 Route::get('/requerimientos', Requerimientos::class)->middleware(SessionValidation::class);
 Route::get('/allperfiles', Allperfiles::class)->middleware(SessionValidation::class);
+Route::get('/users', Users::class)->middleware(SessionValidation::class);
 //CLIENTE
 Route::get('/cliente', Cliente::class)->middleware(SessionValidation::class);
 Route::get('/perfiles', Perfiles::class)->middleware(SessionValidation::class);
-//???
-Route::get('/users', Users::class)->middleware(SessionValidation::class);
 //GENERAR PASSWD
 Route::get('/generar',[GlobalController::class, 'generar_hash']);
+
+Route::get('/test', function(){
+    return view('mail.new_user')->with('title', "Nueva Cuenta")->with('name', "Fernando Delva Cerpa");
+});
+Route::get('/test2', function(){
+    return view('asd');
+});
 

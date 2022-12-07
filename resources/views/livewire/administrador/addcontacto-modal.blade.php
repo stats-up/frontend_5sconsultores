@@ -13,16 +13,18 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="recipient-name" class="col-form-label">Nombre completo</label>
-                        <input wire:model="name" type="text" class="form-control" id="recipient-name" placeholder="Nombre completo del contacto" minlength="2" required>
+                        <input wire:model="name" type="text" class="form-control" placeholder="Nombre completo del contacto" minlength="2" required>
                     </div>
                     <div class="mb-3">
                         <label for="message-text" class="col-form-label">Correo</label>
-                        <input wire:model="email" type="email" class="form-control" id="recipient-name" placeholder="________@____.___" required>
+                        <input wire:model="email" type="email" class="form-control" placeholder="________@____.___" required>
                     </div>
-                    <div class="mb-3">
-                        <label for="message-text" class="col-form-label">Telefono</label>
-                        <input wire:model="phone" type="text" class="form-control" id="recipient-name" placeholder="+___________" minlength="5">
-                    </div>
+                    @if($id_area != null)
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Telefono</label>
+                            <input wire:model="phone" type="text" class="form-control" placeholder="+___________" minlength="5">
+                        </div>
+                    @endif
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>

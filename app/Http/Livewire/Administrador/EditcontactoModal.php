@@ -55,8 +55,11 @@ class EditcontactoModal extends Component
         $response = Http::withBody(json_encode($array), 'application/json')->post($endpoint);
         $endpoint = getenv("API_URL")."/api/upd_account_status";
         $response = Http::withBody(json_encode($array), 'application/json')->post($endpoint);
-
-        return redirect()->to("/contactos?c=".$this->id_cliente);
+        if($this->id_cliente == null){
+            return redirect()->to('/users');
+        }else{
+            return redirect()->to("/contactos?c=".$this->id_cliente);
+        }
     }
     public function mount($id_cliente){
         $this->id_cliente = $id_cliente;

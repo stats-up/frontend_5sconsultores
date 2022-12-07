@@ -6,6 +6,8 @@ use Livewire\Component;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\MailStructure;
 
 
 class AddcontactoModal extends Component
@@ -26,16 +28,20 @@ class AddcontactoModal extends Component
     ];
 
     public function addContactoModal($id_cliente,$id_area){
-        $this->id_cliente = $id_cliente;
-        $this->id_area = $id_area;
         $token = getenv("API_TOKEN");
         $array["token"] = $token;
         $array["data"]["id"] = $id_area;
         $endpint = getenv("API_URL")."/api/get_customer_area";
         $response = Http::withBody(json_encode($array), 'application/json')->post($endpint);
-        $this->nombre_area =  $response->json()[0]["name"];
-        $this->id_area =  $response->json()[0]["id"];
-        $this->id_customer =  $response->json()[0]["customer"];
+        if($response->json() != null){
+            $this->nombre_area =  $response->json()[0]["name"];
+            $this->id_area =  $response->json()[0]["id"];
+            $this->id_customer =  $response->json()[0]["customer"];
+        }else{
+            $this->nombre_area =  "Administración";
+            $this->id_area = null;
+            $this->id_customer = null;
+        }
         $this->dispatchBrowserEvent('swalClose');
     }
 
@@ -60,8 +66,25 @@ class AddcontactoModal extends Component
             $array["data"]["email"] = strtolower($this->email);
             $array["data"]["full_name"] = $this->name;
             $array["data"]["cellphone"] = $this->phone;
+            //CREATE USER
             $endpoint = getenv("API_URL")."/api/add_account";
             $response = Http::withBody(json_encode($array), 'application/json')->post($endpoint);
+            $endpoint = getenv("API_URL")."/api/get_account";
+            $random_string = substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(10/strlen($x)) )),1,32);
+            //GENERATE HASH
+            $array = null;
+            $token = getenv("API_TOKEN");
+            $array["token"] = $token;
+            $array["data"]["email"] = strtolower($this->email);
+            $array["data"]["hash"] = $random_string;
+            $endpoint = getenv("API_URL")."/api/add_reset_password";
+            $response = Http::withBody(json_encode($array), 'application/json')->post($endpoint);
+            //MESSAGE
+            $message = view('mail.new_user')->with('title', "Nueva Cuenta")->with('name', $this->name)->with('url', "www.candidatas.5sconsultores.cl/resetpassword?email=".strtolower($this->email)."&key=".$random_string)->render();
+            Mail::to($this->email)->queue(new MailStructure("Nueva Cuenta - 5SConsultores",$message));
+            if($this->id_customer == null){
+                return redirect()->to("/users");
+            }
             return redirect()->to("/contactos?c=".$this->id_customer);
         }
     }

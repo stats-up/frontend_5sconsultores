@@ -68,6 +68,13 @@
                 text: 'Usuario o contraseña incorrecto',
             });
         });
+        window.addEventListener('incomplete', event =>{
+            Swal.fire({
+                icon: 'warning',
+                title: 'Oops...',
+                text: 'Ingrese su correo y contraseña',
+            });
+        });
         window.addEventListener('disabled', event =>{
             Swal.fire({
                 icon: 'info',
