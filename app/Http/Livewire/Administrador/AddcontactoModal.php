@@ -80,7 +80,7 @@ class AddcontactoModal extends Component
             $endpoint = getenv("API_URL")."/api/add_reset_password";
             $response = Http::withBody(json_encode($array), 'application/json')->post($endpoint);
             //MESSAGE
-            $message = view('mail.new_user')->with('title', "Nueva Cuenta")->with('name', $this->name)->with('url', "www.candidatas.5sconsultores.cl/resetpassword?email=".strtolower($this->email)."&key=".$random_string)->render();
+            $message = view('mail.new_user')->with('title', "Nueva Cuenta")->with('name', $this->name)->with('url', getenv("APP_URL")."/resetpassword?email=".strtolower($this->email)."&key=".$random_string)->render();
             Mail::to($this->email)->queue(new MailStructure("Nueva Cuenta - 5SConsultores",$message));
             if($this->id_customer == null){
                 return redirect()->to("/users");
