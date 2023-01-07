@@ -9,23 +9,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="dropdown nombrecliente">
-                <a class="dropdown-toggle sesiontoggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black">
-                    <div class="name" style="padding-right:0.5rem">{{Session::get('user')["email"]}}</div>
-                </a>
-                <ul class="dropdown-menu sessionmenu" aria-labelledby="navbarDropdown" style="margin-top:4rem">
-                    <li>
-                        <a href="/users" class="dropdown-item adminacount d-flex col" style="width:fit-content">
-                            <i class="fa-solid fa-user-gear" style="font-size:16px;color:grey;display:flex;align-items:center;padding-right:0.5rem"></i>
-                            Administrar cuentas
-                        </a>
-                        <a class="dropdown-item sessionitem" href="/logout" style="display:flex;flex-direction:row">
-                            <i class="bi bi-box-arrow-in-right" style="font-size:1.3rem;color:red;display:flex;align-items:center;padding-right:0.5rem"></i>
-                            Cerrar sesión
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            @livewire('administrador.admin-menu-dropdown')
         </div>
         <div class="col titulo">
             Administración de cuentas administrativas
@@ -37,8 +21,7 @@
                 <i class="bi bi-plus"></i>Agregar nuevo administrador
             </button>
         </div>
-
-        <div class="col-md-12 tabla">
+        <div wire:ignore class="col-md-12 tabla">
             <table id="tabla-admin" class="table table-bordered table-hover">
                 <thead>
                     <tr>
@@ -55,7 +38,7 @@
                             <td>{{$admin["email"]}}</td>
                             <td class="text-center">
                                 @if ($admin["estado_cuenta_clave"] == "no activa")
-                                    <button wire:click="reenviarActivacionCorreo({{$admin["id"]}})" class="btn btn-warning btn-sm">Reenviar correo de activación</button>
+                                    <button wire:click="reenviarActivacionCorreo('{{$admin["email"]}}','{{$admin["nombre_completo"]}}')" class="btn btn-warning btn-sm loadingClick">Reenviar correo de activación</button>
                                 @else
                                     <button class="btn btn-success btn-sm" disabled>Cuenta Activa</button>
                                 @endif
@@ -72,6 +55,28 @@
         </div>
     </div>
     <script>
+        $(".loadingClick").click(function(){
+            Swal.fire({
+                title: 'Cargando...',
+                text: 'Espere un momento',
+                showConfirmButton: false,
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                allowEnterKey: false,
+                onBeforeOpen: () => {
+                    Swal.showLoading()
+                }
+            });
+        });
+        window.addEventListener('correoActivacionEnviado', event => {
+            Swal.fire({
+                icon: 'success',
+                title: 'Correo de activación enviado',
+                text: 'Se ha enviado un correo de activación a la cuenta del administrador',
+                showConfirmButton: false,
+                timer: 3000
+            })
+        });
         $(document).ready(function() {
             $('#tabla-admin').DataTable({
                 "ordering": true,

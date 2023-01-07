@@ -44,10 +44,38 @@
                     @endif
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Enviar correo actualizar contraseña</button>
+                    @if($password_status == "no activa")
+                        <button id="activeLoading" wire:click="reenviarActivacionCorreo('{{$email}}','{{$name}}')" type="button" class="btn btn-primary">Enviar correo actualizar contraseña</button>
+                        <script>
+                            $("#activeLoading").click(function(){
+                                Swal.fire({
+                                    title: 'Cargando...',
+                                    text: 'Espere un momento',
+                                    showConfirmButton: false,
+                                    allowOutsideClick: false,
+                                    allowEscapeKey: false,
+                                    allowEnterKey: false,
+                                    onBeforeOpen: () => {
+                                        Swal.showLoading()
+                                    }
+                                });
+                            });
+                        </script>
+                    @endif
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        window.addEventListener('correoActivacionEnviado', event => {
+            Swal.fire({
+                icon: 'success',
+                title: 'Correo enviado',
+                text: 'Se ha enviado un correo para actualizar la contraseña',
+                showConfirmButton: false,
+                timer: 1500
+            });
+        });
+    </script>
 </div>

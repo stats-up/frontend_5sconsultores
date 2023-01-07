@@ -28,20 +28,42 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-primary">Agregar</button>
+                    <button id="submitFormButton" type="submit" class="btn btn-primary">Agregar</button>
                 </div>
             </form>
         </div>
     </div>
     <script>
+        $("#submitFormButton").click(function(){
+            Swal.fire({
+                title: 'Cargando...',
+                text: 'Espere un momento',
+                showConfirmButton: false,
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                allowEnterKey: false,
+                onBeforeOpen: () => {
+                    Swal.showLoading()
+                }
+            });
+        });
         window.addEventListener('emailExist', event =>{
             let user = event.detail;
-            Swal.fire({
-                icon: 'warning',
-                title: 'El correo ya existe',
-                text: 'El correo ' + user.email,
-                html: 'Este se encuentra en... <br> <b>Cliente:</b> ' + user.nombre_empresa + '<br> <b>Área:</b> ' + user.area_empresa + '<br><b>Correspondiente a:</b> ' + user.nombre_completo
+            if(user.nombre_empresa == null){
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'El correo ya existe',
+                    text: 'El correo ' + user.email,
+                    html: '<b>Correspondiente a:</b> ' + user.nombre_completo
                 });
+            }else{
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'El correo ya existe',
+                    text: 'El correo ' + user.email,
+                    html: 'Este se encuentra en... <br> <b>Cliente:</b> ' + user.nombre_empresa + '<br> <b>Área:</b> ' + user.area_empresa + '<br><b>Correspondiente a:</b> ' + user.nombre_completo
+                });
+            }
         });
     </script>
 </div>

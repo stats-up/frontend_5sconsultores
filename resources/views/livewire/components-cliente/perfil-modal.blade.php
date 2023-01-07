@@ -36,15 +36,17 @@
                             </div>
                         </div>
                         <div class="col-xl-6 py-4">
-                            <button onclick="openCv()" id="btn-cv" style="display:none" class="btn btn-primary">Ver PDF</button>
-                            <button onclick="openVp()" id="btn-vp" class="btn btn-primary">Ver video de presentación</button>
-                            <div class="text-center py-2" id="vp" style="display:none">
-                                @if($applicant["youtube_url"] != "")
-                                    <iframe width="500" height="300" src="https://www.youtube.com/embed/{{substr($applicant["youtube_url"],16)}}" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-                                @else
-                                    <h3 class="text-center">SIN VIDEO</h3>
-                                @endif
-                            </div>
+                            @if(false)
+                                <button onclick="openCv()" id="btn-cv" style="display:none" class="btn btn-primary">Ver PDF</button>
+                                <button onclick="openVp()" id="btn-vp" class="btn btn-primary">Ver video de presentación</button>
+                                <div class="text-center py-2" id="vp" style="display:none">
+                                    @if($applicant["youtube_url"] != "")
+                                        <iframe width="500" height="300" src="https://www.youtube.com/embed/{{substr($applicant["youtube_url"],16)}}" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                                    @else
+                                        <h3 class="text-center">SIN VIDEO</h3>
+                                    @endif
+                                </div>
+                            @endif
                             <div class="py-2"  id="cv">
                                 @if($applicant["pdf_base_64"] != "")
                                     <iframe src="data:application/pdf;base64,{{$applicant["pdf_base_64"]}}" frameborder="0"  width="500px" height="500px"></iframe>

@@ -60,10 +60,12 @@
                             <label class="col-form-label" >PDF</label>
                             <input wire:model="pdf" name="userfile" type="file" accept=".pdf" class="form-control"/>
                         </div>
-                        <div class="mb-3">
-                            <label class="col-form-label" >Video de presentación (URL Youtube)</label>
-                            <input wire:model="youtube_url" type="text" class="form-control" placeholder="https://youtu.be/XXXXXXXXXXX"/>
-                        </div>
+                        @if(false)
+                            <div class="mb-3">
+                                <label class="col-form-label" >Video de presentación (URL Youtube)</label>
+                                <input wire:model="youtube_url" type="text" class="form-control" placeholder="https://youtu.be/XXXXXXXXXXX"/>
+                            </div>
+                        @endif
                     </div>
                 </div>
                 <div class="modal-footer">
