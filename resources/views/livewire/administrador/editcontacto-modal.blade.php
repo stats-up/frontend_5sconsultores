@@ -8,7 +8,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label">Nombre:</label>
+                        <label class="col-form-label">Nombre:</label>
                         <input wire:model="name" type="text" class="form-control" >
                     </div>
                     <div class="mb-3">

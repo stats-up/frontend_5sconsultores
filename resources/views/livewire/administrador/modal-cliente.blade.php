@@ -8,8 +8,8 @@
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label">Nombre:</label>
-                        <input wire:model="nombre" type="text" class="form-control" id="recipient-name" required="" minlength="2" placeholder="Nombre Empresa">
+                        <label class="col-form-label">Nombre:</label>
+                        <input wire:model="nombre" type="text" class="form-control" required="" minlength="2" placeholder="Nombre Empresa">
                         @error('nombre') <span class="text-danger">Largo mínimo de 2 letras</span> @enderror
                     </div>
                     <div class="mb-3">

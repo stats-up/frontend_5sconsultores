@@ -8,12 +8,12 @@
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label">Nombre:</label>
-                        <input wire:model="name" type="text" class="form-control" id="recipient-name" minlength="3">
+                        <label class="col-form-label">Nombre:</label>
+                        <input wire:model="name" type="text" class="form-control" minlength="3">
                         @error('name') <span class="error">{{ $message }}</span> @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label">Área</label>
+                        <label class="col-form-label">Área</label>
                         <select wire:change="get_accounts_by_customer_area($event.target.value)" class="form-select" required>
                             <option value="" selected disabled>Seleccione...</option>
                             @foreach ($customer_areas as $item)
@@ -24,7 +24,7 @@
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label">Solicitante</label>
+                        <label class="col-form-label">Solicitante</label>
                         <select wire:model="requester_account" class="form-select" required autocomplete="off">
                             <option value="" selected >Seleccione...</option>
                             @foreach ($accounts as $account)
@@ -36,7 +36,7 @@
                         @error('requester_account') <span class="text-danger">Seleccione un Solicitante</span> @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label">Descripción</label>
+                        <label class="col-form-label">Descripción</label>
                         <textarea wire:model="description" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
                     </div>
                 </div>

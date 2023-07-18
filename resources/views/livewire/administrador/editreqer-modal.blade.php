@@ -8,8 +8,8 @@
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label">Nombre:</label>
-                        <input wire:model="name" type="text" class="form-control" id="recipient-name" minlength="3">
+                        <label class="col-form-label">Nombre:</label>
+                        <input wire:model="name" type="text" class="form-control" minlength="3">
                         @error('name') <span class="error">{{ $message }}</span> @enderror
                     </div>
                     <div class="mb-3">
