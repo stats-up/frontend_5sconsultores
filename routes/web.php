@@ -49,7 +49,7 @@ Route::get('/perfiles', Perfiles::class)->middleware(SessionValidation::class);
 Route::get('/generar',[GlobalController::class, 'generar_hash']);
 
 Route::get('/test', function(){
-    return view('mail.new_user')->with('title', "Nueva Cuenta")->with('name', "Fernando Delva Cerpa");
+    //return view('mail.global')->with('title', "Actualización de contraseña")->with('name', Session::get('user')["nombre_completo"])->with('password',"asd");
 });
 Route::get('/test2', function(){
     return view('asd');

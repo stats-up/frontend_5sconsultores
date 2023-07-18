@@ -1,20 +1,8 @@
 <div class="container-fluid" style="height:100vh;background-color:#fdfdfd;">
     <div class="row head">
         <div class="col-md-12 d-flex justify-content-between top">
-            <img class="responsiveImg" src="img/Logo_5s_web.jpg" alt="Logo"  class="brandlogo">
-            <div class="dropdown nombrecliente">
-                <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:black">      
-                    <div class="name" style="padding-right:0.5rem">{{Session::get('user')["email"]}}</div>
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown"  style="margin-top:4rem" >
-                    <li>
-                        <a class="dropdown-item" href="/logout" style="display:flex;flex-direction:row">
-                            <i class="bi bi-box-arrow-in-right" style="font-size:1.3rem;color:red;display:flex;align-items:center;padding-right:0.5rem"></i>
-                            Cerrar sesión
-                        </a>                        
-                    </li>
-                </ul>
-            </div>
+            <img class="responsiveImg" src="img/Logo_5s_web.jpg" alt="Logo" class="brandlogo">
+            @livewire('components-cliente.client-menu-dropdown')
         </div> 
     </div>
     <div class="row  d-flex justify-content-center">
@@ -45,6 +33,7 @@
                                 <button class="btn-postulantes" style="width:80%;">
                                     <a href="/perfiles?r={{$req["id"]}}" class="btn-post">Ver postulantes</a>
                                 </button>
+                                
                             </div>
                         </div>
                     </div>
@@ -59,6 +48,9 @@
         </div>
     </div>
     <script>
+        $(".btn-postulantes").click(function(){
+            window.location.href = $(this).find("a").attr("href");
+        });
         function myFunction() {
             var input = document.getElementById("Search");
             var filter = input.value.toLowerCase();

@@ -6,10 +6,6 @@
     </a>
     <ul class="dropdown-menu sessionmenu" aria-labelledby="navbarDropdown"  style="margin-top:4rem" >
         <li>
-            <a href="/users" class="dropdown-item adminacount d-flex col"  style="width:fit-content" >
-                <i class="fa-solid fa-user-gear text-primary" style="font-size:16px;color:grey;display:flex;align-items:center;padding-right:0.5rem"></i>
-                Administrar cuentas
-            </a>
             <a href="#" class="dropdown-item adminacount d-flex col" style="width:fit-content" data-bs-toggle="modal" data-bs-target="#changePassMdl">
                 <i class="fa-solid fa-key text-success" style="font-size:16px;color:grey;display:flex;align-items:center;padding-right:0.5rem"></i>
                 Cambiar contraseña

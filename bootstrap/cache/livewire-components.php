@@ -23,9 +23,11 @@
   'administrador.verpostulante-modal' => 'App\\Http\\Livewire\\Administrador\\VerpostulanteModal',
   'administrador.verrequer-modal' => 'App\\Http\\Livewire\\Administrador\\VerrequerModal',
   'cliente' => 'App\\Http\\Livewire\\Cliente',
+  'components-cliente.client-menu-dropdown' => 'App\\Http\\Livewire\\ComponentsCliente\\ClientMenuDropdown',
   'components-cliente.perfil-modal' => 'App\\Http\\Livewire\\ComponentsCliente\\PerfilModal',
   'components-cliente.perfiles' => 'App\\Http\\Livewire\\ComponentsCliente\\Perfiles',
   'components-cliente.resetpassword' => 'App\\Http\\Livewire\\ComponentsCliente\\Resetpassword',
   'components-cliente.sendemail' => 'App\\Http\\Livewire\\ComponentsCliente\\Sendemail',
+  'generic.change-password' => 'App\\Http\\Livewire\\Generic\\ChangePassword',
   'login' => 'App\\Http\\Livewire\\Login',
 );
