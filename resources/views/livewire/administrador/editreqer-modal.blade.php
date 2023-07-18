@@ -13,7 +13,7 @@
                         @error('name') <span class="error">{{ $message }}</span> @enderror
                     </div>
                     <div class="mb-3">
-                        <label for="recipient-name" class="col-form-label">Descripción</label>
+                        <label class="col-form-label">Descripción</label>
                         <textarea wire:model="description" class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
                     </div>
                     <div class="py-3 d-flex justify-content-center">

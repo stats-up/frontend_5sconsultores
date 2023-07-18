@@ -8,7 +8,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="mb-2 d-flex col">
-                        <label for="recipient-name" class="fw-bold">Nombre:</label>
+                        <label class="fw-bold">Nombre:</label>
                         <div class="d-flex align-items-center px-2">{{$name}}</div>
                     </div>
                     <div class="mb-2 d-flex col">
