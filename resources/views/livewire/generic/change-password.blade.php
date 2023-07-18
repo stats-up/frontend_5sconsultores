@@ -12,8 +12,8 @@
                         <input wire:model="new_password" type="password" class="form-control" id="newPassword">
                     </div>
                     <div class="mb-3">
-                        <label for="newPassword" class="form-label">Repetir Nueva contraseña</label>
-                        <input wire:model="new_password_confirmation" type="password" class="form-control" id="newPassword">
+                        <label for="newPasswordRepeat" class="form-label">Repetir Nueva contraseña</label>
+                        <input wire:model="new_password_confirmation" type="password" class="form-control" id="newPasswordRepeat">
                     </div>
                     <div class="mb-3">
                         @php
